@@ -45,3 +45,14 @@ Physical devices and real screen-reader sessions remain unverified. Exact test o
 ## Traditional Chinese article integration
 
 The v4 candidate incorporates the four avatar studies into its image-finishing section. It now has 39 static figures and two interactions, retaining original 01–35 and A/B source labels with a separate reading index. The article describes arrangement, host-colored separation, image inset and participant access using original examples. Publishing and five-language migration remain separate from these local saves.
+
+
+## Cross-platform numeric rendering — 2026-10-30
+
+The first clean Linux run caught a real specimen discrepancy: Chromium reported decimal positions of 168, 168 and 169 CSS pixels at native 1×, with Geist loaded, tabular figures enabled and kerning disabled. Explicit font readiness and separate caret/selection measurements did not remove it. These diagnostics remain distinct from a font-support query.
+
+The numeric study now scopes `text-rendering: geometricPrecision` to both amount columns. Font, size, strings, precision, spacing and the left/right alignment comparison remain fixed. This rendering choice is specific to the specimen; it is not an instruction to override the consumer project globally. The native check retains its original 0.3 CSS-pixel alignment threshold, saves metrics and the unresampled screenshot before asserting, and records caret and selection positions separately. No tolerance was increased.
+
+Fresh Linux Chromium/WebKit at 1×/2×/3×/1.25×/1.5× passed all ten combinations. Chromium's decimal range is 0.015625 CSS pixels; WebKit's is zero in these strings. The same ten combinations passed locally on macOS. See `runtime/native-linux-geometric.json` and `runtime/native-macos-geometric.json`; the earlier native record remains historical. Complete [CI run 40944422139](https://github.com/master-co/design/actions/runs/40944422139) passed packaging, installation, avatar, dashboard, behavior and native checks.
+
+The dashboard export hash did not change. The article retains its approved, versioned v4 raster artwork and browser export; the updated repository study records the additional cross-platform rendering choice. Browser emulation still does not substitute for physical-device or screen-reader sessions.
