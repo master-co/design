@@ -1,0 +1,635 @@
+{
+  "method": "Browser-emulated device pixel density; unresampled screenshots. Not OS zoom or hardware display testing.",
+  "results": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "dpr": 1,
+      "font": true,
+      "decimals": [
+        167.765625,
+        167.75,
+        167.765625
+      ],
+      "image": {
+        "width": 192,
+        "height": 132,
+        "radius": "12px",
+        "offset": "-1px"
+      },
+      "pixels": {
+        "outside": [
+          247,
+          247,
+          247
+        ],
+        "surface": [
+          252,
+          252,
+          252
+        ],
+        "edge": [
+          233,
+          233,
+          233
+        ],
+        "edgeColumns": [
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            233,
+            233,
+            233
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ]
+        ]
+      },
+      "file": "artifacts/native/chromium-1.png",
+      "result": "pass"
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "dpr": 2,
+      "font": true,
+      "decimals": [
+        167.765625,
+        167.75,
+        167.765625
+      ],
+      "image": {
+        "width": 192,
+        "height": 132,
+        "radius": "12px",
+        "offset": "-1px"
+      },
+      "pixels": {
+        "outside": [
+          247,
+          247,
+          247
+        ],
+        "surface": [
+          252,
+          252,
+          252
+        ],
+        "edge": [
+          247,
+          247,
+          247
+        ],
+        "edgeColumns": [
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ]
+        ]
+      },
+      "file": "artifacts/native/chromium-2.png",
+      "result": "pass"
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "dpr": 3,
+      "font": true,
+      "decimals": [
+        167.765625,
+        167.75,
+        167.765625
+      ],
+      "image": {
+        "width": 192,
+        "height": 132,
+        "radius": "12px",
+        "offset": "-1px"
+      },
+      "pixels": {
+        "outside": [
+          247,
+          247,
+          247
+        ],
+        "surface": [
+          252,
+          252,
+          252
+        ],
+        "edge": [
+          247,
+          247,
+          247
+        ],
+        "edgeColumns": [
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ]
+        ]
+      },
+      "file": "artifacts/native/chromium-3.png",
+      "result": "pass"
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "dpr": 1.25,
+      "font": true,
+      "decimals": [
+        167.765625,
+        167.75,
+        167.765625
+      ],
+      "image": {
+        "width": 192,
+        "height": 132,
+        "radius": "12px",
+        "offset": "-1px"
+      },
+      "pixels": {
+        "outside": [
+          247,
+          247,
+          247
+        ],
+        "surface": [
+          252,
+          252,
+          252
+        ],
+        "edge": [
+          229,
+          229,
+          229
+        ],
+        "edgeColumns": [
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            229,
+            229,
+            229
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ]
+        ]
+      },
+      "file": "artifacts/native/chromium-1.25.png",
+      "result": "pass"
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "dpr": 1.5,
+      "font": true,
+      "decimals": [
+        167.765625,
+        167.75,
+        167.765625
+      ],
+      "image": {
+        "width": 192,
+        "height": 132,
+        "radius": "12px",
+        "offset": "-1px"
+      },
+      "pixels": {
+        "outside": [
+          247,
+          247,
+          247
+        ],
+        "surface": [
+          252,
+          252,
+          252
+        ],
+        "edge": [
+          226,
+          226,
+          226
+        ],
+        "edgeColumns": [
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            226,
+            226,
+            226
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ]
+        ]
+      },
+      "file": "artifacts/native/chromium-1.5.png",
+      "result": "pass"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.6",
+      "dpr": 1,
+      "font": true,
+      "decimals": [
+        167,
+        167,
+        167
+      ],
+      "image": {
+        "width": 192,
+        "height": 132,
+        "radius": "12px",
+        "offset": "-1px"
+      },
+      "pixels": {
+        "outside": [
+          247,
+          247,
+          247
+        ],
+        "surface": [
+          252,
+          252,
+          252
+        ],
+        "edge": [
+          247,
+          247,
+          247
+        ],
+        "edgeColumns": [
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ]
+        ]
+      },
+      "file": "artifacts/native/webkit-1.png",
+      "result": "pass"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.6",
+      "dpr": 2,
+      "font": true,
+      "decimals": [
+        167,
+        167,
+        167
+      ],
+      "image": {
+        "width": 192,
+        "height": 132,
+        "radius": "12px",
+        "offset": "-1px"
+      },
+      "pixels": {
+        "outside": [
+          247,
+          247,
+          247
+        ],
+        "surface": [
+          252,
+          252,
+          252
+        ],
+        "edge": [
+          247,
+          247,
+          247
+        ],
+        "edgeColumns": [
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ]
+        ]
+      },
+      "file": "artifacts/native/webkit-2.png",
+      "result": "pass"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.6",
+      "dpr": 3,
+      "font": true,
+      "decimals": [
+        167,
+        167,
+        167
+      ],
+      "image": {
+        "width": 192,
+        "height": 132,
+        "radius": "12px",
+        "offset": "-1px"
+      },
+      "pixels": {
+        "outside": [
+          247,
+          247,
+          247
+        ],
+        "surface": [
+          252,
+          252,
+          252
+        ],
+        "edge": [
+          247,
+          247,
+          247
+        ],
+        "edgeColumns": [
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ]
+        ]
+      },
+      "file": "artifacts/native/webkit-3.png",
+      "result": "pass"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.6",
+      "dpr": 1.25,
+      "font": true,
+      "decimals": [
+        167,
+        167,
+        167
+      ],
+      "image": {
+        "width": 192,
+        "height": 132,
+        "radius": "12px",
+        "offset": "-0.8px"
+      },
+      "pixels": {
+        "outside": [
+          247,
+          247,
+          247
+        ],
+        "surface": [
+          252,
+          252,
+          252
+        ],
+        "edge": [
+          220,
+          220,
+          220
+        ],
+        "edgeColumns": [
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            220,
+            220,
+            220
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ]
+        ]
+      },
+      "file": "artifacts/native/webkit-1.25.png",
+      "result": "pass"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.6",
+      "dpr": 1.5,
+      "font": true,
+      "decimals": [
+        167,
+        167,
+        167
+      ],
+      "image": {
+        "width": 192,
+        "height": 132,
+        "radius": "12px",
+        "offset": "-0.666667px"
+      },
+      "pixels": {
+        "outside": [
+          247,
+          247,
+          247
+        ],
+        "surface": [
+          252,
+          252,
+          252
+        ],
+        "edge": [
+          220,
+          220,
+          220
+        ],
+        "edgeColumns": [
+          [
+            247,
+            247,
+            247
+          ],
+          [
+            220,
+            220,
+            220
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ],
+          [
+            252,
+            252,
+            252
+          ]
+        ]
+      },
+      "file": "artifacts/native/webkit-1.5.png",
+      "result": "pass"
+    }
+  ]
+}

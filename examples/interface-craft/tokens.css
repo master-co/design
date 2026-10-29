@@ -1,0 +1,13 @@
+/* Selected Aron specimen. These values are not the skill's global defaults. */
+:root {
+ --md-ring:0 0 0 .5px rgb(24 24 24 / .12);
+ --md-near:0 1px 2px -1px rgb(24 24 24 / .04);
+ --md-ambient:0 3px 8px -3px rgb(24 24 24 / .02);
+ --md-depth:var(--md-ring),var(--md-near),var(--md-ambient);
+ --md-focus:#626268;
+}
+/* The example and export studies resolve the same contour/depth values. */
+:root {
+ --article-ring:var(--md-ring);
+ --article-depth:var(--md-near),var(--md-ambient);
+}

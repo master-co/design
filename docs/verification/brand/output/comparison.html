@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Harbor dispatch — visual evidence</title>
+  <style>
+    body { margin: 24px; font: 14px/1.5 system-ui; color: #124f59; background: #fff; }
+    h1 { font-size: 22px; }
+    .comparison { display: flex; flex-wrap: wrap; gap: 24px; align-items: start; }
+    figure { margin: 0 0 24px; }
+    figcaption { font-weight: 600; margin: 0 0 8px; }
+    img { display: block; border: 1px solid #ccc; max-width: 100%; height: auto; }
+    .desktop img { width: 1000px; }
+    .mobile img { width: 320px; }
+    .touch img { width: 375px; }
+  </style>
+  <h1>Harbor dispatch — visual evidence</h1>
+  <p>Matched viewport captures. Images display at native CSS size when space permits; use each image directly to inspect its original pixels.</p>
+  <div class="comparison desktop">
+    <figure><figcaption>Before · 1000 × 700 · DPR 1</figcaption><img src="before-desktop.png" alt="Original Harbor desktop interface"></figure>
+    <figure><figcaption>After · 1000 × 700 · DPR 1 · Chromium</figcaption><img src="after-desktop-chromium.png" alt="Refined Harbor desktop interface"></figure>
+  </div>
+  <div class="comparison mobile">
+    <figure><figcaption>Before · 320 × 640 · DPR 1</figcaption><img src="before-mobile.png" alt="Original Harbor narrow interface"></figure>
+    <figure><figcaption>After · 320 × 640 · DPR 1</figcaption><img src="after-mobile-chromium.png" alt="Refined Harbor narrow interface"></figure>
+    <figure><figcaption>Longer content · 320 px · WebKit</figcaption><img src="after-long-content-webkit.png" alt="Refined interface with a wrapping route and field label"></figure>
+    <figure><figcaption>Forced colors · Chromium</figcaption><img src="after-forced-colors.png" alt="Distinct keyboard focus and selected view in forced colors"></figure>
+  </div>
+  <div class="comparison touch">
+    <figure><figcaption>After · 375 × 667 · DPR 2 · WebKit</figcaption><img src="after-touch-dpr2-webkit.png" alt="In transit selected on the refined touch interface"></figure>
+  </div>
+</html>

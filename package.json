@@ -1,0 +1,29 @@
+{
+  "name": "@master/design-skills",
+  "private": true,
+  "type": "module",
+  "packageManager": "bun@1.4.4",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "build": "bun build examples/interface-craft/app.ts examples/interface-craft/avatar/client.ts --root examples/interface-craft --target browser --outdir examples/interface-craft/dist && node scripts/build.mjs",
+    "demo": "node scripts/serve.mjs",
+    "check": "node scripts/check.mjs && tsc --noEmit && node --test tests/*.test.mjs",
+    "capture": "node scripts/capture.mjs",
+    "test:browser": "node scripts/browser-check.mjs",
+    "test:native": "node scripts/native-check.mjs",
+    "test:install": "node scripts/install-check.mjs",
+    "test:forward": "node docs/verification/brand/output/verify.mjs && node docs/verification/aron/output/verify.mjs",
+    "test:dashboard": "node scripts/dashboard-check.mjs",
+    "capture:avatars": "node scripts/avatar-capture.mjs",
+    "test:avatars": "node scripts/avatar-check.mjs"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.63.0",
+    "linkedom": "^0.18.14",
+    "sharp": "0.35.5",
+    "typescript": "6.0.3",
+    "yaml": "^2.8.0"
+  }
+}

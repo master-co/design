@@ -1,0 +1,40 @@
+{
+  "brand": {
+    "frozenSkill": {
+      "SKILL.md": "e29226e88c62b66dfcf0471faa02b9963a68ae82646acdf4edb98e1e4ca90fc7",
+      "references/images.md": "a588a49a6cf9bf2ef7abb403ab508514048568f993ff413bf1e7956e3b0f20b8",
+      "references/geometry.md": "d2aea1af7f6d014234d4126359c9633e7d26d2b900bae51d0391c85afe45dd01",
+      "references/motion.md": "6f345e24a3f6c8fd0acf5b6bc9cbc638641741c705d039c5a7ff3e40b250c67b",
+      "references/evidence.md": "402a0f699376d52ad92a198a069382a06d43415ee18b1991a4cae774bf43399d",
+      "references/states.md": "54a69e9ac163c93dd08d75955b791935d7265c97661047e741b17a3a936f2dff",
+      "references/typography.md": "76aa044ff95a4681eb416531b6074682e1bf2858972a5aaac9b3131e67f91713",
+      "references/layout.md": "491003d6e13f05e529a70edba08dfed03c1f997504b0b345f554ea575f797c75",
+      "references/aron-preferences.md": "f8bb43de889b46bea78ce53011a51cf98f9915a909da26e6d2646a9551dfbf12",
+      "references/surfaces.md": "78bca2611b0a8080ec10e9e692579a79e9e3eaab4325ec795802c5a6c8e67da3",
+      "references/materials.md": "b244d2cc21d9f8176d4719c6ee1d0d8699cdab3dabe88769795731ee92e72562",
+      "agents/openai.yaml": "dc451273fc366fb5df4e0cd80e2e66bb2373d380dd28f9a5f8b689697c50b952"
+    },
+    "before": "3ffc3e3ac4e2fb65a471553ce9067e181ffe8dd0f2257838863703034ff7b3eb",
+    "after": "b44155e55867dda80645e06130f826803c283775351007fa434fb9f96112af5e",
+    "portabilityEdit": "Retained browser scripts import the repository dev dependency; fixtures and independent results are unchanged."
+  },
+  "aron": {
+    "frozenSkill": {
+      "SKILL.md": "e29226e88c62b66dfcf0471faa02b9963a68ae82646acdf4edb98e1e4ca90fc7",
+      "references/images.md": "a588a49a6cf9bf2ef7abb403ab508514048568f993ff413bf1e7956e3b0f20b8",
+      "references/geometry.md": "d2aea1af7f6d014234d4126359c9633e7d26d2b900bae51d0391c85afe45dd01",
+      "references/motion.md": "6f345e24a3f6c8fd0acf5b6bc9cbc638641741c705d039c5a7ff3e40b250c67b",
+      "references/evidence.md": "402a0f699376d52ad92a198a069382a06d43415ee18b1991a4cae774bf43399d",
+      "references/states.md": "54a69e9ac163c93dd08d75955b791935d7265c97661047e741b17a3a936f2dff",
+      "references/typography.md": "76aa044ff95a4681eb416531b6074682e1bf2858972a5aaac9b3131e67f91713",
+      "references/layout.md": "491003d6e13f05e529a70edba08dfed03c1f997504b0b345f554ea575f797c75",
+      "references/aron-preferences.md": "f8bb43de889b46bea78ce53011a51cf98f9915a909da26e6d2646a9551dfbf12",
+      "references/surfaces.md": "78bca2611b0a8080ec10e9e692579a79e9e3eaab4325ec795802c5a6c8e67da3",
+      "references/materials.md": "b244d2cc21d9f8176d4719c6ee1d0d8699cdab3dabe88769795731ee92e72562",
+      "agents/openai.yaml": "dc451273fc366fb5df4e0cd80e2e66bb2373d380dd28f9a5f8b689697c50b952"
+    },
+    "before": "23d14b433ba73e65c5f55e2a9a259fb47f865c2a5142fd84c36848875653a5a1",
+    "after": "891d8f5139b81d98c4b1d4688c01f918ddf6e4ebecfb84f3da797e07a1870edf",
+    "portabilityEdit": "Retained browser scripts import the repository dev dependency; fixtures and independent results are unchanged."
+  }
+}

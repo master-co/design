@@ -1,0 +1,9 @@
+import {visibleSlots,escapeHtml as e} from './model.mjs';
+const personIcon='<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3"/><path d="M5 21v-3a7 7 0 0 1 14 0v3"/></svg>';
+export function renderAvatar(person,index=0){return `<span class="md-avatar" data-person-id="${e(person.id)}" data-tone="${e(person.tone||'slate')}" style="--avatar-index:${index}" aria-hidden="true"><span class="md-avatar-content"><span class="md-avatar-initials">${person.initials?e(person.initials):personIcon}</span>${person.photo?`<img class="md-avatar-photo" src="${e(person.photo)}" width="32" height="32" alt="" decoding="async">`:''}</span></span>`;}
+export function renderStack(people,{size=32,overlap=8,separator=2,fontSize=11,capacity=4,className='',decorative=false,inset=true}={}){
+ const{visible,hidden}=visibleSlots(people,capacity);if(!people.length)return'<span class="md-avatar-empty">No participants</span>';
+ const items=visible.map(renderAvatar);if(hidden)items.push(`<span class="md-avatar md-avatar-overflow" data-person-id="overflow" data-tone="slate" style="--avatar-index:${visible.length}" aria-hidden="true"><span class="md-avatar-content"><span class="md-avatar-initials">+${hidden}</span></span></span>`);
+ return`<span class="md-avatar-stack ${e(className)}" ${decorative?'aria-hidden="true"':`role="img" aria-label="${e(people.map(p=>p.name).join(', '))}"`} data-slots="${items.length}" style="--avatar-size:${size}px;--avatar-overlap:${overlap}px;--avatar-separator:${items.length===1?0:separator}px;--avatar-font-size:${fontSize}px;${inset?'':'--avatar-inner-width:0px;'}">${items.join('')}</span>`;
+}
+export function renderParticipantList(people){return `<ul class="md-participant-list">${people.map(person=>`<li><details><summary>${renderAvatar(person)}<span>${e(person.name)}</span></summary><p>${e(person.role)}</p></details></li>`).join('')}</ul>`;}

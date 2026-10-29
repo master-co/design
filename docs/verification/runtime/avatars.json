@@ -1,0 +1,352 @@
+{
+  "date": "2026-10-30",
+  "method": "Source-backed geometry and unresampled photo raster comparisons; browser densities are emulated, not physical-device tests.",
+  "results": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "counts": [
+        {
+          "count": 0,
+          "slots": 0,
+          "overflow": []
+        },
+        {
+          "count": 1,
+          "slots": 1,
+          "overflow": []
+        },
+        {
+          "count": 3,
+          "slots": 3,
+          "overflow": []
+        },
+        {
+          "count": 4,
+          "slots": 4,
+          "overflow": []
+        },
+        {
+          "count": 7,
+          "slots": 4,
+          "overflow": [
+            "+4"
+          ]
+        }
+      ],
+      "rtlOrderPreserved": true,
+      "lastOnTop": true,
+      "photoFailureStable": true,
+      "patternUsesSpacing": true,
+      "dialogKeyboardAndFocusReturn": true,
+      "touchEmulated": true,
+      "narrowRows": [
+        52,
+        52,
+        52,
+        52,
+        52,
+        58,
+        52
+      ],
+      "dashboardCenters": [
+        {
+          "x": 1089.46875,
+          "y": 731.25,
+          "width": 22,
+          "height": 22
+        },
+        {
+          "x": 1106.46875,
+          "y": 731.25,
+          "width": 22,
+          "height": 22
+        },
+        {
+          "x": 1089.46875,
+          "y": 771,
+          "width": 22,
+          "height": 22
+        },
+        {
+          "x": 1106.46875,
+          "y": 771,
+          "width": 22,
+          "height": 22
+        },
+        {
+          "x": 1089.46875,
+          "y": 811,
+          "width": 22,
+          "height": 22
+        },
+        {
+          "x": 1089.46875,
+          "y": 851,
+          "width": 22,
+          "height": 22
+        }
+      ],
+      "raster": [
+        {
+          "dpr": 1,
+          "comparisons": [
+            {
+              "id": "B1",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 180,
+              "centerDifferences": 0,
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "B2",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 148,
+              "centerDifferences": 0,
+              "width": 32,
+              "height": 32
+            }
+          ]
+        },
+        {
+          "dpr": 2,
+          "comparisons": [
+            {
+              "id": "B1",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 574,
+              "centerDifferences": 0,
+              "width": 64,
+              "height": 64
+            },
+            {
+              "id": "B2",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 509,
+              "centerDifferences": 0,
+              "width": 64,
+              "height": 64
+            }
+          ]
+        },
+        {
+          "dpr": 3,
+          "comparisons": [
+            {
+              "id": "B1",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 1196,
+              "centerDifferences": 0,
+              "width": 96,
+              "height": 96
+            },
+            {
+              "id": "B2",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 1049,
+              "centerDifferences": 0,
+              "width": 96,
+              "height": 96
+            }
+          ]
+        },
+        {
+          "dpr": 1.25,
+          "comparisons": [
+            {
+              "id": "B1",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 258,
+              "centerDifferences": 0,
+              "width": 40,
+              "height": 40
+            },
+            {
+              "id": "B2",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 206,
+              "centerDifferences": 0,
+              "width": 40,
+              "height": 40
+            }
+          ]
+        }
+      ],
+      "result": "pass"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.6",
+      "counts": [
+        {
+          "count": 0,
+          "slots": 0,
+          "overflow": []
+        },
+        {
+          "count": 1,
+          "slots": 1,
+          "overflow": []
+        },
+        {
+          "count": 3,
+          "slots": 3,
+          "overflow": []
+        },
+        {
+          "count": 4,
+          "slots": 4,
+          "overflow": []
+        },
+        {
+          "count": 7,
+          "slots": 4,
+          "overflow": [
+            "+4"
+          ]
+        }
+      ],
+      "rtlOrderPreserved": true,
+      "lastOnTop": true,
+      "photoFailureStable": true,
+      "patternUsesSpacing": true,
+      "dialogKeyboardAndFocusReturn": true,
+      "touchEmulated": true,
+      "narrowRows": [
+        52,
+        52,
+        52,
+        52,
+        52,
+        58,
+        52
+      ],
+      "dashboardCenters": [
+        {
+          "x": 1089.5,
+          "y": 731.5,
+          "width": 22,
+          "height": 22
+        },
+        {
+          "x": 1106.5,
+          "y": 731.5,
+          "width": 22,
+          "height": 22
+        },
+        {
+          "x": 1089.5,
+          "y": 771,
+          "width": 22,
+          "height": 22
+        },
+        {
+          "x": 1106.5,
+          "y": 771,
+          "width": 22,
+          "height": 22
+        },
+        {
+          "x": 1089.5,
+          "y": 811,
+          "width": 22,
+          "height": 22
+        },
+        {
+          "x": 1089.5,
+          "y": 851,
+          "width": 22,
+          "height": 22
+        }
+      ],
+      "raster": [
+        {
+          "dpr": 1,
+          "comparisons": [
+            {
+              "id": "B1",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 204,
+              "centerDifferences": 0,
+              "width": 32,
+              "height": 32
+            },
+            {
+              "id": "B2",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 179,
+              "centerDifferences": 0,
+              "width": 32,
+              "height": 32
+            }
+          ]
+        },
+        {
+          "dpr": 2,
+          "comparisons": [
+            {
+              "id": "B1",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 595,
+              "centerDifferences": 0,
+              "width": 64,
+              "height": 64
+            },
+            {
+              "id": "B2",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 552,
+              "centerDifferences": 0,
+              "width": 64,
+              "height": 64
+            }
+          ]
+        },
+        {
+          "dpr": 3,
+          "comparisons": [
+            {
+              "id": "B1",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 1209,
+              "centerDifferences": 0,
+              "width": 96,
+              "height": 96
+            },
+            {
+              "id": "B2",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 1156,
+              "centerDifferences": 0,
+              "width": 96,
+              "height": 96
+            }
+          ]
+        },
+        {
+          "dpr": 1.25,
+          "comparisons": [
+            {
+              "id": "B1",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 239,
+              "centerDifferences": 0,
+              "width": 40,
+              "height": 40
+            },
+            {
+              "id": "B2",
+              "method": "Same element and coordinates; toggle only the inward stroke",
+              "differences": 222,
+              "centerDifferences": 0,
+              "width": 40,
+              "height": 40
+            }
+          ]
+        }
+      ],
+      "result": "pass"
+    }
+  ]
+}

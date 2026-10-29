@@ -1,0 +1,6 @@
+.article-finish-seam-example { position: absolute; left: 380px; top: 420px; transform: scale(3); transform-origin: top left; }
+.article-finish-icon-example { position: absolute; top: 390px; transform: scale(5); transform-origin: top left; }
+.article-finish-icon-before { left: 380px; }
+.article-finish-icon-after { left: 860px; }
+.article-finish-icon-box { display: grid; place-items: center; width: 40px; height: 40px; border: var(--article-border); border-radius: 10px; background: #fff; box-shadow: var(--article-selected-shadow); color: #555556; }
+.article-finish-channel-example { position: absolute; left: 330px; top: 420px; transform: scale(4); transform-origin: top left; }

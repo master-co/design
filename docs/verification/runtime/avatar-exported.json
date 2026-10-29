@@ -1,0 +1,18 @@
+{
+  "result": "pass",
+  "views": [
+    {
+      "engine": "chromium",
+      "result": "pass",
+      "exportedModalTheme": true
+    },
+    {
+      "engine": "webkit",
+      "result": "pass",
+      "exportedModalTheme": true
+    }
+  ],
+  "images": 4,
+  "cssSourcesMatch": true,
+  "noCompositeExport": true
+}

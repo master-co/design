@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-30",
+  "tool": "Built-in image_gen; model version not exposed",
+  "status": "Original generated fictional identities; no real-person photos or downloaded portraits used",
+  "records": [
+    {
+      "id": "a",
+      "description": "Fictional woman revised to the requested Japanese/Korean portrait styling.",
+      "source": "exec-26bc7cf4-4e1a-4fc6-8d61-9169a5df7c7f.png",
+      "original": "assets/avatars/originals/portrait-a.png",
+      "webp": "examples/interface-craft/avatar/portraits/portrait-a.webp",
+      "originalHash": "ace2172db2add4a44b74885b3006ecb676462703758a2e517ad83d16db4e12ba",
+      "webpHash": "3fd662e94e73e198f22bfd26a705d5ea798ccd01f5a7916a2dea0562f4de25eb",
+      "transform": "512×512, no crop, WebP quality 95; circle crop is CSS only"
+    },
+    {
+      "id": "b",
+      "description": "Fictional adult with dark wavy hair and charcoal crewneck.",
+      "source": "exec-a881810a-2a99-45df-bcd5-3b5a5bbfbe1d.png",
+      "original": "assets/avatars/originals/portrait-b.png",
+      "webp": "examples/interface-craft/avatar/portraits/portrait-b.webp",
+      "originalHash": "8c7d3b8417adacf51e1c515283e82ec825dfcc0aebbb08d03e6505bd2dd6b141",
+      "webpHash": "2b0be74bad51090923777247f74c0adbaff74bd0d5bc7f83640b320631f34d4b",
+      "transform": "512×512, no crop, WebP quality 95; circle crop is CSS only"
+    },
+    {
+      "id": "c",
+      "description": "Fictional adult with straight dark hair and gray collared shirt.",
+      "source": "exec-2d724869-7cb0-49a9-9302-c593ed96927e.png",
+      "original": "assets/avatars/originals/portrait-c.png",
+      "webp": "examples/interface-craft/avatar/portraits/portrait-c.webp",
+      "originalHash": "3b08e3456ba7d493e1bd66716817c26394a05556ff2946334b0f1bb7b88784d2",
+      "webpHash": "499288f747b5f61ae8db1cf6824e3bc6f4f5c543664c86f18b819d7f26949660",
+      "transform": "512×512, no crop, WebP quality 95; circle crop is CSS only"
+    }
+  ]
+}

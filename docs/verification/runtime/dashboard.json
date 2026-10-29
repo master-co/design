@@ -1,0 +1,285 @@
+{
+  "date": "2026-10-30",
+  "results": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "baseline": "4733743 approved dashboard source",
+      "comparedParts": [
+        ".article-dash-shell",
+        ".article-dash-main",
+        ".article-dash-brand",
+        ".article-dash-search",
+        ".article-dash-nav-label",
+        ".article-dash-nav-item",
+        ".article-dash-account",
+        ".article-dash-topbar",
+        ".article-dash-title-row h2",
+        ".article-dash-title-row p",
+        ".article-dash-stats",
+        ".article-dash-stat",
+        ".article-dash-middle",
+        ".article-dash-chart-shell",
+        ".article-dash-line-chart",
+        ".article-dash-next",
+        ".article-dash-next-task",
+        ".article-dash-projects-shell",
+        ".article-dash-projects-heading h3",
+        ".article-dash-projects-panel table"
+      ],
+      "nav": [
+        {
+          "color": "rgb(83, 80, 173)",
+          "icon": {
+            "x": 67,
+            "y": 256,
+            "width": 16,
+            "height": 16
+          }
+        },
+        {
+          "color": "rgb(104, 104, 105)",
+          "icon": {
+            "x": 67,
+            "y": 290,
+            "width": 16,
+            "height": 16
+          }
+        },
+        {
+          "color": "rgb(104, 104, 105)",
+          "icon": {
+            "x": 67,
+            "y": 324,
+            "width": 16,
+            "height": 16
+          }
+        },
+        {
+          "color": "rgb(104, 104, 105)",
+          "icon": {
+            "x": 67,
+            "y": 358,
+            "width": 16,
+            "height": 16
+          }
+        },
+        {
+          "color": "rgb(104, 104, 105)",
+          "icon": {
+            "x": 67,
+            "y": 864,
+            "width": 16,
+            "height": 16
+          }
+        }
+      ],
+      "checkboxes": [
+        {
+          "x": 292,
+          "y": 736.75,
+          "width": 11,
+          "height": 11
+        },
+        {
+          "x": 292,
+          "y": 776.5,
+          "width": 11,
+          "height": 11
+        },
+        {
+          "x": 292,
+          "y": 816.5,
+          "width": 11,
+          "height": 11
+        },
+        {
+          "x": 292,
+          "y": 856.5,
+          "width": 11,
+          "height": 11
+        }
+      ],
+      "rowHeights": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "date": {
+        "width": 212,
+        "height": 34,
+        "radius": "10px",
+        "shadow": "rgba(24, 24, 24, 0.12) 0px 0px 0px 0.5px, rgba(24, 24, 24, 0.04) 0px 1px 2px -1px, rgba(24, 24, 24, 0.02) 0px 3px 8px -3px"
+      },
+      "raster": [
+        {
+          "dpr": 1,
+          "appearance": "none",
+          "width": 11
+        },
+        {
+          "dpr": 2,
+          "appearance": "none",
+          "width": 11
+        },
+        {
+          "dpr": 3,
+          "appearance": "none",
+          "width": 11
+        },
+        {
+          "dpr": 1.25,
+          "appearance": "none",
+          "width": 11
+        },
+        {
+          "dpr": 1.5,
+          "appearance": "none",
+          "width": 11
+        }
+      ],
+      "result": "pass"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.6",
+      "baseline": "4733743 approved dashboard source",
+      "comparedParts": [
+        ".article-dash-shell",
+        ".article-dash-main",
+        ".article-dash-brand",
+        ".article-dash-search",
+        ".article-dash-nav-label",
+        ".article-dash-nav-item",
+        ".article-dash-account",
+        ".article-dash-topbar",
+        ".article-dash-title-row h2",
+        ".article-dash-title-row p",
+        ".article-dash-stats",
+        ".article-dash-stat",
+        ".article-dash-middle",
+        ".article-dash-chart-shell",
+        ".article-dash-line-chart",
+        ".article-dash-next",
+        ".article-dash-next-task",
+        ".article-dash-projects-shell",
+        ".article-dash-projects-heading h3",
+        ".article-dash-projects-panel table"
+      ],
+      "nav": [
+        {
+          "color": "rgb(83, 80, 173)",
+          "icon": {
+            "x": 67,
+            "y": 256,
+            "width": 16,
+            "height": 16
+          }
+        },
+        {
+          "color": "rgb(104, 104, 105)",
+          "icon": {
+            "x": 67,
+            "y": 290,
+            "width": 16,
+            "height": 16
+          }
+        },
+        {
+          "color": "rgb(104, 104, 105)",
+          "icon": {
+            "x": 67,
+            "y": 324,
+            "width": 16,
+            "height": 16
+          }
+        },
+        {
+          "color": "rgb(104, 104, 105)",
+          "icon": {
+            "x": 67,
+            "y": 358,
+            "width": 16,
+            "height": 16
+          }
+        },
+        {
+          "color": "rgb(104, 104, 105)",
+          "icon": {
+            "x": 67,
+            "y": 864,
+            "width": 16,
+            "height": 16
+          }
+        }
+      ],
+      "checkboxes": [
+        {
+          "x": 292,
+          "y": 736.75,
+          "width": 11,
+          "height": 11
+        },
+        {
+          "x": 292,
+          "y": 776.5,
+          "width": 11,
+          "height": 11
+        },
+        {
+          "x": 292,
+          "y": 816.5,
+          "width": 11,
+          "height": 11
+        },
+        {
+          "x": 292,
+          "y": 856.5,
+          "width": 11,
+          "height": 11
+        }
+      ],
+      "rowHeights": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "date": {
+        "width": 212,
+        "height": 34,
+        "radius": "10px",
+        "shadow": "rgba(24, 24, 24, 0.12) 0px 0px 0px 0.5px, rgba(24, 24, 24, 0.04) 0px 1px 2px -1px, rgba(24, 24, 24, 0.02) 0px 3px 8px -3px"
+      },
+      "raster": [
+        {
+          "dpr": 1,
+          "appearance": "none",
+          "width": 11
+        },
+        {
+          "dpr": 2,
+          "appearance": "none",
+          "width": 11
+        },
+        {
+          "dpr": 3,
+          "appearance": "none",
+          "width": 11
+        },
+        {
+          "dpr": 1.25,
+          "appearance": "none",
+          "width": 11
+        },
+        {
+          "dpr": 1.5,
+          "appearance": "none",
+          "width": 11
+        }
+      ],
+      "result": "pass"
+    }
+  ]
+}

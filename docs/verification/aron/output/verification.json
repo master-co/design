@@ -1,0 +1,196 @@
+{
+  "engines": {
+    "chromium": {
+      "available": true,
+      "version": "153.0.8010.12"
+    },
+    "webkit": {
+      "available": true,
+      "version": "26.6"
+    }
+  },
+  "checks": [
+    {
+      "name": "chromium: initial render has no transition",
+      "passed": true
+    },
+    {
+      "name": "chromium: native Tab order is Next value then Open details",
+      "passed": true
+    },
+    {
+      "name": "chromium: initial state closed, no occupied panel space, hidden/inert content",
+      "passed": true
+    },
+    {
+      "name": "chromium: six value changes preserve the original cycle and layout",
+      "passed": true
+    },
+    {
+      "name": "chromium: keyboard focus, Enter open and Space close",
+      "passed": true
+    },
+    {
+      "name": "chromium: mid-transition reversal continues from the current height",
+      "passed": true
+    },
+    {
+      "name": "chromium: thirteen rapid toggles settle on the last requested state",
+      "passed": true
+    },
+    {
+      "name": "chromium: press feedback leaves the control and text geometry stable",
+      "passed": true
+    },
+    {
+      "name": "chromium: 320, 280 and 240px widths retain >=44px controls without horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "chromium: longer English control and panel text wraps without clipping at 320px",
+      "passed": true
+    },
+    {
+      "name": "chromium: no page script errors",
+      "passed": true
+    },
+    {
+      "name": "chromium: touch taps change the value and open details at 320px / DPR2",
+      "passed": true
+    },
+    {
+      "name": "chromium: native screenshot evidence at DPR1, DPR1.25 and DPR2",
+      "passed": true
+    },
+    {
+      "name": "chromium: reduced motion applies state changes without travel or transition",
+      "passed": true
+    },
+    {
+      "name": "chromium: no-JavaScript fallback retains details and explains the unavailable value action",
+      "passed": true
+    },
+    {
+      "name": "chromium: forced colors retains focused control and panel boundaries",
+      "passed": true
+    },
+    {
+      "name": "webkit: initial render has no transition",
+      "passed": true
+    },
+    {
+      "name": "webkit: native Alt+Tab order is Next value then Open details",
+      "passed": true
+    },
+    {
+      "name": "webkit: initial state closed, no occupied panel space, hidden/inert content",
+      "passed": true
+    },
+    {
+      "name": "webkit: six value changes preserve the original cycle and layout",
+      "passed": true
+    },
+    {
+      "name": "webkit: keyboard focus, Enter open and Space close",
+      "passed": true
+    },
+    {
+      "name": "webkit: mid-transition reversal continues from the current height",
+      "passed": true
+    },
+    {
+      "name": "webkit: thirteen rapid toggles settle on the last requested state",
+      "passed": true
+    },
+    {
+      "name": "webkit: press feedback leaves the control and text geometry stable",
+      "passed": true
+    },
+    {
+      "name": "webkit: 320, 280 and 240px widths retain >=44px controls without horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "webkit: longer English control and panel text wraps without clipping at 320px",
+      "passed": true
+    },
+    {
+      "name": "webkit: no page script errors",
+      "passed": true
+    },
+    {
+      "name": "webkit: touch taps change the value and open details at 320px / DPR2",
+      "passed": true
+    },
+    {
+      "name": "webkit: reduced motion applies state changes without travel or transition",
+      "passed": true
+    },
+    {
+      "name": "webkit: no-JavaScript fallback retains details and explains the unavailable value action",
+      "passed": true
+    },
+    {
+      "name": "calculated: functional button boundaries exceed 3:1 against their fills",
+      "passed": true
+    }
+  ],
+  "metrics": {
+    "chromium-rendered-value-widths": {
+      "08:08": 80.078125,
+      "12:34": 80.078125,
+      "11:11": 80.078125
+    },
+    "chromium-reversal": {
+      "before": 68.828125,
+      "immediate": 68.828125,
+      "after": 54.328125,
+      "final": 0,
+      "state": "false"
+    },
+    "actualNumberFont": {
+      "fonts": [
+        {
+          "familyName": "Arial",
+          "postScriptName": "ArialMT",
+          "isCustomFont": false,
+          "glyphCount": 5
+        }
+      ]
+    },
+    "typography": {
+      "computedFamily": "Arial, sans-serif",
+      "fontSize": "32px",
+      "variant": "tabular-nums",
+      "kerning": "none",
+      "kernedCanvasWidths": {
+        "11:11": 75.328125,
+        "08:08": 80.078125,
+        "12:34": 80.078125
+      },
+      "slotWidth": 88.984375,
+      "strings": {
+        "11:11": 80.078125,
+        "08:08": 80.078125,
+        "12:34": 80.078125
+      }
+    },
+    "webkit-rendered-value-widths": {
+      "08:08": 80.078125,
+      "12:34": 80.078125,
+      "11:11": 80.078125
+    },
+    "webkit-reversal": {
+      "before": 57.078125,
+      "immediate": 57.078125,
+      "after": 39.15625,
+      "final": 0,
+      "state": "false"
+    },
+    "contrast": {
+      "defaultButtonBoundary": 3.1000409521144134,
+      "expandedButtonBoundary": 3.677945681102002,
+      "secondaryText": 5.925589214743315
+    }
+  }
+}

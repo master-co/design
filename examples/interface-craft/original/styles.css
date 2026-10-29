@@ -1,0 +1,68 @@
+@import './base.css';
+@import './finishing.css';
+@import './detail.css';
+@import './dashboard.css';
+
+/* One outside contour; depth is independent. Transparent borders below only
+   reserve the existing control geometry. They paint no visible edge. */
+:root {
+  --article-border: 1px solid transparent;
+  --article-edge-width: .5px;
+  --article-ring: 0 0 0 var(--article-edge-width) rgba(24,24,24,.12);
+  --article-depth: 0 1px 2px -1px rgba(24,24,24,.04), 0 3px 8px -3px rgba(24,24,24,.02);
+  --article-surface-shadow: var(--article-ring), var(--article-depth);
+  --article-contact-shadow: var(--article-surface-shadow);
+  --article-selected-shadow: var(--article-surface-shadow);
+  --article-inner-light: 0 0 0 0 transparent;
+  --article-glass-border: 1px solid transparent;
+  --article-glass-shadow: 0 0 0 .5px rgba(24,24,24,.06), inset 0 .5px 1px rgba(255,255,255,.32), inset .5px 0 1px rgba(255,255,255,.10), 0 .5px 1px rgba(24,24,24,.018), 0 3px 8px -2px rgba(24,24,24,.016), 0 8px 24px -6px rgba(24,24,24,.018);
+  --article-dash-panel-shadow: 0 0 0 .5px rgba(24,24,24,.08), 0 1px 2px -1px rgba(24,24,24,.025);
+}
+.article-nested-panel { border: 0; box-shadow: var(--article-ring); }
+.article-selected, .article-craft-button, .article-craft-mark,
+.article-tone-mark, .article-finish-icon-box { border-color: transparent; box-shadow: var(--article-surface-shadow); }
+.article-craft-pressed { box-shadow: var(--article-ring), var(--article-inner-shadow); }
+.article-craft-mark { box-shadow: 0 0 0 .5px rgba(24,24,24,.08); }
+.article-craft-glass { border-bottom-color: transparent; }
+.article-optical-button { border-color: transparent; box-shadow: var(--article-surface-shadow); }
+.article-finish-split { border: 0; padding: 1px; box-shadow: var(--article-surface-shadow); }
+.article-finish-dropdown::before { top: 7px; bottom: 7px; box-shadow: none; }
+.article-selection-section::before { border-color: transparent; box-shadow: var(--article-surface-shadow); }
+
+/* Preserve the approved dashboard's layout; repaint its surface boundaries. */
+.article-dash-shell { box-shadow: 0 0 0 .5px rgba(24,24,24,.06), var(--article-depth); }
+.article-dash-main, .article-dash-stat, .article-dash-nav-current,
+.article-dash-button, .article-dash-icon-button, .article-dash-filter,
+.article-dash-project-mark { border-color: transparent; }
+.article-dash-main, .article-dash-stat { box-shadow: var(--article-dash-panel-shadow); }
+.article-dash-nav-current { box-shadow: var(--article-surface-shadow); }
+.article-dash-stats { box-shadow: 0 0 0 .5px rgba(24,24,24,.045); }
+.article-dash-chart-shell, .article-dash-next, .article-dash-projects-shell {
+  border: 0; padding: 6px; box-shadow: 0 0 0 .5px rgba(24,24,24,.06);
+}
+.article-dash-chart-panel, .article-dash-next-panel, .article-dash-projects-panel {
+  border-color: transparent; box-shadow: 0 0 0 .5px rgba(24,24,24,.08);
+}
+.article-dash-search { border-color: transparent; box-shadow: 0 0 0 .5px rgba(24,24,24,.10); }
+.article-dash-button-primary { border-color: transparent; box-shadow: 0 0 0 .5px rgba(55,43,118,.24), 0 1px 2px -1px rgba(55,43,118,.12); }
+.article-dash-brand-icon { box-shadow: 0 1px 2px rgba(38,32,62,.08); }
+.article-dash-floating-actions { border-bottom-color: transparent; bottom: -15px; }
+.article-dash-project-mark { box-shadow: 0 0 0 .5px rgba(24,24,24,.08); }
+
+/* New controlled comparisons. Both cards share the same size, fill and depth. */
+.article-ring-pair { position: absolute; left: 260px; top: 360px; display: flex; gap: 180px; }
+.article-ring-swatch { width: 370px; height: 220px; padding: 38px; border-radius: 26px; background: #fff; box-shadow: 0 0 0 var(--sample-width,.5px) rgba(24,24,24,var(--sample-alpha,.12)); }
+.article-ring-swatch strong { display: block; font-size: 23px; font-weight: 450; letter-spacing: -.03em; }
+.article-ring-swatch p { margin-top: 12px; color: #818182; font-size: 13px; }
+.article-ring-swatch span { display: block; height: 5px; margin-top: 30px; border-radius: 3px; background: #f0f0f0; width: 80%; }
+.article-ring-swatch span + span { margin-top: 12px; width: 58%; }
+.article-ring-divider { position: absolute; left: 720px; top: 280px; height: 420px; width: 1px; background: #e1e1e1; }
+.article-ring-comparison-label { position: absolute; top: 635px; width: 370px; text-align: center; }
+.article-depth-window { position: absolute; left: 300px; top: 275px; width: 860px; height: 430px; overflow: hidden; }
+.article-depth-object { position: absolute; left: 35px; top: 35px; width: 230px; height: 78px; transform: scale(4); transform-origin: top left; border-radius: 16px; background: #fff; box-shadow: var(--article-surface-shadow); }
+.article-dark-stage { position: absolute; left: 250px; top: 265px; width: 940px; height: 440px; border-radius: 24px; background: #171717; display: grid; place-items: center; }
+.article-dark-swatch { width: 480px; height: 230px; padding: 35px; border-radius: 18px; background: #242424; color: #ededed; box-shadow: 0 0 0 .5px rgba(255,255,255,.12), 0 1px 2px -1px rgba(0,0,0,.3), 0 4px 10px -3px rgba(0,0,0,.16); }
+.article-dark-swatch strong { font-size: 24px; font-weight: 450; letter-spacing: -.03em; }
+.article-dark-swatch p { color: #a0a0a0; font-size: 14px; margin-top: 13px; }
+.article-dark-swatch span { display: block; height: 6px; width: 82%; margin-top: 32px; background: #373737; border-radius: 3px; }
+.article-dark-swatch span + span { margin-top: 13px; width: 60%; }

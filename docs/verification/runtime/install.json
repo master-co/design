@@ -1,0 +1,8 @@
+{
+  "result": "pass",
+  "installer": "skills@1.4.9",
+  "scope": "temporary project",
+  "skills": 1,
+  "files": 14,
+  "standalone": true
+}

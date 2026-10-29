@@ -1,0 +1,11 @@
+import {writeFile} from 'node:fs/promises';
+import {renderWorkspace} from '../examples/interface-craft/render.mjs';
+import {renderAvatarPage,renderAvatarStudies} from '../examples/interface-craft/avatar/study.mjs';
+import {renderStudies,imageSvg} from '../examples/interface-craft/studies.mjs';
+const base=new URL('../examples/interface-craft/',import.meta.url);
+await writeFile(new URL('index.html',base),renderWorkspace());
+await writeFile(new URL('studies.html',base),renderStudies());
+await writeFile(new URL('image-study.svg',base),imageSvg);
+await writeFile(new URL('avatars.html',base),renderAvatarPage());
+await writeFile(new URL('avatar-studies.html',base),renderAvatarStudies());
+console.log('Built standalone workspace and detail studies.');

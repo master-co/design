@@ -1,0 +1,56 @@
+[
+  {
+    "engine": "chromium",
+    "version": "153.0.8010.12",
+    "result": "pass",
+    "viewports": [
+      1440,
+      900,
+      390,
+      320
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "checks": [
+      "global totals",
+      "composed query/status",
+      "clear hidden selections",
+      "empty results",
+      "native keyboard focus",
+      "narrow navigation",
+      "touch emulation",
+      "reduced motion",
+      "no JavaScript",
+      "no page errors"
+    ]
+  },
+  {
+    "engine": "webkit",
+    "version": "26.6",
+    "result": "pass",
+    "viewports": [
+      1440,
+      900,
+      390,
+      320
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "checks": [
+      "global totals",
+      "composed query/status",
+      "clear hidden selections",
+      "empty results",
+      "native keyboard focus",
+      "narrow navigation",
+      "touch emulation",
+      "reduced motion",
+      "no JavaScript",
+      "no page errors"
+    ]
+  }
+]

@@ -1,0 +1,10 @@
+/* These same parts are used at native size in the final dashboard. */
+.article-finish-icon { flex-shrink: 0; fill: none; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; }
+.article-finish-split { display: flex; width: 212px; height: 34px; border: var(--article-border); border-radius: 10px; background: #fff; box-shadow: var(--article-inner-light), var(--article-contact-shadow); color: #555556; font-size: 11px; }
+.article-finish-date { display: flex; align-items: center; gap: 7px; padding: 0 11px; flex: 1; white-space: nowrap; }
+.article-finish-dropdown { position: relative; display: grid; place-items: center; width: 30px; flex-shrink: 0; }
+.article-finish-dropdown::before { content: ''; position: absolute; left: 0; top: 8px; bottom: 8px; width: 1px; border-radius: 1px; background: rgba(41,41,42,.09); box-shadow: .5px 0 1px rgba(255,255,255,.24); }
+.article-finish-progress { display: flex; align-items: center; gap: 10px; width: 158px; height: 24px; }
+.article-finish-track { display: block; flex-shrink: 0; width: 112px; height: 6px; padding: 1px; border-radius: 3px; background: #e9e9ea; box-shadow: inset 0 .5px 1px rgba(24,24,24,.065), var(--article-recess-light); }
+.article-finish-track i { display: block; height: 4px; border-radius: 2px; background: #929293; box-shadow: var(--article-fill-light); }
+.article-finish-percent { width: 36px; font: 10px 'IBM Plex Mono', monospace; font-variant-numeric: tabular-nums; text-align: right; color: #737374; }

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Harbor dispatch</title>
+    <style>
+      :root {
+        --ink: #124f59;
+        --paper: #f9f5e9;
+        --accent: #f6ba55;
+        --surface: #eee9da;
+        --line: #41717a;
+        --radius: 4px;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        padding: 30px;
+        background: var(--paper);
+        color: var(--ink);
+        font: 14px/1.5 system-ui;
+      }
+
+      main { max-width: 660px; margin: auto; }
+      h1 { font: 30px Georgia, serif; margin: 0 0 24px; }
+
+      .card {
+        padding: 18px;
+        border: 2px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--surface);
+        box-shadow: 0 2px 0 #124f591a;
+      }
+
+      .label {
+        display: block;
+        font-size: 11px;
+        line-height: 16px;
+        letter-spacing: .05em;
+      }
+
+      h2 { font: 24px Georgia, serif; margin: 4px 0 0; }
+      .details { display: grid; gap: 8px; margin: 12px 0 0; }
+
+      .row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) max-content;
+        align-items: baseline;
+        column-gap: 16px;
+      }
+
+      .row dd {
+        margin: 0;
+        font-weight: 700;
+        font-variant-numeric: tabular-nums;
+        text-align: end;
+      }
+
+      .actions {
+        display: inline-flex;
+        max-width: 100%;
+        margin-top: 16px;
+        border: 2px solid var(--line);
+        border-radius: var(--radius);
+        background: var(--paper);
+        vertical-align: top;
+      }
+
+      .actions button {
+        position: relative;
+        min-height: 37px;
+        padding: 8px 12px;
+        border: 0;
+        border-radius: 0;
+        color: var(--ink);
+        background: transparent;
+        font: inherit;
+        cursor: pointer;
+      }
+
+      .actions button:first-child { border-radius: 2px 0 0 2px; }
+      .actions button:last-child { border-radius: 0 2px 2px 0; }
+      .actions button + button { border-inline-start: 2px solid var(--line); }
+      .actions button[aria-pressed="true"] { background: var(--accent); }
+
+      .actions button[aria-pressed="true"]::after {
+        content: "";
+        position: absolute;
+        inset-inline: 12px;
+        bottom: 4px;
+        height: 2px;
+        background: currentColor;
+      }
+
+      @media (hover: hover) {
+        .actions button:hover { box-shadow: inset 0 0 0 1px var(--line); }
+      }
+
+      .actions button:active { box-shadow: inset 0 2px 0 #124f5930; }
+      .actions button:focus-visible {
+        z-index: 1;
+        outline: 2px solid var(--ink);
+        outline-offset: 3px;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px 16px;
+        margin-top: 18px;
+        font-size: 12px;
+        line-height: 18px;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .meta span { white-space: nowrap; }
+
+      @media (max-width: 440px) {
+        body { padding: 16px; }
+      }
+
+      @media (forced-colors: active) {
+        .actions button[aria-pressed="true"]::after { background: ButtonText; }
+        .actions button:focus-visible { outline-color: Highlight; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Harbor dispatch</h1>
+      <section class="card" aria-labelledby="route-title">
+        <span class="label">TODAY'S ROUTE</span>
+        <h2 id="route-title">North quay</h2>
+        <dl class="details">
+          <div class="row">
+            <dt>Dispatch window</dt>
+            <dd>08:30–10:00</dd>
+          </div>
+          <div class="row">
+            <dt>Parcels ready</dt>
+            <dd>18</dd>
+          </div>
+        </dl>
+        <div class="actions" role="group" aria-label="Dispatch view">
+          <button type="button" aria-pressed="true">Ready</button>
+          <button type="button" aria-pressed="false">In transit</button>
+        </div>
+      </section>
+      <div class="meta">
+        <span>Last check <time datetime="08:12">08:12</time></span>
+        <span>3 routes</span>
+        <span>Local workspace</span>
+      </div>
+    </main>
+    <script>
+      const viewButtons = document.querySelectorAll('.actions button');
+      viewButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          viewButtons.forEach(candidate => {
+            candidate.setAttribute('aria-pressed', String(candidate === button));
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

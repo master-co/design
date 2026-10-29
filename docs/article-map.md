@@ -1,0 +1,64 @@
+# Article companion
+
+The Traditional Chinese draft is **Beyond the AI look: interface details and craft**. Source baseline: `1aron/aron.tw`, commit `4733743`, `assets/posts/interface-craft/revision-v3/`. It is a local draft, not a claim of a published public URL. A developer with the article checkout can open its isolated preview at `http://localhost:4191/blog/interface-craft`.
+
+Every installed technique remains explained inside the skill. This map provides provenance and study IDs, not a required external dependency. The selected workspace example uses the article’s illustrative data and keeps its desktop geometry.
+
+| Original figure | Skill reference |
+| --- | --- |
+| 01-ring-width | [surfaces](../skills/master-design/references/surfaces.md) |
+| 02-opacity-compensation | [surfaces](../skills/master-design/references/surfaces.md) |
+| 03-directional-edge-light | [surfaces](../skills/master-design/references/surfaces.md) |
+| 04-directional-edge-dark | [surfaces](../skills/master-design/references/surfaces.md) |
+| 05-shadow-layers | [surfaces](../skills/master-design/references/surfaces.md) |
+| 06-dark-surface | [surfaces](../skills/master-design/references/surfaces.md) |
+| 07-surface-tones | [surfaces](../skills/master-design/references/surfaces.md) |
+| 08-eased-fade-light | [materials](../skills/master-design/references/materials.md) |
+| 09-eased-fade-dark | [materials](../skills/master-design/references/materials.md) |
+| 10-inset-spacing | [geometry](../skills/master-design/references/geometry.md) |
+| 11-nested-radii | [geometry](../skills/master-design/references/geometry.md) |
+| 12-continuous-corner-light | [geometry](../skills/master-design/references/geometry.md) |
+| 13-continuous-corner-dark | [geometry](../skills/master-design/references/geometry.md) |
+| 14-image-outline-light | [images](../skills/master-design/references/images.md) |
+| 15-image-outline-dark | [images](../skills/master-design/references/images.md) |
+| 16-heading-wrap | [typography](../skills/master-design/references/typography.md) |
+| 17-paragraph-wrap | [typography](../skills/master-design/references/typography.md) |
+| 18-tabular-numbers | [typography](../skills/master-design/references/typography.md) |
+| 19-reserved-width | [typography](../skills/master-design/references/typography.md) |
+| 20-numeric-columns | [typography](../skills/master-design/references/typography.md) |
+| 21-optical-centering | [typography](../skills/master-design/references/typography.md) |
+| 22-text-edges | [typography](../skills/master-design/references/typography.md) |
+| 23-icon-padding | [typography](../skills/master-design/references/typography.md) |
+| 24-icon-stroke | [typography](../skills/master-design/references/typography.md) |
+| 25-label-tracking | [typography](../skills/master-design/references/typography.md) |
+| 26-spacing-rhythm | [layout](../skills/master-design/references/layout.md) |
+| 27-spatial-grouping | [layout](../skills/master-design/references/layout.md) |
+| 28-segmented-control | [states](../skills/master-design/references/states.md) |
+| 29-shared-seam | [states](../skills/master-design/references/states.md) |
+| 30-pressed-state | [states](../skills/master-design/references/states.md) |
+| 31-recessed-track | [states](../skills/master-design/references/states.md) |
+| 32-hit-area | [states](../skills/master-design/references/states.md) |
+| 33-focus-indicator | [states](../skills/master-design/references/states.md) |
+| 34-subtle-glass | [materials](../skills/master-design/references/materials.md) |
+| 35-in-context | [layout](../skills/master-design/references/layout.md) |
+
+## Interaction studies
+
+| Study | Reference |
+| --- | --- |
+| Contextual icon fade | [Motion](../skills/master-design/references/motion.md) |
+| Mid-flight reversal | [Motion](../skills/master-design/references/motion.md) |
+
+V4 uses the local Master Design exports for selected plates and the full workspace. Changes and retained decisions are recorded in the article repository. Publishing that article and updating its public reading link remain separate operations.
+
+
+## Avatar integration in the Traditional Chinese v4 candidate
+
+The article inserts A1/A2/B1/B2 after original figure 15. The reading sequence now has 39 static figures and two interactions. Original 01–35 and A/B labels are retained so their source studies remain identifiable.
+
+| Additional figure | Topic |
+| --- | --- |
+| A1 / A2: spaced versus stacked | [Avatar stacking](../skills/master-design/references/avatar-stacks.md) |
+| B1 / B2: image inner stroke | [Avatar stacking](../skills/master-design/references/avatar-stacks.md) |
+
+The four images are shared with the standalone study. The complete workspace retains its D22/O5 owner groups; the concept comparison is not a claim about its historical layout.

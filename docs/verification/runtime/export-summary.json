@@ -1,0 +1,135 @@
+{
+  "date": "2026-10-30",
+  "skill": "master-design",
+  "skillVersion": "0.1.0",
+  "node": "v24.20.0",
+  "browser": {
+    "chromium": "153.0.8010.12"
+  },
+  "logicalCanvas": {
+    "width": 1440,
+    "height": 1000
+  },
+  "scale": 2,
+  "parameters": {
+    "ring": {
+      "spread": 0.5,
+      "alpha": 0.12
+    },
+    "near": {
+      "y": 1,
+      "blur": 2,
+      "spread": -1,
+      "alpha": 0.04
+    },
+    "ambient": {
+      "y": 3,
+      "blur": 8,
+      "spread": -3,
+      "alpha": 0.02
+    },
+    "image": {
+      "radius": 12,
+      "inwardOutline": 1,
+      "alpha": 0.1
+    },
+    "numeric": {
+      "font": "Geist",
+      "size": 23,
+      "tabular": true,
+      "kerning": "none",
+      "precision": 2
+    },
+    "dashboard": {
+      "outerRadius": 24,
+      "innerRadius": 16,
+      "inset": 8,
+      "navRow": 32,
+      "control": 34,
+      "sectionGap": 16,
+      "contentInset": 24,
+      "checkbox": {
+        "markSize": 11,
+        "radius": 3,
+        "desktopTarget": 32,
+        "mobileTarget": 44
+      },
+      "reportingPeriod": {
+        "width": 212,
+        "height": 34,
+        "radius": 10,
+        "days": 14
+      },
+      "tableColumns": [
+        4,
+        28,
+        17,
+        19,
+        7,
+        10,
+        15
+      ],
+      "avatars": {
+        "diameter": 22,
+        "overlap": 5,
+        "separator": 1.5,
+        "innerWidth": 0.5,
+        "innerAlpha": 0.06,
+        "hostToken": "--avatar-host-surface",
+        "order": "last-on-top"
+      }
+    }
+  },
+  "artifacts": [
+    {
+      "id": "05-shadow-layers",
+      "png": "artifacts/export/05-shadow-layers.png",
+      "webp": "artifacts/export/05-shadow-layers.webp",
+      "thumbnail": "artifacts/export/05-shadow-layers-thumb.webp",
+      "width": 2880,
+      "height": 2000,
+      "sha256": "be06c2d91e8fdac4d68a41e616bd66d3d27480cf50ce1fe9335ecb9b3b899407",
+      "pngSha256": "c879c8ef887abfe0fd8e11be77d592d07dc72aab207523150534c516bc2e6874"
+    },
+    {
+      "id": "14-image-outline-light",
+      "png": "artifacts/export/14-image-outline-light.png",
+      "webp": "artifacts/export/14-image-outline-light.webp",
+      "thumbnail": "artifacts/export/14-image-outline-light-thumb.webp",
+      "width": 2880,
+      "height": 2000,
+      "sha256": "99c4d927c5bccf00d7e84d63fc93a4ca4cf736e84fca1e9c1ace698a8f3c672e",
+      "pngSha256": "6c098fc78b9747791fba6b23ff68bc3825dec94cbd9fb2f0fd3984e2dd34df67"
+    },
+    {
+      "id": "15-image-outline-dark",
+      "png": "artifacts/export/15-image-outline-dark.png",
+      "webp": "artifacts/export/15-image-outline-dark.webp",
+      "thumbnail": "artifacts/export/15-image-outline-dark-thumb.webp",
+      "width": 2880,
+      "height": 2000,
+      "sha256": "53c34525e71b30869cff55a49f99462b63b3ab8ba3c33a91629cc27ad17fff18",
+      "pngSha256": "256c7d8f7260e3f5d17eb4df16b2266aca94938ffeb2ccc087b6dec0f7de0e42"
+    },
+    {
+      "id": "20-numeric-columns",
+      "png": "artifacts/export/20-numeric-columns.png",
+      "webp": "artifacts/export/20-numeric-columns.webp",
+      "thumbnail": "artifacts/export/20-numeric-columns-thumb.webp",
+      "width": 2880,
+      "height": 2000,
+      "sha256": "14ccf80e5bfb272bcf4a9a4afea37783f7dc9c959e41adb3f0a16a37ac2c6918",
+      "pngSha256": "4aca3a21c41a222742a692bf86aa00aeb9a720d287988a9f6bfbe618910891f6"
+    },
+    {
+      "id": "35-in-context",
+      "png": "artifacts/export/35-in-context.png",
+      "webp": "artifacts/export/35-in-context.webp",
+      "thumbnail": "artifacts/export/35-in-context-thumb.webp",
+      "width": 2880,
+      "height": 2000,
+      "sha256": "2aa43d0b3ecefd1d99ee9adfc359a8400616378d383076a9145a3563ed712363",
+      "pngSha256": "59ec9f484080ec5cbcfdff9ee12b5ada8481d58ea2ad04ccf47949fffb0b67c0"
+    }
+  ]
+}

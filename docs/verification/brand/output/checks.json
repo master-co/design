@@ -1,0 +1,345 @@
+{
+  "checks": [
+    {
+      "name": "chromium: initial selection and named group",
+      "passed": true
+    },
+    {
+      "name": "chromium: pointer switching, reversal, repeated input and stable bounds",
+      "passed": true
+    },
+    {
+      "name": "chromium: equal rendered digit widths in route values",
+      "passed": true
+    },
+    {
+      "name": "chromium: single divider and no transform while pressed",
+      "passed": true
+    },
+    {
+      "name": "chromium: keyboard focus, Space and Enter switching",
+      "passed": true
+    },
+    {
+      "name": "chromium: 320px layout without horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "chromium: 375px layout without horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "chromium: 440px layout without horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "chromium: 768px layout without horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "chromium: longer content and four-digit value at 320px",
+      "passed": true
+    },
+    {
+      "name": "chromium: reduced-motion switching",
+      "passed": true
+    },
+    {
+      "name": "chromium: selected cue and focus in forced colors",
+      "passed": true
+    },
+    {
+      "name": "chromium: touch switching and reversal at DPR 2",
+      "passed": true
+    },
+    {
+      "name": "chromium: readable initial route with JavaScript disabled",
+      "passed": true
+    },
+    {
+      "name": "webkit: native keyboard traversal matches baseline",
+      "passed": true
+    },
+    {
+      "name": "webkit: initial selection and named group",
+      "passed": true
+    },
+    {
+      "name": "webkit: pointer switching, reversal, repeated input and stable bounds",
+      "passed": true
+    },
+    {
+      "name": "webkit: equal rendered digit widths in route values",
+      "passed": true
+    },
+    {
+      "name": "webkit: single divider and no transform while pressed",
+      "passed": true
+    },
+    {
+      "name": "webkit: keyboard focus, Space and Enter switching",
+      "passed": true
+    },
+    {
+      "name": "webkit: 320px layout without horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "webkit: 375px layout without horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "webkit: 440px layout without horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "webkit: 768px layout without horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "webkit: longer content and four-digit value at 320px",
+      "passed": true
+    },
+    {
+      "name": "webkit: reduced-motion switching",
+      "passed": true
+    },
+    {
+      "name": "webkit: touch switching and reversal at DPR 2",
+      "passed": true
+    },
+    {
+      "name": "webkit: readable initial route with JavaScript disabled",
+      "passed": true
+    }
+  ],
+  "browsers": {
+    "chromium": "153.0.8010.12",
+    "webkit": "26.6"
+  },
+  "metrics": {
+    "chromium": {
+      "main": {
+        "x": 170,
+        "y": 30,
+        "width": 660,
+        "height": 301,
+        "font": "14px / 21px system-ui",
+        "border": "0px none rgb(18, 79, 89)",
+        "radius": "0px",
+        "shadow": "none"
+      },
+      "h1": {
+        "x": 170,
+        "y": 30,
+        "width": 660,
+        "height": 35,
+        "font": "30px Georgia, serif",
+        "border": "0px none rgb(18, 79, 89)",
+        "radius": "0px",
+        "shadow": "none"
+      },
+      ".card": {
+        "x": 170,
+        "y": 89,
+        "width": 660,
+        "height": 206,
+        "font": "14px / 21px system-ui",
+        "border": "2px solid rgb(65, 113, 122)",
+        "radius": "4px",
+        "shadow": "rgba(18, 79, 89, 0.1) 0px 2px 0px 0px"
+      },
+      ".row": {
+        "x": 190,
+        "y": 168,
+        "width": 620,
+        "height": 21,
+        "font": "14px / 21px system-ui",
+        "border": "0px none rgb(18, 79, 89)",
+        "radius": "0px",
+        "shadow": "none"
+      },
+      ".actions": {
+        "x": 190,
+        "y": 234,
+        "width": 150.671875,
+        "height": 41,
+        "font": "14px / 21px system-ui",
+        "border": "2px solid rgb(65, 113, 122)",
+        "radius": "4px",
+        "shadow": "none"
+      },
+      "button": {
+        "x": 192,
+        "y": 236,
+        "width": 64.125,
+        "height": 37,
+        "font": "14px / 21px system-ui",
+        "border": "0px none rgb(18, 79, 89)",
+        "radius": "2px 0px 0px 2px",
+        "shadow": "none"
+      },
+      ".meta": {
+        "x": 170,
+        "y": 313,
+        "width": 660,
+        "height": 18,
+        "font": "",
+        "border": "0px none rgb(18, 79, 89)",
+        "radius": "0px",
+        "shadow": "none"
+      }
+    },
+    "webkit": {
+      "main": {
+        "x": 170,
+        "y": 30,
+        "width": 660,
+        "height": 301,
+        "font": "14px / 21px system-ui",
+        "border": "0px none rgb(18, 79, 89)",
+        "radius": "0px",
+        "shadow": "none"
+      },
+      "h1": {
+        "x": 170,
+        "y": 30,
+        "width": 660,
+        "height": 35,
+        "font": "30px Georgia, serif",
+        "border": "0px none rgb(18, 79, 89)",
+        "radius": "0px",
+        "shadow": "none"
+      },
+      ".card": {
+        "x": 170,
+        "y": 89,
+        "width": 660,
+        "height": 206,
+        "font": "14px / 21px system-ui",
+        "border": "2px solid rgb(65, 113, 122)",
+        "radius": "4px",
+        "shadow": "rgba(18, 79, 89, 0.1) 0px 2px 0px 0px"
+      },
+      ".row": {
+        "x": 190,
+        "y": 168,
+        "width": 620,
+        "height": 21,
+        "font": "14px / 21px system-ui",
+        "border": "0px none rgb(18, 79, 89)",
+        "radius": "0px",
+        "shadow": "none"
+      },
+      ".actions": {
+        "x": 190,
+        "y": 234,
+        "width": 150.671875,
+        "height": 41,
+        "font": "14px / 21px system-ui",
+        "border": "2px solid rgb(65, 113, 122)",
+        "radius": "4px",
+        "shadow": "none"
+      },
+      "button": {
+        "x": 192,
+        "y": 236,
+        "width": 64.125,
+        "height": 37,
+        "font": "14px / 21px system-ui",
+        "border": "0px none rgb(18, 79, 89)",
+        "radius": "2px 0px 0px 2px",
+        "shadow": "none"
+      },
+      ".meta": {
+        "x": 170,
+        "y": 313,
+        "width": 660,
+        "height": 18,
+        "font": "",
+        "border": "0px none rgb(18, 79, 89)",
+        "radius": "0px",
+        "shadow": "none"
+      }
+    }
+  },
+  "fonts": {
+    "h1": [
+      {
+        "familyName": "Georgia",
+        "postScriptName": "Georgia",
+        "isCustomFont": false,
+        "glyphCount": 15
+      }
+    ],
+    "h2": [
+      {
+        "familyName": "Georgia",
+        "postScriptName": "Georgia",
+        "isCustomFont": false,
+        "glyphCount": 10
+      }
+    ],
+    "dt": [
+      {
+        "familyName": ".SF NS",
+        "postScriptName": ".SFNS-Regular",
+        "isCustomFont": false,
+        "glyphCount": 15
+      }
+    ],
+    "dd": [
+      {
+        "familyName": ".SF NS",
+        "postScriptName": ".SFNS-Bold",
+        "isCustomFont": false,
+        "glyphCount": 11
+      }
+    ],
+    "button": [
+      {
+        "familyName": ".SF NS",
+        "postScriptName": ".SFNS-Regular",
+        "isCustomFont": false,
+        "glyphCount": 5
+      }
+    ]
+  },
+  "digitWidths": {
+    "chromium": [
+      9.25,
+      9.25,
+      9.25,
+      9.25,
+      9.25,
+      9.25,
+      9.25,
+      9.25,
+      9.25,
+      9.25
+    ],
+    "webkit": [
+      9.25,
+      9.25,
+      9.25,
+      9.25,
+      9.25,
+      9.25,
+      9.25,
+      9.25,
+      9.25,
+      9.25
+    ]
+  },
+  "keyboardBaseline": {
+    "before": {
+      "tabTarget": "BODY",
+      "optionTabTarget": "Ready"
+    },
+    "work": {
+      "tabTarget": "BODY",
+      "optionTabTarget": "Ready"
+    }
+  },
+  "errors": []
+}

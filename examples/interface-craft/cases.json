@@ -1,0 +1,182 @@
+{
+  "source": {
+    "repository": "1aron/aron.tw",
+    "commit": "4733743",
+    "path": "assets/posts/interface-craft/revision-v3",
+    "status": "local-draft"
+  },
+  "figures": [
+    {
+      "id": "01-ring-width",
+      "topic": "surfaces"
+    },
+    {
+      "id": "02-opacity-compensation",
+      "topic": "surfaces"
+    },
+    {
+      "id": "03-directional-edge-light",
+      "topic": "surfaces"
+    },
+    {
+      "id": "04-directional-edge-dark",
+      "topic": "surfaces"
+    },
+    {
+      "id": "05-shadow-layers",
+      "topic": "surfaces"
+    },
+    {
+      "id": "06-dark-surface",
+      "topic": "surfaces"
+    },
+    {
+      "id": "07-surface-tones",
+      "topic": "surfaces"
+    },
+    {
+      "id": "08-eased-fade-light",
+      "topic": "materials"
+    },
+    {
+      "id": "09-eased-fade-dark",
+      "topic": "materials"
+    },
+    {
+      "id": "10-inset-spacing",
+      "topic": "geometry"
+    },
+    {
+      "id": "11-nested-radii",
+      "topic": "geometry"
+    },
+    {
+      "id": "12-continuous-corner-light",
+      "topic": "geometry"
+    },
+    {
+      "id": "13-continuous-corner-dark",
+      "topic": "geometry"
+    },
+    {
+      "id": "14-image-outline-light",
+      "topic": "images"
+    },
+    {
+      "id": "15-image-outline-dark",
+      "topic": "images"
+    },
+    {
+      "id": "16-heading-wrap",
+      "topic": "typography"
+    },
+    {
+      "id": "17-paragraph-wrap",
+      "topic": "typography"
+    },
+    {
+      "id": "18-tabular-numbers",
+      "topic": "typography"
+    },
+    {
+      "id": "19-reserved-width",
+      "topic": "typography"
+    },
+    {
+      "id": "20-numeric-columns",
+      "topic": "typography"
+    },
+    {
+      "id": "21-optical-centering",
+      "topic": "typography"
+    },
+    {
+      "id": "22-text-edges",
+      "topic": "typography"
+    },
+    {
+      "id": "23-icon-padding",
+      "topic": "typography"
+    },
+    {
+      "id": "24-icon-stroke",
+      "topic": "typography"
+    },
+    {
+      "id": "25-label-tracking",
+      "topic": "typography"
+    },
+    {
+      "id": "26-spacing-rhythm",
+      "topic": "layout"
+    },
+    {
+      "id": "27-spatial-grouping",
+      "topic": "layout"
+    },
+    {
+      "id": "28-segmented-control",
+      "topic": "states"
+    },
+    {
+      "id": "29-shared-seam",
+      "topic": "states"
+    },
+    {
+      "id": "30-pressed-state",
+      "topic": "states"
+    },
+    {
+      "id": "31-recessed-track",
+      "topic": "states"
+    },
+    {
+      "id": "32-hit-area",
+      "topic": "states"
+    },
+    {
+      "id": "33-focus-indicator",
+      "topic": "states"
+    },
+    {
+      "id": "34-subtle-glass",
+      "topic": "materials"
+    },
+    {
+      "id": "35-in-context",
+      "topic": "layout"
+    }
+  ],
+  "interactions": [
+    {
+      "id": "icons",
+      "topic": "motion"
+    },
+    {
+      "id": "retarget",
+      "topic": "motion"
+    }
+  ],
+  "supplementalFigures": [
+    {
+      "id": "A1",
+      "topic": "avatar-stacks",
+      "articleId": "avatar-a1"
+    },
+    {
+      "id": "A2",
+      "topic": "avatar-stacks",
+      "articleId": "avatar-a2"
+    },
+    {
+      "id": "B1",
+      "topic": "avatar-stacks",
+      "articleId": "avatar-b1"
+    },
+    {
+      "id": "B2",
+      "topic": "avatar-stacks",
+      "articleId": "avatar-b2"
+    }
+  ]
+}

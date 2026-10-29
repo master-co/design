@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library controls</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root {
+      color-scheme: light;
+      font-family: Arial, sans-serif;
+      color: #29292a;
+      background: #f7f7f7;
+    }
+    body { margin: 0; padding: 40px 24px; font: 14px/1.5 Arial, sans-serif; }
+    main { max-inline-size: 600px; margin-inline: auto; }
+    h1 { margin: 0 0 20px; font-size: 24px; line-height: 1.25; font-weight: 600; text-wrap: balance; }
+    .card {
+      padding: 24px;
+      border-radius: 24px;
+      background: #fcfcfc;
+      box-shadow: 0 0 0 .5px rgb(0 0 0 / 12%), 0 1px 2px -1px rgb(0 0 0 / 4%), 0 3px 8px -3px rgb(0 0 0 / 2%);
+    }
+    .number-row { display: flex; align-items: baseline; gap: 8px; margin: 0 0 24px; }
+    .number {
+      display: inline-block;
+      inline-size: 5ch;
+      flex: none;
+      font-size: 32px;
+      font-weight: 500;
+      line-height: 1.2;
+      font-variant-numeric: tabular-nums;
+      font-kerning: none;
+    }
+    .number-label { color: #626265; }
+    .controls { display: flex; flex-wrap: wrap; gap: 8px; }
+    button {
+      min-block-size: 44px;
+      padding: 10px 16px;
+      border: 1px solid #909094;
+      border-radius: 10px;
+      background: #fcfcfc;
+      color: inherit;
+      font: 14px/22px Arial, sans-serif;
+      text-wrap: balance;
+      overflow-wrap: anywhere;
+      cursor: pointer;
+      transition: background-color 150ms ease-out, border-color 150ms ease-out, box-shadow 150ms ease-out;
+      -webkit-tap-highlight-color: transparent;
+    }
+    #toggle { min-inline-size: 128px; }
+    button[aria-expanded="true"] { border-color: #77777b; background: #e9e9eb; }
+    @media (hover: hover) {
+      button:enabled:hover { background: #f1f1f2; border-color: #77777b; }
+      button[aria-expanded="true"]:hover { background: #e2e2e5; }
+    }
+    button:enabled:active { background: #dedee1; border-color: #69696d; box-shadow: inset 0 1px 2px rgb(0 0 0 / 8%); }
+    button:focus-visible { outline: 2px solid #525258; outline-offset: 3px; }
+    button:disabled { color: #77777b; background: #f1f1f2; border-color: #c8c8cb; cursor: default; }
+    [hidden] { display: none !important; }
+    .viewport { display: grid; grid-template-rows: 1fr; }
+    .panel-clip { min-block-size: 0; overflow: hidden; }
+    .panel {
+      margin-block-start: 16px;
+      padding: 16px;
+      border-radius: 16px;
+      background: #f1f1f2;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .panel-title { margin: 0 0 4px; font-weight: 600; }
+    .panel-copy { margin: 0; color: #626265; }
+    .card[data-open="false"] .viewport { grid-template-rows: 0fr; }
+    .card[data-open="false"] .panel { opacity: 0; transform: translateY(-6px); }
+    .is-ready .viewport { transition: grid-template-rows 200ms cubic-bezier(.2, 0, 0, 1); }
+    .is-ready .panel { transition: opacity 150ms ease-out, transform 200ms cubic-bezier(.2, 0, 0, 1); }
+    .fallback { margin: 16px 0 0; color: #626265; }
+    @media (max-width: 400px) {
+      body { padding: 24px 16px; }
+      .card { padding: 20px; }
+      .controls button { flex: 1 1 100px; min-inline-size: 0; }
+      #toggle { min-inline-size: 0; }
+    }
+    @media (max-width: 300px) {
+      .controls button { flex-basis: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      button, .is-ready .viewport, .is-ready .panel { transition: none; }
+      .card[data-open="false"] .panel { transform: none; }
+    }
+    @media (forced-colors: active) {
+      .card { outline: 1px solid CanvasText; box-shadow: none; }
+      button { border-color: ButtonText; }
+      button[aria-expanded="true"] { border-color: Highlight; outline: 1px solid Highlight; }
+      button:focus-visible { outline: 2px solid Highlight; outline-offset: 3px; }
+      button:disabled { border-color: GrayText; color: GrayText; }
+      .panel { border: 1px solid CanvasText; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Interface library</h1>
+    <section class="card" data-open="true" aria-label="Library controls">
+      <div class="number-row">
+        <output id="elapsed" class="number" aria-live="polite" aria-atomic="true" aria-describedby="elapsed-label">11:11</output>
+        <span id="elapsed-label" class="number-label">elapsed</span>
+      </div>
+      <div class="controls">
+        <button id="value" type="button" disabled>Next value</button>
+        <button id="toggle" type="button" aria-expanded="true" aria-controls="panel" hidden>Close details</button>
+      </div>
+      <div class="viewport">
+        <div class="panel-clip">
+          <div id="panel" class="panel" role="region" aria-labelledby="panel-title">
+            <p id="panel-title" class="panel-title">Project brief</p>
+            <p class="panel-copy">Layout review</p>
+          </div>
+        </div>
+      </div>
+      <noscript><p class="fallback">Enable JavaScript to change the elapsed value.</p></noscript>
+    </section>
+  </main>
+  <script>
+    const values = ['11:11', '08:08', '12:34'];
+    const card = document.querySelector('.card');
+    const valueButton = document.querySelector('#value');
+    const toggleButton = document.querySelector('#toggle');
+    const elapsed = document.querySelector('#elapsed');
+    const panel = document.querySelector('#panel');
+    let tick = 0;
+    let open = false;
+
+    function renderDetails() {
+      card.dataset.open = String(open);
+      toggleButton.setAttribute('aria-expanded', String(open));
+      toggleButton.textContent = open ? 'Close details' : 'Open details';
+      panel.inert = !open;
+      panel.setAttribute('aria-hidden', String(!open));
+    }
+
+    renderDetails();
+    valueButton.disabled = false;
+    toggleButton.hidden = false;
+    valueButton.addEventListener('click', () => {
+      tick = (tick + 1) % values.length;
+      elapsed.value = values[tick];
+    });
+    toggleButton.addEventListener('click', () => {
+      open = !open;
+      renderDetails();
+    });
+    // Enable transitions after the initial closed state has painted.
+    requestAnimationFrame(() => requestAnimationFrame(() => card.classList.add('is-ready')));
+  </script>
+</body>
+</html>

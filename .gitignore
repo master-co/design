@@ -1,0 +1,8 @@
+node_modules/
+artifacts/
+examples/interface-craft/dist/
+examples/interface-craft/index.html
+examples/interface-craft/studies.html
+.test-install/
+examples/interface-craft/avatars.html
+examples/interface-craft/avatar-studies.html
