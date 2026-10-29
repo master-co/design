@@ -12,6 +12,8 @@ Use tabular figures for changing values and aligned numeric columns when support
 
 Tabular advances do not necessarily neutralize numeric kerning. If real strings still drift, measure the punctuation and pairs; consider disabling kerning only on that numeric run, then recheck the actual font. Do not disable kerning across ordinary text.
 
+Rendering choices can also affect final advances after kerning is disabled. When actual equal-precision values still drift, compare `text-rendering: geometricPrecision` locally on the numeric run and remeasure both themes and target engines. It resolved a native discrepancy in the Geist specimen; it is not a global font-smoothing rule or a guarantee for another font. If the project's rendering still cannot keep the required alignment, position the integer and fractional parts explicitly.
+
 Equal digit width does not reserve space for more digits. Reserve expected value width or a stable grid column; include signs, grouping characters and units in the maximum-format check.
 
 End alignment plus equal precision aligns decimal points. Mixed precision requires separate integer/decimal positioning or another explicit mechanism. Independent currency/unit columns can keep a stable gap. Use project locale formatting rather than assuming English punctuation.
