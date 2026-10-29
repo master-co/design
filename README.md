@@ -6,8 +6,6 @@ Use one entry, **`$master-design`**. It follows the project's framework, brand, 
 
 ## Install
 
-After this version is pushed to the repository:
-
 ```sh
 npx skills add master-co/design --skill master-design
 ```
@@ -41,9 +39,9 @@ The skill covers surfaces, geometry, images, typography, layout, states, motion 
 
 ## Companion study
 
-[Interface craft](docs/article-map.md) connects every topic to 35 baseline diagrams, four avatar studies and two interaction studies. The Traditional Chinese article is still a local draft. Its complete history and original illustrations remain in the article repository.
+[Interface craft](docs/article-map.md) connects every topic to 35 baseline diagrams, four avatar studies and two interaction studies. The five-language [companion article](https://aron.tw/blog/interface-craft) explains the mechanisms with original illustrations. Its complete history and original illustrations remain in the article repository.
 
-The standalone [workspace example](examples/interface-craft/README.md) reuses its coherent illustrative data and desktop geometry, with real project search, filtering, selection and responsive navigation. It contains no backend. The [avatar-stack study](examples/interface-craft/avatar/README.md) adds four original single-variable diagrams and a photo/initials participant example; it stays outside the article’s 35-figure sequence.
+The standalone [workspace example](examples/interface-craft/README.md) reuses its coherent illustrative data and desktop geometry, with real project search, filtering, selection and responsive navigation. It contains no backend. The [avatar-stack study](examples/interface-craft/avatar/README.md) adds four original single-variable diagrams and a photo/initials participant example; the article includes these four studies alongside its 35 baseline diagrams.
 
 ## Develop
 
@@ -70,6 +68,10 @@ bun run capture:avatars
 ```
 
 Install the Playwright Chromium and WebKit binaries before browser checks if needed. Exports, hashes and screenshots are written to ignored `artifacts/`. See [verification](docs/verification.md) for methods and actual results.
+
+## Contribute
+
+Read the [contribution guide](CONTRIBUTING.md) for scope, evidence and checks. Use the [issue forms](https://github.com/master-co/design/issues/new/choose) for a reproducible problem, craft proposal or documentation question; focused fixes can go straight to a pull request. See the [changelog](CHANGELOG.md) for the current version.
 
 ## License and sources
 

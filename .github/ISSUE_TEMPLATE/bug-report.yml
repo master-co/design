@@ -1,0 +1,50 @@
+name: Bug report
+description: Report a reproducible skill, installation or example failure.
+title: "Bug: "
+body:
+  - type: markdown
+    attributes:
+      value: Describe one reproducible failure. A small case is more useful than a broad request to make an interface better.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Affected area
+      options:
+        - Installed skill guidance
+        - Installation or packaging
+        - Workspace example
+        - Avatar example
+        - Repository tooling
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Include the skill/repository revision, or say unknown.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Include the task or steps, relevant starting code and the smallest example that reveals the failure. Remove private data.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Expected and observed behavior
+      description: Explain the difference. For a visual problem, name the edge, alignment, state or relationship that fails.
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Relevant environment
+      description: Agent/editor and framework; for rendering, browser version, OS, viewport, theme, actual font, pixel density and zoom when known.
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence and checks
+      description: Add matched screenshots, logs or measurements if available. Say which checks you ran and what remains unverified.

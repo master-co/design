@@ -1,0 +1,35 @@
+name: Craft proposal
+description: Propose a scoped mechanism, reference or original comparison.
+title: "Craft: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Visible problem or missing capability
+      description: Name a concrete relationship. Explain what existing guidance cannot address; a palette or parameter variation alone may not need a new topic.
+    validations:
+      required: true
+  - type: textarea
+    id: mechanism
+    attributes:
+      label: Proposed mechanism and scope
+      description: Explain how it works, where it applies, where it fails, and whether it is general guidance or an opt-in preference.
+    validations:
+      required: true
+  - type: textarea
+    id: comparison
+    attributes:
+      label: Reproduction or comparison plan
+      description: Describe the original component, the single changed variable and the conditions held fixed. A working reproduction is welcome but not required to begin discussion.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources and evidence
+      description: Link primary explanations or original code when available. Separate explicit source claims, observable effects and your own deductions; note licensing for proposed assets.
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification and tradeoffs
+      description: Relevant themes, states, browsers, scales, content, accessibility and fallback conditions. State unknowns rather than assuming results.

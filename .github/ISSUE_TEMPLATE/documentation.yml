@@ -1,0 +1,23 @@
+name: Documentation or usage question
+description: Clarify instructions, correct documentation or ask about a supported task.
+title: "Docs: "
+body:
+  - type: input
+    id: location
+    attributes:
+      label: Reference or task
+      description: Link a file or describe the task you are trying to complete.
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: What is unclear or incorrect?
+      description: Include the relevant wording and what you need to understand or correct.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested clarification
+      description: Optional replacement wording, example or supporting source.

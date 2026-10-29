@@ -1,6 +1,6 @@
 # Article companion
 
-The Traditional Chinese draft is **Beyond the AI look: interface details and craft**. Source baseline: `1aron/aron.tw`, commit `4733743`, `assets/posts/interface-craft/revision-v3/`. It is a local draft, not a claim of a published public URL. A developer with the article checkout can open its isolated preview at `http://localhost:4191/blog/interface-craft`.
+The companion article is **Beyond the AI Look: The Details of Interface Craft**, available in [Traditional Chinese](https://aron.tw/blog/interface-craft), [English](https://aron.tw/en/blog/interface-craft), [Japanese](https://aron.tw/ja/blog/interface-craft), [Korean](https://aron.tw/ko/blog/interface-craft) and [Simplified Chinese](https://aron.tw/zh-cn/blog/interface-craft). Source baseline: `1aron/aron.tw`, commit `4733743`, `assets/posts/interface-craft/revision-v3/`. The reviewed v4 source is recorded by article commit `8eae607`; publication integrates all five editions under `interface-craft` while retaining the older section anchors.
 
 Every installed technique remains explained inside the skill. This map provides provenance and study IDs, not a required external dependency. The selected workspace example uses the article’s illustrative data and keeps its desktop geometry.
 
@@ -49,10 +49,10 @@ Every installed technique remains explained inside the skill. This map provides 
 | Contextual icon fade | [Motion](../skills/master-design/references/motion.md) |
 | Mid-flight reversal | [Motion](../skills/master-design/references/motion.md) |
 
-V4 uses the local Master Design exports for selected plates and the full workspace. Changes and retained decisions are recorded in the article repository. Publishing that article and updating its public reading link remain separate operations.
+V4 uses the local Master Design exports for selected plates and the full workspace. Changes and retained decisions are recorded in the article repository. The public reading links above use the integrated slug; the installed skill remains independent of the article.
 
 
-## Avatar integration in the Traditional Chinese v4 candidate
+## Avatar studies in the article
 
 The article inserts A1/A2/B1/B2 after original figure 15. The reading sequence now has 39 static figures and two interactions. Original 01–35 and A/B labels are retained so their source studies remain identifiable.
 
