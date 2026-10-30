@@ -39,9 +39,11 @@ The skill covers surfaces, geometry, images, typography, layout, states, motion 
 
 ## Companion study
 
-[Interface craft](docs/article-map.md) connects every topic to 35 baseline diagrams, four avatar studies and two interaction studies. The five-language [companion article](https://aron.tw/blog/interface-craft) explains the mechanisms with original illustrations. Its complete history and original illustrations remain in the article repository.
+[Interface craft](docs/article-map.md) connects every topic to 35 baseline diagrams, four avatar studies, six typography/layout studies and two interaction studies. The five-language [companion article](https://aron.tw/blog/interface-craft) explains the mechanisms with original illustrations. Its complete history and original illustrations remain in the article repository.
 
 The standalone [workspace example](examples/interface-craft/README.md) reuses its coherent illustrative data and desktop geometry, with real project search, filtering, selection and responsive navigation. It contains no backend. The [avatar-stack study](examples/interface-craft/avatar/README.md) adds four original single-variable diagrams and a photo/initials participant example; the article includes these four studies alongside its 35 baseline diagrams.
+
+The [type and row study](examples/interface-craft/typography-layout/README.md) adds five-language samples, real controls and six shared CJK/row diagrams. Its reading-controls section applies the aron.tw integration findings to heading targets, wrapping result arrows and touch-visible copy. It preserves the existing workspace.
 
 ## Develop
 
@@ -65,6 +67,9 @@ bun run test:native
 bun run test:forward
 bun run capture
 bun run capture:avatars
+bun run test:typography
+bun run test:reading
+bun run capture:typography
 ```
 
 Install the Playwright Chromium and WebKit binaries before browser checks if needed. Exports, hashes and screenshots are written to ignored `artifacts/`. See [verification](docs/verification.md) for methods and actual results.

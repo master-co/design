@@ -7,7 +7,7 @@
     "node": "24.x"
   },
   "scripts": {
-    "build": "bun build examples/interface-craft/app.ts examples/interface-craft/avatar/client.ts --root examples/interface-craft --target browser --outdir examples/interface-craft/dist && node scripts/build.mjs",
+    "build": "bun build examples/interface-craft/app.ts examples/interface-craft/avatar/client.ts examples/interface-craft/typography-layout/client.ts --root examples/interface-craft --target browser --outdir examples/interface-craft/dist && node scripts/build.mjs",
     "demo": "node scripts/serve.mjs",
     "check": "node scripts/check.mjs && tsc --noEmit && node --test tests/*.test.mjs",
     "capture": "node scripts/capture.mjs",
@@ -17,7 +17,10 @@
     "test:forward": "node docs/verification/brand/output/verify.mjs && node docs/verification/aron/output/verify.mjs",
     "test:dashboard": "node scripts/dashboard-check.mjs",
     "capture:avatars": "node scripts/avatar-capture.mjs",
-    "test:avatars": "node scripts/avatar-check.mjs"
+    "test:avatars": "node scripts/avatar-check.mjs",
+    "capture:typography": "node scripts/typography-capture.mjs",
+    "test:typography": "node scripts/typography-check.mjs",
+    "test:reading": "node scripts/reading-controls-check.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",

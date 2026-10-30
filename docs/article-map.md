@@ -54,7 +54,7 @@ V4 uses the local Master Design exports for selected plates and the full workspa
 
 ## Avatar studies in the article
 
-The article inserts A1/A2/B1/B2 after original figure 15. The reading sequence now has 39 static figures and two interactions. Original 01–35 and A/B labels are retained so their source studies remain identifiable.
+The article inserts A1/A2/B1/B2 after original figure 15. The v4 reading sequence has 39 static figures and two interactions. Original 01–35 and A/B labels are retained so their source studies remain identifiable.
 
 | Additional figure | Topic |
 | --- | --- |
@@ -62,3 +62,9 @@ The article inserts A1/A2/B1/B2 after original figure 15. The reading sequence n
 | B1 / B2: image inner stroke | [Avatar stacking](../skills/master-design/references/avatar-stacks.md) |
 
 The four images are shared with the standalone study. The complete workspace retains its D22/O5 owner groups; the concept comparison is not a claim about its historical layout.
+
+## Typography and mixed-content rows
+
+The current article adds C1/C2/C3 and R1/R2/R3 for 45 static figures in total. Original 01–35 and avatar A/B IDs remain stable. C1–C3 map to [typography](../skills/master-design/references/typography.md); R1–R3 map to [layout](../skills/master-design/references/layout.md). The [shared study](../examples/interface-craft/typography-layout/README.md) supplies diagrams and the portable interactive page. Export provenance stays with the article materials; verification is [recorded separately](verification/typography-layout.md).
+
+The later site-wide application at `1aron/aron.tw` commit `ac14119` returned [reading-control findings](verification/aron-site-2026-10-30.md) to the skill and the same live study. It adds no article figure IDs or replacements for the six diagrams.

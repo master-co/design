@@ -13,3 +13,5 @@ Hold distance, duration and easing constant in comparisons. Check a controlled i
 Staged first entrances may group heading, copy and actions. Exits usually need less travel and attention. Do not stagger routine updates. Name changing properties instead of `all`; add compositing hints only after observing a need.
 
 Honor reduced motion by removing unnecessary travel, scale and blur while retaining state and a static/opacity cue. Test initial render, keyboard, touch, rapid changes and disabled activation. Theme swaps should not accidentally trigger unrelated page-wide transitions.
+
+Disabling transition or animation alone can leave an immediate hover transform. Inspect the resulting state too: suppress unnecessary arrow travel or image scale while preserving a meaningful resting direction and non-motion feedback.

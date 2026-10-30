@@ -1,0 +1,288 @@
+{
+  "date": "2026-10-30",
+  "method": "Real DOM bounds and browser-rendered local fonts. Text-size control is not OS/browser zoom; touch and device density are emulated.",
+  "results": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "metrics": {
+        "rows": [
+          {
+            "mode": "normal",
+            "height": 36,
+            "target": 36,
+            "targetTop": 0
+          },
+          {
+            "mode": "compensated",
+            "height": 24,
+            "target": 36,
+            "targetTop": -6
+          },
+          {
+            "mode": "translated",
+            "height": 36,
+            "target": 36,
+            "targetTop": -6
+          }
+        ],
+        "tables": [
+          52,
+          40
+        ],
+        "inline": [
+          60,
+          48
+        ],
+        "support": {
+          "autospace": true,
+          "punctuation": true,
+          "ideographic": false
+        }
+      },
+      "platforms": [
+        {
+          "locale": "zh-TW",
+          "fonts": [
+            {
+              "familyName": "Noto Sans TC Thin",
+              "postScriptName": "NotoSansTC-Thin_Regular",
+              "isCustomFont": true,
+              "glyphCount": 2
+            },
+            {
+              "familyName": "Geist",
+              "postScriptName": "Geist-Regular",
+              "isCustomFont": true,
+              "glyphCount": 6
+            }
+          ]
+        },
+        {
+          "locale": "en",
+          "fonts": [
+            {
+              "familyName": "Geist",
+              "postScriptName": "Geist-Regular",
+              "isCustomFont": true,
+              "glyphCount": 8
+            }
+          ]
+        },
+        {
+          "locale": "ja",
+          "fonts": [
+            {
+              "familyName": "Noto Sans JP Thin",
+              "postScriptName": "NotoSansJP-Thin_Regular",
+              "isCustomFont": true,
+              "glyphCount": 4
+            },
+            {
+              "familyName": "Geist",
+              "postScriptName": "Geist-Regular",
+              "isCustomFont": true,
+              "glyphCount": 7
+            }
+          ]
+        },
+        {
+          "locale": "ko",
+          "fonts": [
+            {
+              "familyName": "Noto Sans KR Thin",
+              "postScriptName": "NotoSansKR-Thin_Regular",
+              "isCustomFont": true,
+              "glyphCount": 2
+            },
+            {
+              "familyName": "Geist",
+              "postScriptName": "Geist-Regular",
+              "isCustomFont": true,
+              "glyphCount": 6
+            }
+          ]
+        },
+        {
+          "locale": "zh-CN",
+          "fonts": [
+            {
+              "familyName": "Noto Sans SC Thin",
+              "postScriptName": "NotoSansSC-Thin_Regular",
+              "isCustomFont": true,
+              "glyphCount": 2
+            },
+            {
+              "familyName": "Geist",
+              "postScriptName": "Geist-Regular",
+              "isCustomFont": true,
+              "glyphCount": 6
+            }
+          ]
+        }
+      ],
+      "comparisons": {
+        "spacing": [
+          274.75,
+          288.75,
+          419.171875,
+          391.171875
+        ],
+        "breaks": [
+          {
+            "lang": "zh-TW",
+            "lines": [
+              "請先確認這個專案Interfac",
+              "eCraft的設定，再繼續編",
+              "輯。"
+            ]
+          },
+          {
+            "lang": "zh-TW",
+            "lines": [
+              "請先確認這個專案",
+              "InterfaceCraft的設定，再",
+              "繼續編輯。"
+            ]
+          },
+          {
+            "lang": "ja",
+            "lines": [
+              "小さなアイコンサイズをチ",
+              "ェックし、操作と文字の関",
+              "係を整えます。"
+            ]
+          },
+          {
+            "lang": "ja",
+            "lines": [
+              "小さなアイコンサイズを",
+              "チェックし、操作と文字の",
+              "関係を整えます。"
+            ]
+          },
+          {
+            "lang": "ko",
+            "lines": [
+              "인터페이스 설계는 글자와 아",
+              "이콘 그리고 조작 요소 사이",
+              "의 관계를 다듬는 일입니다."
+            ]
+          },
+          {
+            "lang": "ko",
+            "lines": [
+              "인터페이스 설계는 글자와 ",
+              "아이콘 그리고 조작 요소 ",
+              "사이의 관계를 다듬는 ",
+              "일입니다."
+            ]
+          }
+        ]
+      },
+      "coverage": "5 locales × 3 widths × 2 themes × 2 text sizes; keyboard, hover, native control input, touch emulation, no JavaScript",
+      "result": "pass"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.6",
+      "metrics": {
+        "rows": [
+          {
+            "mode": "normal",
+            "height": 36,
+            "target": 36,
+            "targetTop": 0
+          },
+          {
+            "mode": "compensated",
+            "height": 24,
+            "target": 36,
+            "targetTop": -6
+          },
+          {
+            "mode": "translated",
+            "height": 36,
+            "target": 36,
+            "targetTop": -6
+          }
+        ],
+        "tables": [
+          52,
+          40
+        ],
+        "inline": [
+          60,
+          48
+        ],
+        "support": {
+          "autospace": true,
+          "punctuation": false,
+          "ideographic": true
+        }
+      },
+      "platforms": [],
+      "comparisons": {
+        "spacing": [
+          274.7359924316406,
+          288.7359619140625,
+          420,
+          420
+        ],
+        "breaks": [
+          {
+            "lang": "zh-TW",
+            "lines": [
+              "請先確認這個專案Interfac",
+              "eCraft的設定，再繼續編",
+              "輯。"
+            ]
+          },
+          {
+            "lang": "zh-TW",
+            "lines": [
+              "請先確認這個專案",
+              "InterfaceCraft的設定，再",
+              "繼續編輯。"
+            ]
+          },
+          {
+            "lang": "ja",
+            "lines": [
+              "小さなアイコンサイズをチ",
+              "ェックし、操作と文字の関",
+              "係を整えます。"
+            ]
+          },
+          {
+            "lang": "ja",
+            "lines": [
+              "小さなアイコンサイズを",
+              "チェックし、操作と文字の",
+              "関係を整えます。"
+            ]
+          },
+          {
+            "lang": "ko",
+            "lines": [
+              "인터페이스 설계는 글자와 아",
+              "이콘 그리고 조작 요소 사이",
+              "의 관계를 다듬는 일입니다."
+            ]
+          },
+          {
+            "lang": "ko",
+            "lines": [
+              "인터페이스 설계는 글자와 ",
+              "아이콘 그리고 조작 요소 ",
+              "사이의 관계를 다듬는 ",
+              "일입니다."
+            ]
+          }
+        ]
+      },
+      "coverage": "5 locales × 3 widths × 2 themes × 2 text sizes; keyboard, hover, native control input, touch emulation, no JavaScript",
+      "result": "pass"
+    }
+  ]
+}

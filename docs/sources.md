@@ -22,3 +22,12 @@ Aron preferences are explicitly selected taste, with contextual starting values.
 - [Primer AvatarStack](https://primer.style/product/components/avatar-stack/): documents a space-constrained inline stack and distinguishes its variants. Its API, hover spread and example assets are not copied into this implementation.
 
 The new rules, diagrams, code and fictional portraits are original. Surface separation, image inset and geometry are explicitly distinct. The D32/O8/G2 study, four-slot capacity and D22 dashboard treatment are author-selected specimens. Image generation prompts and original/derived hashes are preserved in `assets/avatars/`; no model version is invented. Browser measurements, derived extents and visual judgments remain separate.
+
+## CJK and mixed-content row research — 2026-10-30
+
+- [Chinese layout requirements](https://www.w3.org/TR/clreq/), [Japanese layout requirements](https://www.w3.org/TR/jlreq/) and [Korean layout requirements](https://www.w3.org/TR/klreq/): frames/faces, regional glyphs, punctuation and language-specific line breaking.
+- [CSS Text 3](https://www.w3.org/TR/css-text-3/) and [CSS Text 4](https://www.w3.org/TR/css-text-4/): wrapping, script spacing and punctuation-space trimming; draft syntax is distinct from engine support.
+- [CSS Inline Layout](https://drafts.csswg.org/css-inline-3/), [Flexbox sizing](https://www.w3.org/TR/css-flexbox-1/#cross-sizing), [native table sizing](https://www.w3.org/TR/CSS2/tables.html#height-layout), and [transforms](https://www.w3.org/TR/css-transforms-1/#transform-rendering): separate inline contributions, flex footprints, cell padding and visual offsets.
+- [Radix ghost button](https://www.radix-ui.com/themes/docs/components/button#ghost), [MUI IconButton edge](https://mui.com/material-ui/api/icon-button/) and [Chakra Bleed](https://chakra-ui.com/docs/components/bleed): evidence that local negative-margin/padding compensation and controlled extension are established patterns. Their components and code are not copied.
+
+The study uses original rendering code, the existing fictional portraits, and pinned first-party Noto font imports with original OFL notices. Numeric values are specimens, not universal rules. The installed skill retains its own explanation without requiring the article or demo.

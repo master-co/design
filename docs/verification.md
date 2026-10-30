@@ -58,3 +58,7 @@ Fresh Linux Chromium/WebKit at 1×/2×/3×/1.25×/1.5× passed all ten combinati
 The dashboard export hash did not change. The article retains its approved, versioned v4 raster artwork and browser export; the updated repository study records the additional cross-platform rendering choice. Browser emulation still does not substitute for physical-device or screen-reader sessions.
 
 The installed Typography reference includes this measured condition and a scoped comparison path. It keeps project fonts and rendering choices under project control; explicit integer/fractional positioning remains available when equal-precision values cannot be kept aligned. Packaging and temporary project installation were rechecked after the wording change.
+
+## aron.tw application feedback — 2026-10-30
+
+The [application record](verification/aron-site-2026-10-30.md) separates the site's production verification from the portable reading-controls specimen. It records the existing CJK/row work retained here, the additional heading/arrow/touch/motion guidance, two-engine checks and their limits. Run `bun run test:reading` for the new live section; the six original typography/layout boards and article artwork remain separate.

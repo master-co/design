@@ -19,6 +19,8 @@ jobs:
       - run: bun run test:install
       - run: bunx playwright install --with-deps chromium webkit
       - run: bun run test:avatars
+      - run: bun run test:typography
+      - run: bun run test:reading
       - run: bun run test:dashboard
       - run: bun run test:browser
       - run: bun run test:native

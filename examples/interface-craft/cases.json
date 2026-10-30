@@ -177,6 +177,36 @@
       "id": "B2",
       "topic": "avatar-stacks",
       "articleId": "avatar-b2"
+    },
+    {
+      "id": "C1",
+      "topic": "typography",
+      "articleId": "typography-layout-c1"
+    },
+    {
+      "id": "C2",
+      "topic": "typography",
+      "articleId": "typography-layout-c2"
+    },
+    {
+      "id": "C3",
+      "topic": "typography",
+      "articleId": "typography-layout-c3"
+    },
+    {
+      "id": "R1",
+      "topic": "layout",
+      "articleId": "typography-layout-r1"
+    },
+    {
+      "id": "R2",
+      "topic": "layout",
+      "articleId": "typography-layout-r2"
+    },
+    {
+      "id": "R3",
+      "topic": "layout",
+      "articleId": "typography-layout-r3"
     }
   ]
 }

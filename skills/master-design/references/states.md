@@ -14,4 +14,8 @@ When replacing a drawn control with a real input, button or link, inspect the wi
 
 Separate visible glyph size from hit area. A 16px glyph inside a 44px target is one specimen; check neighboring targets for overlap. Use an accessible name and native control or established equivalent. Growing the target should not move the visible mark: preserve its center with explicit geometry, and verify actual bounds because flex shrink can silently reduce a declared target.
 
+When local margins reduce the [row footprint](layout.md#mixed-content-rows), the control's border box and target can still extend outside it. Inspect the full clickable bounds and every adjacent row, not just the visible glyph. Keep hover and focus unobstructed; increase row spacing or density size when there is insufficient room.
+
 Focus needs independent strength and must remain identifiable against its surroundings, rather than inheriting the decorative hairline. Check keyboard movement, activation, clipping, disabled state and forced colors. Keep a static text/icon cue alongside motion.
+
+An action revealed by hover still needs a discoverable entry on devices without hover. A code-copy button can stay visible there while using hover/focus revelation on pointer devices. Keep the accessible name and successful/failed feedback; hide an unavailable enhancement when static content already provides the fallback. Test the first touch directly, rather than tapping an unrelated surface to reveal the control before testing it.

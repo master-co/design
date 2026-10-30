@@ -1,0 +1,213 @@
+{
+  "checkedAt": "2026-10-30T13:24:43.324Z",
+  "method": "Actual DOM bounds, extended hit testing and local browser behavior; not an independent-agent forward test.",
+  "engines": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "geometry": [
+        {
+          "mode": "minimum",
+          "line": 30,
+          "layout": 44,
+          "target": 44
+        },
+        {
+          "mode": "independent",
+          "line": 30,
+          "layout": 30,
+          "target": 44
+        }
+      ],
+      "layouts": 60,
+      "minimumTarget": 44,
+      "maximumFirstLineAlignmentError": 0,
+      "touch": [
+        {
+          "locale": "zh-TW",
+          "directFirstTap": true,
+          "exactCopy": true,
+          "failureFallback": true
+        },
+        {
+          "locale": "en",
+          "directFirstTap": true,
+          "exactCopy": true,
+          "failureFallback": true
+        },
+        {
+          "locale": "ja",
+          "directFirstTap": true,
+          "exactCopy": true,
+          "failureFallback": true
+        },
+        {
+          "locale": "ko",
+          "directFirstTap": true,
+          "exactCopy": true,
+          "failureFallback": true
+        },
+        {
+          "locale": "zh-CN",
+          "directFirstTap": true,
+          "exactCopy": true,
+          "failureFallback": true
+        }
+      ],
+      "noScript": true,
+      "reducedMotion": true,
+      "result": "pass"
+    },
+    {
+      "engine": "webkit",
+      "version": "26.6",
+      "geometry": [
+        {
+          "mode": "minimum",
+          "line": 30,
+          "layout": 44,
+          "target": 44
+        },
+        {
+          "mode": "independent",
+          "line": 30,
+          "layout": 30,
+          "target": 44
+        }
+      ],
+      "layouts": 60,
+      "minimumTarget": 44,
+      "maximumFirstLineAlignmentError": 0,
+      "touch": [
+        {
+          "locale": "zh-TW",
+          "directFirstTap": true,
+          "exactCopy": true,
+          "failureFallback": true
+        },
+        {
+          "locale": "en",
+          "directFirstTap": true,
+          "exactCopy": true,
+          "failureFallback": true
+        },
+        {
+          "locale": "ja",
+          "directFirstTap": true,
+          "exactCopy": true,
+          "failureFallback": true
+        },
+        {
+          "locale": "ko",
+          "directFirstTap": true,
+          "exactCopy": true,
+          "failureFallback": true
+        },
+        {
+          "locale": "zh-CN",
+          "directFirstTap": true,
+          "exactCopy": true,
+          "failureFallback": true
+        }
+      ],
+      "noScript": true,
+      "reducedMotion": true,
+      "result": "pass"
+    }
+  ],
+  "limits": [
+    "Emulated touch",
+    "Specimen text scaling, not OS/browser zoom",
+    "Local run only; no new Linux CI claim",
+    "Physical devices and assistive technologies unverified"
+  ],
+  "application": {
+    "repository": "1aron/aron.tw",
+    "sourceCommit": "ac141194790ccebc0f9339ed881eabe2bc39f1de",
+    "cloudflareDeployment": "cca4c316-4c0b-4fb0-a89c-fe43deccb2d5",
+    "checkedAt": "2026-10-30T13:15:06.232Z",
+    "publishedArticleBodiesMatched": 50,
+    "mainPages": 20,
+    "stylesheetFilesMatched": 12,
+    "draftsExcluded": [
+      {
+        "locale": "zh-TW",
+        "path": "/blog/css-architecture-after-ai",
+        "status": 404,
+        "feedExcluded": true
+      },
+      {
+        "locale": "en",
+        "path": "/en/blog/css-architecture-after-ai",
+        "status": 404,
+        "feedExcluded": true
+      },
+      {
+        "locale": "ja",
+        "path": "/ja/blog/css-architecture-after-ai",
+        "status": 404,
+        "feedExcluded": true
+      },
+      {
+        "locale": "ko",
+        "path": "/ko/blog/css-architecture-after-ai",
+        "status": 404,
+        "feedExcluded": true
+      },
+      {
+        "locale": "zh-CN",
+        "path": "/zh-cn/blog/css-architecture-after-ai",
+        "status": 404,
+        "feedExcluded": true
+      }
+    ],
+    "liveSearchAndTouch": [
+      {
+        "locale": "zh-TW",
+        "search": true,
+        "firstTouchCopy": true,
+        "pageErrors": []
+      },
+      {
+        "locale": "en",
+        "search": true,
+        "firstTouchCopy": true,
+        "pageErrors": []
+      },
+      {
+        "locale": "ja",
+        "search": true,
+        "firstTouchCopy": true,
+        "pageErrors": []
+      },
+      {
+        "locale": "ko",
+        "search": true,
+        "firstTouchCopy": true,
+        "pageErrors": []
+      },
+      {
+        "locale": "zh-CN",
+        "search": true,
+        "firstTouchCopy": true,
+        "pageErrors": []
+      }
+    ],
+    "ciUrl": "https://github.com/1aron/aron.tw/actions/runs/41061126825",
+    "ciConclusion": "success",
+    "ciJobs": [
+      {
+        "name": "check",
+        "conclusion": "success"
+      },
+      {
+        "name": "deploy-ops",
+        "conclusion": "success"
+      }
+    ],
+    "publicBrowserCasesPassed": 309,
+    "publicBrowserCasesSkipped": 2,
+    "operationsBrowserCasesPassed": 12,
+    "operationsWorkerVersion": "9ac7f566-58d8-4f0d-ac8f-c36ef8e900f5"
+  }
+}
