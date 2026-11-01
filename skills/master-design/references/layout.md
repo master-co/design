@@ -35,3 +35,19 @@ Use [target and focus guidance](states.md) when extending actionable bounds. The
 A short linked heading can keep its natural line height while an absolutely positioned anchor extends into reserved surrounding whitespace. Derive any extension from the actual line height, keep the anchor's minimum target size on the anchor itself, and let wrapped or enlarged text grow. Measure the clickable box in the target engines: fractional layout can round a calculated target just below its intended minimum. Check the neighboring paragraph, independent inline links and focus outline for obstruction.
 
 For an arrow beside a wrapping result title, a separate icon column can retain a shared edge and first-line alignment. Keep the text column shrinkable and allow long strings to wrap. Compare this with an inline arrow using identical content; the separate column costs some text width, so it is a contextual choice rather than a default for every link.
+
+## Grouping, explanation and hierarchy
+
+A common region should express a relationship, not put a separate card around every field. Compare the same labels, values and positions before deciding whether a shared boundary clarifies the group. Give the group a real layout container with its own padding; an absolutely positioned decorative outline must still reserve and respect the space it paints. Let the outer surface grow with the contents. Equal card dimensions alone do not prove balanced inner spacing.
+
+Keep an explanation near the object it explains. In forms, associate messages with their fields programmatically; local feedback can coexist with an overall error summary. For a controlled diagram, reserve the same message slots in both variants so moving a message does not also move the fields. In a real form, choose reserved space or natural flow according to its validation behavior, rather than retaining empty slots solely to match the diagram.
+
+Give the current task a clear visual priority through typography, contrast and action emphasis. A primary action, current state and supplementary timestamp need not carry the same weight. Keep the content and placement fixed when comparing emphasis, and keep secondary information readable.
+
+## Controls and progressive disclosure
+
+Place a control near the scope it affects and name that scope. A per-row toggle can make its relationship clearer than a detached bank of toggles. A global action belongs with the whole group; do not duplicate it per row merely to achieve proximity. Preserve ordering, labels and states when comparing the two arrangements.
+
+Disclose advanced or infrequent options on demand while keeping the primary task and necessary conditions visible. After collapse, retain a concise summary of consequential applied settings. Keep the disclosure trigger separate from links that navigate elsewhere. For a nested contents list, update the current section without repeatedly changing the reader's expansion choices or keyboard focus. For filters, keep applied criteria, removal actions and result status visible even when the option list is collapsed.
+
+These are contextual design judgments, not measured improvements in task success. See [verification](evidence.md) for comparison controls and [state distinctions](states.md#multiple-state-cues) for concurrent state feedback.

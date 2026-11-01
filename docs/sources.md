@@ -31,3 +31,13 @@ The new rules, diagrams, code and fictional portraits are original. Surface sepa
 - [Radix ghost button](https://www.radix-ui.com/themes/docs/components/button#ghost), [MUI IconButton edge](https://mui.com/material-ui/api/icon-button/) and [Chakra Bleed](https://chakra-ui.com/docs/components/bleed): evidence that local negative-margin/padding compensation and controlled extension are established patterns. Their components and code are not copied.
 
 The study uses original rendering code, the existing fictional portraits, and pinned first-party Noto font imports with original OFL notices. Numeric values are specimens, not universal rules. The installed skill retains its own explanation without requiring the article or demo.
+
+## Publication composition and feedback — 2026-11-02
+
+The companion article now has an overview and six standalone essays: [Interface Craft](https://aron.tw/en/blog/interface-craft). The first-party source baseline is `1aron/aron.tw` commit `846333f`; the subsequent figure correction and cross-repository synchronization are recorded in [verification](verification/interface-craft-series-2026-11-02.md). Article typography, book covers and navigation are site-specific examples, not new defaults for consumers.
+
+- [WAI form notifications](https://www.w3.org/WAI/tutorials/forms/notifications/) supports combining overall and nearby feedback with programmatic field associations.
+- [WCAG Use of Color](https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html) supports redundant state cues; the examples do not certify a whole interface's conformance.
+- [Nielsen's progressive disclosure](https://www.nngroup.com/articles/progressive-disclosure/) describes deferring advanced options. Retaining applied quiet-hours settings is this example's design choice, not a quoted research result.
+
+Common regions, task hierarchy, control mapping and state continuity are first-party design judgments illustrated with controlled examples, without invented user-study metrics. Sources checked 2026-11-02. Original seven-figure sources and asset history remain in the article repository.

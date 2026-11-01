@@ -19,3 +19,9 @@ When local margins reduce the [row footprint](layout.md#mixed-content-rows), the
 Focus needs independent strength and must remain identifiable against its surroundings, rather than inheriting the decorative hairline. Check keyboard movement, activation, clipping, disabled state and forced colors. Keep a static text/icon cue alongside motion.
 
 An action revealed by hover still needs a discoverable entry on devices without hover. A code-copy button can stay visible there while using hover/focus revelation on pointer devices. Keep the accessible name and successful/failed feedback; hide an unavailable enhancement when static content already provides the fallback. Test the first touch directly, rather than tapping an unrelated surface to reveal the control before testing it.
+
+## Multiple state cues
+
+Assign distinct cues to distinct facts: selection may use a checkmark and fill, keyboard focus an independent outline, an error a message and boundary treatment, and unavailability a visible reason. Do not rely on hue alone. Match visual cues to native semantics or appropriate accessibility properties; a drawn checkmark alone does not make a control selected.
+
+Check combinations as well as isolated specimens. A selected item may also receive focus; a validation error may remain when its field gains focus. Neither layer should erase the other. Focus cues must remain visible against selected fills, and error explanations should identify the affected input. A disabled explanation should not masquerade as successful feedback.

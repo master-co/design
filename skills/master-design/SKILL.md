@@ -29,8 +29,8 @@ Read only the references needed for this task:
 | Insets, painted boundaries, nested and continuous corners | [Geometry](references/geometry.md) |
 | Image outlines, crop, container edges and avatar stacks | [Images](references/images.md) |
 | CJK and mixed scripts, wrapping, figures, visible glyphs and icons | [Typography](references/typography.md) |
-| Mixed-content rows, table density, alignment and narrow layouts | [Layout](references/layout.md) |
-| Segments, shared seams, pressed state, targets and focus | [States](references/states.md) |
+| Grouping, hierarchy, disclosure, mixed-content rows and narrow layouts | [Layout](references/layout.md) |
+| Segments, shared seams, concurrent states, targets and focus | [States](references/states.md) |
 | State swaps, interruptions and entrance/exit timing | [Motion](references/motion.md) |
 | Glass, directional edges, masks and falloff | [Materials](references/materials.md) |
 

@@ -15,3 +15,9 @@ Staged first entrances may group heading, copy and actions. Exits usually need l
 Honor reduced motion by removing unnecessary travel, scale and blur while retaining state and a static/opacity cue. Test initial render, keyboard, touch, rapid changes and disabled activation. Theme swaps should not accidentally trigger unrelated page-wide transitions.
 
 Disabling transition or animation alone can leave an immediate hover transform. Inspect the resulting state too: suppress unnecessary arrow travel or image scale while preserving a meaningful resting direction and non-motion feedback.
+
+## Identity across states
+
+Keep an item's name, position and structural role traceable as it moves from waiting to processing to completion. Update the status cue and relevant progress without replacing the item's identity or jumping focus. If a real product intentionally reorders completed items, make the transition and destination understandable; a stable-position example is not a prohibition on sorting.
+
+When comparing states, hold the name, icon cell and row geometry constant. A progress bar that advances while the filename also changes demonstrates two variables, so it cannot isolate continuity. Verify the behavior under asynchronous updates and reduced motion, not only in three static screenshots.
