@@ -1,3 +1,5 @@
+![Master Design](assets/brand/master-design-github.png)
+
 # Master Design
 
 An Agent Skill for building and refining web interfaces with deliberate surfaces, typography, spacing and interaction.
