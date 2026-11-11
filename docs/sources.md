@@ -41,3 +41,9 @@ The companion article now has an overview and six standalone essays: [Interface 
 - [Nielsen's progressive disclosure](https://www.nngroup.com/articles/progressive-disclosure/) describes deferring advanced options. Retaining applied quiet-hours settings is this example's design choice, not a quoted research result.
 
 Common regions, task hierarchy, control mapping and state continuity are first-party design judgments illustrated with controlled examples, without invented user-study metrics. Sources checked 2026-11-02. Original seven-figure sources and asset history remain in the article repository.
+
+## Design guide foundations — 2026-11-12
+
+The new guideline prose is original. [Apple HIG principles](https://developer.apple.com/design/human-interface-guidelines/design-principles) inform task purpose, agency, familiarity and adaptation. [Spectrum inclusive design](https://spectrum.adobe.com/foundations/inclusivity/inclusive-design) informs Web input, content and recovery considerations. [Spectrum token guidance](https://spectrum.adobe.com/page/design-tokens/) informs the separation of semantic decisions from raw values. No platform dimensions, imagery, component APIs or third-party prose are copied.
+
+[WCAG 2.2](https://www.w3.org/TR/WCAG22/) supplies the Web accessibility baseline; [WAI-ARIA APG](https://www.w3.org/WAI/ARIA/apg/patterns/) supplies pattern references, with its documented support limitations. Master UI remains the executable source of its own tokens, contracts and behavior. The guide does not certify every consumer composition.
