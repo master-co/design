@@ -5,6 +5,7 @@ import { extname, resolve, sep } from 'node:path'
 import { chromium, webkit } from '@playwright/test'
 import { parseHTML } from 'linkedom'
 import { pages } from '../site/catalog.mjs'
+import { verifyHeaderReadiness } from './header-readiness-check.mjs'
 import legacyAnchors from '../site/legacy-anchors.json' with { type: 'json' }
 
 const root = resolve(import.meta.dirname, '..')
@@ -65,6 +66,7 @@ try {
     const browser = await launcher.launch()
     versions.push({ engine, version: browser.version() })
     try {
+      results.push(...await verifyHeaderReadiness(browser, { origin, engine }))
       for (const theme of ['light', 'dark']) {
         const page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, colorScheme: theme, reducedMotion: 'reduce' })
         page.on('pageerror', error => errors.push(`${engine}/${theme}: ${error.message}`))

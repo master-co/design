@@ -13,7 +13,7 @@
     "type-check": "bun run prepare-site && astro sync && astro-check --tsconfig tsconfig.json && svelte-check --tsconfig tsconfig.json"
   },
   "dependencies": {
-    "@master/internal-site": "0.2.7",
+    "@master/internal-site": "0.2.8",
     "@master/ui": "0.0.2",
     "@master/css": "2.1.3",
     "@master/css-astro": "2.1.3",
