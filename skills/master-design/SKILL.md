@@ -4,7 +4,7 @@ description: Build and refine web interface details in the project's existing de
 license: MIT
 metadata:
   author: master-co
-  version: "0.1.0"
+  version: "0.2.0"
 ---
 
 # Master Design

@@ -10,4 +10,4 @@ Use Bun 1.4.4 for development dependencies and Node 24 for scripts; commit `bun.
 
 Generated builds, screenshots and temporary installs belong in ignored `artifacts/` or example `dist/`. Keep reviewed evidence summaries in `docs/verification/`. The article source and original illustrations keep their own provenance and licensing; do not copy the full article asset history here.
 
-Commit, push, release, deployment and global skill installation require task authorization. Preserve unrelated work. The repo's example is a local study, with no backend or external data writes.
+A release is a `SKILL.md` `metadata.version` with a matching dated `CHANGELOG.md` section and no `v` tag yet; pushing it to `main` tags and publishes it (see CONTRIBUTING.md). Do not change the version unless asked to release. Commit, push, release, deployment and global skill installation require task authorization. Preserve unrelated work. The repo's example is a local study, with no backend or external data writes.

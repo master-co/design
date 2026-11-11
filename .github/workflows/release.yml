@@ -1,0 +1,91 @@
+name: Release
+# Every push to main runs the checks, then releases the skill when SKILL.md metadata.version has no
+# v<version> tag yet: the tag, a GitHub release with the CHANGELOG.md notes, and a zip of the skill
+# folder with its checksum. Pushes that keep the version only run the checks. See CONTRIBUTING.md.
+on:
+  push:
+    branches: [main]
+  # Reruns the release for the head of main, such as after an interrupted run.
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  # Never cancel a release halfway; the next push waits and then sees the new tag.
+  cancel-in-progress: false
+
+jobs:
+  check:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    uses: ./.github/workflows/check.yml
+
+  release:
+    needs: check
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write # create the version tag and the GitHub release
+    outputs:
+      due: ${{ steps.plan.outputs.due }}
+      tag: ${{ steps.plan.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # the plan compares the version with every existing tag
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.4
+      - run: bun install --frozen-lockfile
+      - name: Plan the release
+        id: plan
+        run: node scripts/release.mjs plan --github
+      - name: Pack the skill
+        if: ${{ steps.plan.outputs.due == 'true' }}
+        run: node scripts/release.mjs pack "$RUNNER_TEMP/release"
+      - name: Create the tag and the GitHub release
+        if: ${{ steps.plan.outputs.due == 'true' }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.plan.outputs.tag }}
+          VERSION: ${{ steps.plan.outputs.version }}
+        run: |
+          dir="$RUNNER_TEMP/release"
+          gh release create "$TAG" \
+            --target "$GITHUB_SHA" \
+            --title "Master Design $VERSION" \
+            --notes-file "$dir/notes.md" \
+            --latest \
+            "$dir/master-design-$VERSION.zip" \
+            "$dir/master-design-$VERSION.zip.sha256"
+
+  verify:
+    needs: release
+    if: ${{ needs.release.outputs.due == 'true' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24.20.0
+      - name: Install the released tag into an empty project
+        env:
+          TAG: ${{ needs.release.outputs.tag }}
+          DISABLE_TELEMETRY: '1'
+        run: |
+          mkdir consumer && cd consumer
+          npx --yes skills@1.4.9 add "https://github.com/${GITHUB_REPOSITORY}/tree/$TAG" --skill master-design --agent codex --copy --yes
+          grep -q "version: \"${TAG#v}\"" .agents/skills/master-design/SKILL.md
+          test "$(find . -name SKILL.md | wc -l)" -eq 1
+      - name: Check the release asset against its checksum
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ needs.release.outputs.tag }}
+        run: |
+          gh release download "$TAG" --repo "$GITHUB_REPOSITORY" --dir asset
+          cd asset && sha256sum --check ./*.sha256
+          unzip -l ./*.zip | grep -q 'master-design/SKILL.md'

@@ -12,6 +12,14 @@ Use one entry, **`$master-design`**. It follows the project's framework, brand, 
 npx skills add master-co/design --skill master-design
 ```
 
+That follows `main`. To pin a [release](https://github.com/master-co/design/releases), install its tag:
+
+```sh
+npx skills add https://github.com/master-co/design/tree/v0.2.0 --skill master-design
+```
+
+Each release also attaches the skill folder as a zip with its SHA-256 checksum. The [changelog](CHANGELOG.md) lists what each version changes.
+
 For the current local checkout:
 
 ```sh

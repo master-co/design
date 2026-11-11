@@ -9,7 +9,9 @@
   "scripts": {
     "build": "bun build examples/interface-craft/app.ts examples/interface-craft/avatar/client.ts examples/interface-craft/typography-layout/client.ts --root examples/interface-craft --target browser --outdir examples/interface-craft/dist && node scripts/build.mjs",
     "demo": "node scripts/serve.mjs",
-    "check": "node scripts/check.mjs && tsc --noEmit && node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs && node scripts/release.mjs check && tsc --noEmit && node --test tests/*.test.mjs",
+    "release:plan": "node scripts/release.mjs plan",
+    "release:pack": "node scripts/release.mjs pack",
     "capture": "node scripts/capture.mjs",
     "test:browser": "node scripts/browser-check.mjs",
     "test:native": "node scripts/native-check.mjs",

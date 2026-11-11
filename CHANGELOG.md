@@ -1,6 +1,8 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 — 2026-11-12
+
+The first tagged public release; 0.1.0 was recorded here but never tagged.
 
 - Add contextual guidance for common regions, nearby explanations, hierarchy, control scope and progressive disclosure.
 - Distinguish concurrent state cues and identity across asynchronous updates.
@@ -8,6 +10,7 @@
 - Remove the opt-in preferences profile and its reference file. The skill is one entry with craft references; specimen values stay as examples in the references that use them.
 - Add guidance for gradient-to-solid face changes, focus indicators on masked parts, immediate row highlights and empty layers in composed shadow lists.
 - Rename the second forward-test study to `docs/verification/near-white/`.
+- Release from GitHub: a version in `SKILL.md` without a tag publishes the `v` tag, a GitHub release with these notes, and a zip of the skill folder with its checksum.
 
 ## 0.1.0 — 2026-10-30
 
@@ -16,5 +19,4 @@
 - A standalone HTML/CSS/TypeScript workspace with search, filters, selection, responsive navigation and participant examples.
 - Original single-variable studies, cross-engine checks, installation checks and retained independent task evidence.
 - Contribution guide, focused issue forms and a pull request template.
-
 - Scoped geometric rendering for the numeric study; native checks retain caret/selection metrics and failure screenshots across platforms.
