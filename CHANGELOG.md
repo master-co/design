@@ -3,7 +3,7 @@
 ## 0.3.0 — 2026-11-12
 
 - Add principles, web accessibility, foundations, component guidance and complete task patterns alongside the existing craft references.
-- Define Master UI foundations and cross-project ownership without imposing a house style on unrelated consumers.
+- Define Master UI foundations and cross-project ownership without imposing a house style on unrelated consumers. Explain Moonstone, Obsidian and Paper, the material ladder, concentric geometry, state feedback and customization boundaries with observable review criteria.
 - Expand the skill routing to select general guidance, Master UI foundations and detailed craft references without requiring the companion website.
 
 ## 0.2.0 — 2026-11-12
