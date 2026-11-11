@@ -1,0 +1,32 @@
+@import '@master/css';
+@reference '@master/internal-site/styles/foundation.css';
+@import '@master/internal-site/styles/foundation.css';
+@import '@master/ui/components/button.css';
+@import '@master/ui/components/input.css';
+@import '@master/ui/components/radio.css';
+
+/* Site composition only; reusable control presentation is owned by Master UI. */
+.design-document { min-width: 0; flex: 1; }
+.design-skip { position: fixed; inset-block-start: .5rem; inset-inline-start: .5rem; z-index: 100; padding: .75rem 1rem; background: Canvas; color: CanvasText; transform: translateY(-200%); }
+.design-skip:focus { transform: none; }
+.design-compact-nav { display: none; }
+.design-specimen { margin-block: 1.5rem 2.5rem; padding: 1.5rem; border: 1px solid var(--color-line-divider); border-radius: var(--radius-surface); }
+.design-specimen fieldset { display: flex; gap: 1rem; flex-wrap: wrap; margin-block-end: 1.5rem; border: 0; padding: 0; }
+.design-specimen legend { margin-block-end: .5rem; font-weight: 600; }
+.design-specimen label { display: flex; gap: .5rem; align-items: center; }
+.design-specimen .design-specimen-field { display: grid; gap: .5rem; margin-block: 1rem; }
+.design-specimen input[type='text'] { width: 100%; }
+.design-specimen p { margin-block: .75rem; }
+.design-specimen-status { min-height: 1.5em; }
+@media (width < 64rem) {
+  .design-compact-nav { display: block; margin: 1rem 1.25rem 0; border-block-end: 1px solid var(--color-line-divider); padding-block-end: 1rem; }
+  .design-compact-nav summary { cursor: pointer; padding: .5rem 0; font-weight: 600; }
+  .design-compact-nav nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr)); gap: 1rem; padding-block: 1rem; }
+  .design-compact-nav h2 { font-size: .85rem; margin-block-end: .5rem; }
+  .design-compact-nav ul { list-style: none; padding: 0; }
+  .design-compact-nav a { display: block; padding-block: .5rem; text-decoration: none; }
+  .design-compact-nav a[aria-current] { font-weight: 700; text-decoration: underline; text-underline-offset: .25em; }
+}
+
+/* Compatibility fragments sit at their equivalent section without changing prose. */
+.design-legacy-anchor { display: block; height: 0; scroll-margin-block-start: 6rem; }

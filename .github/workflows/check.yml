@@ -1,7 +1,7 @@
 name: Check
 on:
   pull_request:
-  # main is checked by release.yml, which calls this workflow before it releases.
+  # main is checked by the independent skill-release and website-deployment workflows.
   push:
     branches-ignore: [main]
   workflow_call:
@@ -19,16 +19,26 @@ jobs:
         with:
           bun-version: 1.4.4
       - run: bun install --frozen-lockfile
+      - run: bun run check:site-pins
       - run: bun run build
       - run: bun run check
       - run: bun run test:install
+      - run: bun run check:site
+      - run: bun run build:site
       - run: bunx playwright install --with-deps chromium webkit
+      - run: bun run test:site
       - run: bun run test:avatars
       - run: bun run test:typography
       - run: bun run test:reading
       - run: bun run test:dashboard
       - run: bun run test:browser
       - run: bun run test:native
+      - uses: actions/upload-artifact@v4
+        with:
+          name: master-design-site-${{ github.sha }}
+          path: site/out
+          if-no-files-found: error
+          retention-days: 7
       - uses: actions/upload-artifact@v4
         if: always()
         with:

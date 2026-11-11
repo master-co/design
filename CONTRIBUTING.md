@@ -6,10 +6,11 @@ Improve a specific interface relationship and leave enough evidence for someone 
 
 ## What belongs here
 
-The skill helps an agent build and refine interfaces in the consumer project's own framework, brand, fonts and density. Keep general guidance separate from personal taste; the skill ships no preference profile. A compelling specimen value is not a universal rule.
+The guide and skill help people and agents design and refine interfaces in the consumer project's own framework, brand, fonts and density. Keep general guidance separate from Master UI-specific foundations and from personal taste; the skill ships no preference profile. A compelling specimen value is not a universal rule.
 
 | Change | Start here |
 | --- | --- |
+| Website route metadata and source adaptation | `site/catalog.mjs`, `site/scripts/prepare.ts` |
 | Task selection or workflow | `skills/master-design/SKILL.md` |
 | Craft mechanisms, constraints and verification | `skills/master-design/references/` |
 | Article-to-reference coverage | `examples/interface-craft/cases.json`, `docs/article-map.md` |
@@ -42,6 +43,8 @@ The server prints the example URL. Generated HTML, bundles, exports and temporar
 Use original or appropriately licensed material. Record source, version and attribution. Do not copy another author's skill text or assume that an externally hosted image may be redistributed. Screenshots and public reports must not expose private project data. Contributions use this repository's MIT license; bundled fonts and the companion article archive retain their own notices.
 
 ## Choose checks by impact
+
+For website changes, also run `bun run check:site`, `bun run build:site` and `bun run test:site` against the built site. The canonical prose remains inside the skill; generated website pages are ignored.
 
 Always run `bun run check`. It validates the single skill, references, contribution forms, example mappings, TypeScript and data logic.
 

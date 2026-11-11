@@ -8,3 +8,13 @@ examples/interface-craft/avatars.html
 examples/interface-craft/avatar-studies.html
 examples/interface-craft/typography-layout.html
 examples/interface-craft/typography-layout-studies.html
+
+# Site adapters and build products: edit skill Markdown, not generated pages.
+site/content/
+site/.categories/
+site/.astro/
+site/out/
+site/public/search/
+site/public/llms.txt
+site/public/guidelines/
+site/.wrangler/

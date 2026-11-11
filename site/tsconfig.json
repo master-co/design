@@ -1,0 +1,6 @@
+{
+  "extends": "astro/tsconfigs/strict",
+  "compilerOptions": { "allowJs": true, "checkJs": false, "types": ["node"], "skipLibCheck": true, "paths": { "@tabler/icons-svelte-runes/icons/*": ["./node_modules/@tabler/icons-svelte-runes/dist/icons/*.svelte"] } },
+  "include": [".astro/types.d.ts", "**/*.ts", "**/*.astro", "**/*.svelte"],
+  "exclude": ["out", "node_modules", "public"]
+}

@@ -1,0 +1,16 @@
+---
+import DocumentShell from '@master/internal-site/sections/document.astro'
+import DocHeader from '@master/internal-site/components/DocHeader.svelte'
+import DocSidebar from '@master/internal-site/components/DocSidebar.svelte'
+import DocWrapper from '@master/internal-site/components/DocWrapper.astro'
+import categories from '../.categories/guide.json'
+export const bodyClass = 'bg-surface-base'
+---
+<DocumentShell>
+  <a href="#main-content" class="design-skip">Skip to content</a>
+  <DocHeader client:load contained />
+  <DocWrapper>
+    <DocSidebar client:load pageCategories={categories} includeNestedPages />
+    <slot />
+  </DocWrapper>
+</DocumentShell>

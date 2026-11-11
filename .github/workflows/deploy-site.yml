@@ -1,0 +1,66 @@
+name: Deploy Design website
+# The website has its own lifecycle. Publishing a skill version is not a prerequisite.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: design-site-production
+  cancel-in-progress: false
+
+jobs:
+  validation:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    uses: ./.github/workflows/check.yml
+
+  deploy:
+    needs: validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      PAGES_PROJECT: ${{ vars.CLOUDFLARE_PAGES_PROJECT || 'master-design' }}
+    steps:
+      - name: Check deployment configuration
+        id: configuration
+        shell: bash
+        run: |
+          if [ -n "$CLOUDFLARE_API_TOKEN" ] && [ -n "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "configured=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "configured=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::Cloudflare credentials are incomplete; the verified website artifact was retained but deployment was skipped."
+            echo "Website deployment skipped: configure both CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID repository secrets. Validation and the static build completed successfully." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - uses: actions/checkout@v4
+        if: ${{ steps.configuration.outputs.configured == 'true' }}
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        if: ${{ steps.configuration.outputs.configured == 'true' }}
+        with:
+          node-version-file: .node-version
+      - uses: oven-sh/setup-bun@v2
+        if: ${{ steps.configuration.outputs.configured == 'true' }}
+        with:
+          bun-version: 1.4.4
+      - name: Install the locked deployment tools
+        if: ${{ steps.configuration.outputs.configured == 'true' }}
+        run: bun install --frozen-lockfile
+      - name: Verify the exact first-party package pins
+        if: ${{ steps.configuration.outputs.configured == 'true' }}
+        run: bun run check:site-pins
+      - uses: actions/download-artifact@v4
+        if: ${{ steps.configuration.outputs.configured == 'true' }}
+        with:
+          name: master-design-site-${{ github.sha }}
+          path: site/out
+      - name: Deploy the validated static artifact
+        if: ${{ steps.configuration.outputs.configured == 'true' }}
+        working-directory: site
+        run: ./node_modules/.bin/wrangler pages deploy out --project-name "$PAGES_PROJECT" --branch main --commit-hash "$GITHUB_SHA" --commit-dirty=false

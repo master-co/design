@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "reviewed": "2026-11-12",
+  "sourceRepository": "https://github.com/master-co/master",
+  "sourceDirectory": "site/internal/design-system",
+  "scope": "Explicit public heading, section and recipe-group anchors from the ten formerly redirected routes, across all five locales. Internal IDs inside embedded example documents are not page fragments.",
+  "routes": [
+    {
+      "source": "/design-system",
+      "status": 301,
+      "destination": "https://design.master.co/principles",
+      "aliases": {
+        "interaction": "build-on-familiar-behavior"
+      },
+      "unmappedAnchors": [
+        "authoring",
+        "component-reference",
+        "documentation",
+        "foundations"
+      ],
+      "reason": "The overview now introduces design principles; its retired internal component catalog and exact material demonstrations have not moved.",
+      "markdownDestination": "https://design.master.co/guidelines/principles.md"
+    },
+    {
+      "source": "/design-system/authoring",
+      "status": 410,
+      "aliases": {},
+      "unmappedAnchors": [
+        "authoring",
+        "choose-the-smallest-useful-frame",
+        "code-table-recipes",
+        "color-elevation-recipes",
+        "configured-examples",
+        "distinguish-alignment-from-distribution",
+        "expose-grid-tracks-and-placement",
+        "expose-real-scroll-geometry",
+        "fitted-surfaces",
+        "foundation-recipes",
+        "isolate-glyph-paint",
+        "keep-behavior-honest",
+        "keep-examples-portable",
+        "make-positioning-and-paint-boundaries-explicit",
+        "measure-flex-sizing-outside-the-layout",
+        "minimal-compositions",
+        "namespace-recipes",
+        "preserve-background-paint-prerequisites",
+        "preserve-lists-and-generated-content",
+        "preserve-media-size-and-paint-context",
+        "preserve-native-animation-phases",
+        "preserve-native-input-and-accessibility",
+        "preserve-native-shape-wrapping",
+        "preserve-native-transition-timelines",
+        "preserve-paint-context-and-interaction",
+        "preserve-source-and-fragment-geometry",
+        "preserve-text-flow-and-reading-paths",
+        "preserve-transform-geometry-and-hints",
+        "preserve-type-glyphs-and-inheritance",
+        "project-style-recipes",
+        "separate-edge-paint-from-layout",
+        "show-constraints-and-content",
+        "size-the-canvas-to-the-lesson",
+        "typography-motion-recipes",
+        "utility-recipes",
+        "viewport-presets",
+        "viewport-presets-gallery",
+        "working-recipes"
+      ],
+      "reason": "Internal Demo* import contracts, compiler fixtures and recipe collections remain private; the Master UI foundations page does not implement these APIs."
+    },
+    {
+      "source": "/design-system/review/motion",
+      "status": 410,
+      "aliases": {},
+      "unmappedAnchors": [
+        "component-interface",
+        "player",
+        "reference"
+      ],
+      "reason": "DemoMotion playback controls and an animation-play-state fixture are internal teaching helpers, not the general motion guideline."
+    },
+    {
+      "source": "/design-system/review/palette",
+      "status": 410,
+      "aliases": {},
+      "unmappedAnchors": [
+        "component-interface",
+        "families"
+      ],
+      "reason": "DemoPalette exposes preset-family chips and clipboard feedback; no such inventory or API moved to the color guideline."
+    },
+    {
+      "source": "/design-system/review/surface",
+      "status": 301,
+      "destination": "https://design.master.co/foundations/elevation",
+      "aliases": {
+        "sheet-elevation": "establish-a-surface-ladder",
+        "well": "establish-a-surface-ladder"
+      },
+      "unmappedAnchors": [
+        "component-interface",
+        "surface-component"
+      ],
+      "reason": "Surface ladder and recessed-well concepts are present in the elevation guideline; DemoSurface API documentation is not.",
+      "markdownDestination": "https://design.master.co/guidelines/foundations/elevation.md"
+    },
+    {
+      "source": "/design-system/review/swatch",
+      "status": 410,
+      "aliases": {},
+      "unmappedAnchors": [
+        "component-interface",
+        "roles"
+      ],
+      "reason": "DemoSwatch markup and sample paint roles remain an internal teaching helper, not a relocated color-guide component."
+    },
+    {
+      "source": "/design-system/review/badge",
+      "status": 410,
+      "aliases": {},
+      "unmappedAnchors": [
+        "component-interface",
+        "tones"
+      ],
+      "reason": "DemoBadge literal teaching tones differ from the public badge status-token contract."
+    },
+    {
+      "source": "/design-system/review/controls",
+      "status": 410,
+      "aliases": {},
+      "unmappedAnchors": [
+        "component-interface",
+        "document-views",
+        "document-views-interface",
+        "gallery",
+        "segmented",
+        "viewport-conditions"
+      ],
+      "reason": "DemoControls, Segments and iframe condition controls are internal helper APIs; the choosing guide does not contain them."
+    },
+    {
+      "source": "/design-system/review/data-table",
+      "status": 410,
+      "aliases": {},
+      "unmappedAnchors": [
+        "benchmarks",
+        "component-interface",
+        "table"
+      ],
+      "reason": "BenchmarkDataTable disclosure and chart integration differ from the public table sorting/selection contract."
+    },
+    {
+      "source": "/design-system/review/scroll",
+      "status": 410,
+      "aliases": {},
+      "unmappedAnchors": [
+        "component-interface",
+        "local-scroll",
+        "reference"
+      ],
+      "reason": "DemoScrollArea and its overflow fixture differ from the public scroll-area fading-region API."
+    }
+  ]
+}
