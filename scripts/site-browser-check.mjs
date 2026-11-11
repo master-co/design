@@ -67,6 +67,32 @@ try {
     versions.push({ engine, version: browser.version() })
     try {
       results.push(...await verifyHeaderReadiness(browser, { origin, engine }))
+      const specimen = await browser.newPage({ reducedMotion: 'reduce' })
+      const specimenModule = /\/_astro\/FoundationPreview\.[^/]+\.js$/
+      let releaseSpecimen
+      const specimenGate = new Promise(resolve => { releaseSpecimen = resolve })
+      await specimen.route(specimenModule, async route => { await specimenGate; await route.continue() })
+      const specimenRequest = specimen.waitForRequest(specimenModule)
+      const specimenNavigation = specimen.goto(origin + '/master-ui', { waitUntil: 'domcontentloaded' })
+      try {
+        await specimenRequest
+        const name = specimen.getByRole('textbox', { name: 'Project name' })
+        await name.waitFor({ state: 'visible' })
+        for (const control of await specimen.locator('.design-specimen input, .design-specimen button').all()) {
+          assert(await control.isDisabled(), `${engine}: SSR specimen must wait for its local behavior`)
+        }
+        releaseSpecimen()
+        await specimenNavigation
+        await specimen.getByRole('radio', { name: 'Compact', exact: true }).check()
+        await name.fill('First submission')
+        await specimen.getByRole('button', { name: 'Save changes', exact: true }).click()
+        await specimen.getByRole('status').filter({ hasText: 'Saved “First submission”' }).waitFor()
+        results.push(`${engine}: held specimen module disables inputs; first mounted submission retains the entered value`)
+      } finally {
+        releaseSpecimen()
+        await specimenNavigation.catch(() => {})
+        await specimen.close()
+      }
       for (const theme of ['light', 'dark']) {
         const page = await browser.newPage({ viewport: { width: 1440, height: 1000 }, colorScheme: theme, reducedMotion: 'reduce' })
         page.on('pageerror', error => errors.push(`${engine}/${theme}: ${error.message}`))
