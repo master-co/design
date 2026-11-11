@@ -34,8 +34,6 @@ Read only the references needed for this task:
 | State swaps, interruptions and entrance/exit timing | [Motion](references/motion.md) |
 | Glass, directional edges, masks and falloff | [Materials](references/materials.md) |
 
-**Aron preferences are opt-in.** Read [Aron preferences](references/aron-preferences.md) when explicitly requested or selected by project instructions. Its palette, radii and numeric recipes are specimen starting points, not the default for every polish task.
-
 ## Refine the implementation
 
 Start with a visible failure: a doubled seam, moving label, weak control edge, or misleading grouping. Preserve what works. Keep contour, depth and state independently adjustable; strengthen functional boundaries when identification requires it.

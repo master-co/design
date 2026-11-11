@@ -15,6 +15,6 @@ For visual changes, include matched before/after views and state viewport, theme
 List the checks actually run and their results. Note relevant checks not run and why.
 
 - [ ] The installed skill remains self-contained and preserves the consumer project's design language.
-- [ ] General guidance and optional preferences are kept separate.
+- [ ] General guidance and specimen values are kept separate.
 - [ ] Affected states and neighboring components were considered.
 - [ ] New material has appropriate provenance and licensing.

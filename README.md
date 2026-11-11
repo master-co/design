@@ -4,7 +4,7 @@
 
 An Agent Skill for building and refining web interfaces with deliberate surfaces, typography, spacing and interaction.
 
-Use one entry, **`$master-design`**. It follows the project's framework, brand, fonts and density, then loads only the relevant craft references. An optional **Aron preferences** profile captures a restrained near-white treatment without making it the default for every project.
+Use one entry, **`$master-design`**. It follows the project's framework, brand, fonts and density, then loads only the relevant craft references. It ships no house style: values in the references are scoped specimens, not defaults for every project.
 
 ## Install
 
@@ -28,8 +28,8 @@ fonts and compact density. Implement and verify the affected states.
 ```
 
 ```text
-Use $master-design with Aron preferences for this workspace.
-Keep its text clear, its surfaces quiet and its control feedback stable.
+Use $master-design for this new workspace. I want quiet near-white
+surfaces, clear text and stable control feedback.
 ```
 
 ```text

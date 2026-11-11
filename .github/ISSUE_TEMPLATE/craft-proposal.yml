@@ -13,7 +13,7 @@ body:
     id: mechanism
     attributes:
       label: Proposed mechanism and scope
-      description: Explain how it works, where it applies, where it fails, and whether it is general guidance or an opt-in preference.
+      description: Explain how it works, where it applies, where it fails, and whether it is general guidance or a scoped specimen.
     validations:
       required: true
   - type: textarea

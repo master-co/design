@@ -14,7 +14,7 @@ The original workspace data, chart geometry and component drawing code are copie
 
 Measured, derived and judged findings stay separate. Browser checks record their actual engines, device densities and tested conditions. A CSS support query is not a replacement for observed rendering.
 
-Aron preferences are explicitly selected taste, with contextual starting values. They are not a new historical movement, a replacement for project branding, or a requirement to install the original article's fonts.
+Specimen values in the references and examples are author-selected starting points for their context. They are not a new historical movement, a replacement for project branding, or a requirement to install the original article's fonts.
 
 ## Avatar-stack research — 2026-10-30
 

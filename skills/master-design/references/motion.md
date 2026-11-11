@@ -2,7 +2,7 @@
 
 State feedback remains understandable when motion is reduced or unavailable. A default state should not animate merely because enhancement mounted.
 
-Occasional contextual icon changes can overlap glyphs in a stable cell and fade opacity. The Aron specimen uses 150ms ease-out with reserved label space. Preserve project timing where established; scale and blur are optional.
+Occasional contextual icon changes can overlap glyphs in a stable cell and fade opacity. One specimen uses 150ms ease-out with reserved label space. Preserve project timing where established; scale and blur are optional.
 
 Typing, row hover and tabs need direct feedback. Reserve expressive motion for moments that benefit from it. Gate hover-only effects by hover-capable pointers.
 

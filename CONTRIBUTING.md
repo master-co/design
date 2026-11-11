@@ -6,7 +6,7 @@ Improve a specific interface relationship and leave enough evidence for someone 
 
 ## What belongs here
 
-The skill helps an agent build and refine interfaces in the consumer project's own framework, brand, fonts and density. Keep general guidance separate from the optional Aron preferences profile. A compelling specimen value is not a universal rule.
+The skill helps an agent build and refine interfaces in the consumer project's own framework, brand, fonts and density. Keep general guidance separate from personal taste; the skill ships no preference profile. A compelling specimen value is not a universal rule.
 
 | Change | Start here |
 | --- | --- |

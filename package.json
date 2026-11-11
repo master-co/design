@@ -14,7 +14,7 @@
     "test:browser": "node scripts/browser-check.mjs",
     "test:native": "node scripts/native-check.mjs",
     "test:install": "node scripts/install-check.mjs",
-    "test:forward": "node docs/verification/brand/output/verify.mjs && node docs/verification/aron/output/verify.mjs",
+    "test:forward": "node docs/verification/brand/output/verify.mjs && node docs/verification/near-white/output/verify.mjs",
     "test:dashboard": "node scripts/dashboard-check.mjs",
     "capture:avatars": "node scripts/avatar-capture.mjs",
     "test:avatars": "node scripts/avatar-check.mjs",

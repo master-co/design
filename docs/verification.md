@@ -12,7 +12,7 @@
 
 ## Independent forward tests
 
-Two isolated agents receive only a frozen skill, a raw fixture and a user task. One retains a distinct existing brand; the other explicitly selects Aron preferences. Neither receives the intended fixes or the other agent's work. Their reports distinguish implemented changes, actual checks and unverified conditions. Reviewed reports and an outcome summary are saved under `verification/`.
+Two isolated agents receive only a frozen skill, a raw fixture and a user task. One retains a distinct existing brand; the other applies an explicitly requested near-white treatment. Neither receives the intended fixes or the other agent's work. Their reports distinguish implemented changes, actual checks and unverified conditions. Reviewed reports and an outcome summary are saved under `verification/`.
 
 Real assistive-technology and physical touch-device testing are separate from browser automation. Do not present emulation as a hardware test or a passing syntax validator as proof of good design judgment.
 
@@ -33,7 +33,7 @@ A user review identified regressions that the initial behavioral checks missed. 
 
 ## Avatar stacking — original concept comparisons
 
-The avatar extension stays in the existing Images route; it is not a second skill or a public component API. A1/A2 compare gap6 with overlap8 at fixed D32, G2, image source/crop and inward stroke. Both hosts and group inline-start/vertical center match. Layout/derived painted widths are 108/112 versus 80/84. A2 holds white 10% on both sides; B2 uses the opt-in white 8% inset specimen. B1/B2 hold stacking and separator fixed while comparing inset presence. The old separator-presence comparison is a separate live control.
+The avatar extension stays in the existing Images route; it is not a second skill or a public component API. A1/A2 compare gap6 with overlap8 at fixed D32, G2, image source/crop and inward stroke. Both hosts and group inline-start/vertical center match. Layout/derived painted widths are 108/112 versus 80/84. A2 holds white 10% on both sides; B2 uses the study's white 8% inset specimen. B1/B2 hold stacking and separator fixed while comparing inset presence. The old separator-presence comparison is a separate live control.
 
 `bun run test:avatars` exercises exact overflow counts, RTL DOM order and last-on-top painting, failed-photo geometry, mixed content, patterned-host spacing fallback, native dialog/role disclosure, keyboard/Escape/focus return, touch emulation and no-JavaScript reading. The actual dashboard's D22/O5 circle and glyph positions are compared with the original source. Selected/hover/dark separators match their actual row surface.
 
