@@ -6,7 +6,7 @@ Improve a specific interface relationship and leave enough evidence for someone 
 
 ## What belongs here
 
-The guide and skill help people and agents design and refine interfaces in the consumer project's own framework, brand, fonts and density. Keep general guidance separate from Master UI-specific foundations and from personal taste; the skill ships no preference profile. A compelling specimen value is not a universal rule.
+The guide and skill help people and agents design and refine interfaces in the consumer project's own framework, brand, fonts and density. Keep general guidance independent of component-library material choices and personal taste; Master UI-specific foundations belong in the UI repository, and this skill ships no preference profile. A compelling specimen value is not a universal rule.
 
 | Change | Start here |
 | --- | --- |

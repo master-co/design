@@ -4,7 +4,6 @@ export const pages = [
   page('/', 'overview', 'Design for the task. Refine every detail.', 'Practical guidelines for clear, adaptable and carefully made web interfaces.', 'Start here'),
   page('/principles', 'principles', 'Design principles', 'Purpose, agency, familiarity and hierarchy guide the details of an interface.', 'Start here'),
   page('/accessibility', 'accessibility', 'Accessibility', 'A practical web baseline for semantics, keyboard, contrast, targets and feedback.', 'Start here'),
-  page('/master-ui', 'master-ui', 'Master UI foundations', 'How Master UI turns the guide into components, themes and interaction behaviors.', 'Start here'),
   ...[
     ['color', 'Color', 'Choose semantic roles and keep meaning clear across themes.'],
     ['typography', 'Typography', 'Establish readable hierarchy with real fonts, content and scripts.'],

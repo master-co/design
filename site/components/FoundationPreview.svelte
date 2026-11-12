@@ -8,7 +8,7 @@
   const id = $props.id()
 </script>
 
-<form class="design-specimen" aria-label="Master UI foundation example" onsubmit={event => { event.preventDefault(); saved = `Saved “${name.trim()}” in this example.` }}>
+<form class="design-specimen" aria-label="Density comparison example" onsubmit={event => { event.preventDefault(); saved = `Saved “${name.trim()}” in this example.` }}>
   <fieldset disabled={!mounted}>
     <legend>One task, two densities</legend>
     <label><input class="radio" type="radio" name={`${id}-density`} value="comfortable" bind:group={density} /> Comfortable</label>

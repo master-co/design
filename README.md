@@ -6,7 +6,7 @@ Practical guidelines for clear, adaptable and carefully made web interfaces, wit
 
 Master Design owns principles, foundations, accessibility, component usage, task patterns and verification methods. [Master UI](https://ui.master.co) implements reusable components, themes and behaviors; [Master CSS](https://css.master.co) provides the styling engine; [Master](https://master.co) owns the ecosystem website and shared site infrastructure.
 
-Use one entry, **`$master-design`**. It follows the consumer project's framework, brand, fonts and density, then loads the relevant guidance. [Master UI foundations](skills/master-design/references/master-ui.md) describes the specific implementation choices of Master UI. General guidance does not impose those choices on unrelated projects.
+Use one entry, **`$master-design`**. It follows the consumer project's framework, brand, fonts and density, then loads the relevant guidance. General guidance remains self-contained and independent of any component library. Master UI-specific material and implementation decisions live in [Master UI’s design foundations](https://ui.master.co/guide/design).
 
 The website and installed skill share the Markdown in `skills/master-design/references/`. The site adapts that source for navigation, links and search; it maintains no second copy of the prose or runtime tokens. Existing craft studies remain local research examples.
 

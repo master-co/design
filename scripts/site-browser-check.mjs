@@ -73,7 +73,7 @@ try {
       const specimenGate = new Promise(resolve => { releaseSpecimen = resolve })
       await specimen.route(specimenModule, async route => { await specimenGate; await route.continue() })
       const specimenRequest = specimen.waitForRequest(specimenModule)
-      const specimenNavigation = specimen.goto(origin + '/master-ui', { waitUntil: 'domcontentloaded' })
+      const specimenNavigation = specimen.goto(origin + '/foundations/sizing', { waitUntil: 'domcontentloaded' })
       try {
         await specimenRequest
         const name = specimen.getByRole('textbox', { name: 'Project name' })
@@ -100,7 +100,7 @@ try {
           await page.goto(origin + '/')
           await page.screenshot({ path: resolve(artifacts, 'overview.png') })
         }
-        await page.goto(origin + '/master-ui')
+        await page.goto(origin + '/foundations/sizing')
         await page.getByRole('radio', { name: 'Compact', exact: true }).check()
         assert.equal(await page.getByRole('radio', { name: 'Comfortable', exact: true }).isChecked(), false)
         const field = page.getByRole('textbox', { name: 'Project name' })

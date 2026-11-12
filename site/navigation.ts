@@ -3,7 +3,7 @@ export const primaryNavs = [
   { name: 'Principles', href: '/principles' },
   { name: 'Foundations', href: '/foundations/color' },
   { name: 'Patterns', href: '/patterns/forms' },
-  { name: 'Master UI', href: '/master-ui' },
+  { name: 'Master UI', href: 'https://ui.master.co' },
 ]
 export const communityNavs = [{ name: 'GitHub', href: 'https://github.com/master-co/design', Icon: IconBrandGithub }]
 export const footerProps = { navGroups: [

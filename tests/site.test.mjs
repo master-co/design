@@ -1,6 +1,6 @@
 import test from 'node:test'
 import assert from 'node:assert/strict'
-import { readFile } from 'node:fs/promises'
+import { readFile, access } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { pages } from '../site/catalog.mjs'
 import { webMarkdown, metadataFor } from '../site/scripts/content.mjs'
@@ -41,6 +41,25 @@ test('site adapters, search and downloaded Markdown preserve source ownership', 
     assert.equal(download, source)
     assert(search.some(entry => new URL(entry.url, 'https://design.master.co').pathname === page.route), `Missing search route ${page.route}`)
   }
+})
+
+test('moved UI material has no stale Design page, download or search entry', async () => {
+  const search = JSON.parse(await readFile(resolve(root, 'site/public/search/en.json'), 'utf8'))
+  assert(!pages.some(page => page.route === '/master-ui'))
+  assert(!search.some(entry => new URL(entry.url, 'https://design.master.co').pathname === '/master-ui'))
+  for (const file of ['skills/master-design/references/master-ui.md', 'site/content/master-ui/content.mdx', 'site/public/guidelines/master-ui.md']) {
+    await assert.rejects(access(resolve(root, file)), { code: 'ENOENT' })
+  }
+  const redirects = (await readFile(resolve(root, 'site/public/_redirects'), 'utf8')).trim().split('\n').map(line => line.split(/\s+/))
+  for (const source of ['/master-ui', '/master-ui/', '/master-ui.html', '/guidelines/master-ui.md', '/master-ui.md']) {
+    const rule = redirects.find(([path]) => path === source)
+    assert(rule, `Missing redirect for ${source}`)
+    assert.equal(rule[1], `https://ui.master.co/guide/design${source.endsWith('.md') ? '.md' : ''}`)
+    assert.equal(rule[2], '301')
+    assert.equal(new URL(rule[1]).hash, '', 'The destination must allow a retained source fragment')
+  }
+  const sizing = await readFile(resolve(root, 'site/content/foundations/sizing/content.mdx'), 'utf8')
+  assert(sizing.includes('<FoundationPreview client:load />'), 'The density example stays available with the sizing guidance')
 })
 
 // Compatibility aliases are site metadata, never part of the installed skill text.

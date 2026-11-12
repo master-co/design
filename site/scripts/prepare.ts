@@ -17,8 +17,8 @@ async function write(file: string, value: string) {
 for (const page of pages) {
   const markdown = await readFile(join(root, page.source), 'utf8')
   const directory = join(site, 'content', page.route === '/' ? '(home)' : page.route.slice(1))
-  const specimen = page.route === '/master-ui'
-    ? `import FoundationPreview from '../../components/FoundationPreview.svelte'\n\n<FoundationPreview client:load />\n\n`
+  const specimen = page.route === '/foundations/sizing'
+    ? `import FoundationPreview from '../../../components/FoundationPreview.svelte'\n\n<FoundationPreview client:load />\n\n`
     : ''
   await write(join(directory, 'content.mdx'), specimen + webMarkdown(markdown, page.source))
   await write(join(directory, 'metadata.ts'), `// Generated from the portable skill. Edit site/catalog.mjs for route metadata.\nexport default ${JSON.stringify(metadataFor(page), null, 2)}\n`)
