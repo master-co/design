@@ -112,8 +112,34 @@ try {
         await page.goto(origin + '/principles')
         await page.getByRole('button', { name: /Search/i }).first().click()
         const search = page.locator('dialog input').first()
+        if (engine === 'chromium') {
+          await page.emulateMedia({ forcedColors: 'active' })
+          await search.focus()
+          const focus = await search.evaluate(element => ({ value: element.value, visible: element.matches(':focus-visible'), style: getComputedStyle(element).outlineStyle, width: parseFloat(getComputedStyle(element).outlineWidth) }))
+          assert.equal(focus.value, '')
+          assert(focus.visible && focus.style !== 'none' && focus.width >= 2, 'Empty forced-color command input has visible keyboard focus')
+          await page.screenshot({ path: resolve(artifacts, `${engine}-${theme}-search-forced-colors.png`) })
+          await page.emulateMedia({ forcedColors: 'none' })
+          results.push(`${engine}/${theme}: empty forced-color command input has visible focus`)
+        }
         await search.fill('recovery')
         await page.locator('dialog a[href="/patterns/recovery"]').first().waitFor()
+        const searchMaterial = await page.locator('dialog[open]').evaluate(element => {
+          const reference = document.createElement('dialog')
+          reference.className = 'dialog command'
+          document.body.append(reference)
+          const actual = getComputedStyle(element), canonical = getComputedStyle(reference)
+          const differences = ['backgroundColor', 'boxShadow', 'borderTopLeftRadius', 'cornerShape'].filter(property => actual[property] !== canonical[property]).map(property => ({ property, actual: actual[property], canonical: canonical[property] }))
+          const result = { differences, command: element.classList.contains('command'), input: Boolean(element.querySelector('.command-input')), list: Boolean(element.querySelector('.listbox.command-list')), body: Boolean(element.querySelector('.listbox-option .listbox-body')) }
+          reference.remove()
+          return result
+        })
+        assert.deepEqual(searchMaterial.differences, [], `${engine}/${theme}: canonical command frame material`)
+        assert(searchMaterial.command && searchMaterial.input && searchMaterial.list && searchMaterial.body, 'Search must use canonical command/listbox parts')
+        await page.evaluate(() => Promise.all(document.getAnimations().map(animation => animation.finished.catch(() => {}))))
+        await page.screenshot({ path: resolve(artifacts, `${engine}-${theme}-search.png`) })
+        results.push(`${engine}/${theme}: canonical command frame and listbox parts render correctly`)
+
         await search.press('Escape')
         await page.setViewportSize({ width: 320, height: 800 })
         await page.goto(origin + '/foundations/typography')
