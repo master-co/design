@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.3.1 — 2026-11-12
+
+- Keep the portable skill focused on general design principles, foundations, usage and craft across brands and frameworks.
+- Move Master UI-specific design foundations to the UI documentation, preserving general guidance locally and referring implementation work to the consumer’s installed contracts and theme.
+
 ## 0.3.0 — 2026-11-12
 
 - Add principles, web accessibility, foundations, component guidance and complete task patterns alongside the existing craft references.
