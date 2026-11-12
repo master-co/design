@@ -1,6 +1,6 @@
 # Design guide ownership and horizontal identity
 
-Status: locally verified candidate; not pushed, tagged or deployed. The UI destination must be verified before the Design redirects are published.
+Status: locally verified with official packages; not pushed, tagged or deployed. The UI destination must be verified before the Design redirects are published.
 
 ## Content ownership
 
@@ -53,3 +53,9 @@ CUA review remains coordinated by the primary agent. This record does not claim 
 The existing `bun run test:site` CLI now also captures the overview, its semantic table and the sizing example at 390, 768 and 1280 CSS pixels in both light and dark modes. Chromium and WebKit cover 12 profiles and produce 36 additional screenshots. Assertions cover document overflow, bounded table overflow, canonical table markup, nonoverlapping header parts, a single visible logo, its unchanged 20px height/aspect ratio, and the neutral light/dark wordmark ink. Reduced motion and disabled screenshot animations keep captures stable. These representative-page checks supplement rather than replace the existing 320px/200% text, search, forced-colors, density submission and held-module readiness checks.
 
 Candidate 8 (`@master/internal-site` local archive labeled 0.2.11; SHA-256 `d9c8e738371dd514e8102d0d1f3d9726d1ea232c4e4cbfb4d7ff3d3247931e88`) passed site types, all five site tests, the 35-page build and the expanded browser suite with Chromium 153.0.8010.12 and WebKit 26.6. The official dependency pins and lockfile remain unchanged. Reports and actual captures are preserved under the task workspace's `work/doc-unification/design/candidate-8-browser`; representative home, table and sizing screenshots were visually inspected without additional findings. This is local candidate evidence, not published-package or hosted acceptance. VoiceOver was explicitly waived and was not tested.
+
+## Official package integration
+
+The final site pins `@master/internal-site` 0.2.11 and `@master/ui` 0.0.4, with exact release-age exceptions. The lockfile changes only those two package entries and their workspace pins; the CSS packages remain at 2.1.3. A fresh frozen-lockfile installation replaced the local candidate installation. Every installed regular file matched the corresponding registry tarball: 779 shared-package files and 316 UI files. Archive SHA-256 values are `ce7c93077691d12fa53f33ac503d0afa899191b4aa402e8b76d6cd9edae8341f` and `d4b4f0c79bfdd3a680b4bc4a05ff8b7d795c9b84a1d85b391bc83fa1026867bd`, respectively; both integrity values also match the coordinated publication evidence.
+
+The official installation passed the complete local workflow: build, root checks, isolated skill installation, site types/tests/build, both site-browser engines, avatars, typography, reading controls, dashboard, craft browser and native checks. The site still builds 34 guides plus the 404 page, and the expanded matrix retains its 12 profiles and 36 captures. Canonical skill contents remain byte-identical to commit `55f9e6e`. Logs, registry comparisons, fresh screenshots and the static-output hash inventory are saved in `work/doc-unification/design/final-official`. This establishes local readiness; CI, hosted bytes and the destination-before-redirect deployment gate remain separate acceptance steps.
