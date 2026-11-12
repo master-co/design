@@ -108,4 +108,4 @@ Read the [contribution guide](CONTRIBUTING.md) for scope, evidence and checks. U
 
 ## License and sources
 
-MIT, following Master CSS's Aoyue Design LLC attribution. Self-hosted fonts retain their included OFL notices. The existing companion article and original illustration archive retain their current licensing. See [sources](docs/sources.md) for original research and the scope of the examples.
+The portable skill, its reference Markdown and the reusable example source are [MIT licensed](skills/master-design/LICENSE.txt). The original website implementation, site-only content and Master brand assets are reserved to Aoyue Design LLC. See the [repository license notice](LICENSE) for the full scope and [sources](docs/sources.md) for the provenance of the examples.

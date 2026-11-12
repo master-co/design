@@ -1,21 +1,18 @@
-The MIT License
+Master Design licensing
 
-Copyright (c) Aoyue Design LLC.
+The MIT License in skills/master-design/LICENSE.txt applies to the
+master-design skill, including its reference Markdown in source, rendered
+guide and downloadable forms. It also applies to the reusable example
+source in examples/ and other repository material, except as stated below
+or where separate terms are identified.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+The original design.master.co website implementation and site-only
+material are covered by site/LICENSE. Copyright (c) Aoyue Design LLC.
+All rights reserved for the Master brand assets in assets/brand/.
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+Third-party material retains its own terms, including the bundled font
+licenses. The companion Interface Craft article and its original
+illustration archive retain their own terms.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+This notice does not alter permissions already granted for earlier
+versions.
