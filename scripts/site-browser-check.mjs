@@ -6,6 +6,7 @@ import { chromium, webkit } from '@playwright/test'
 import { parseHTML } from 'linkedom'
 import { pages } from '../site/catalog.mjs'
 import { verifyHeaderReadiness } from './header-readiness-check.mjs'
+import { verifyVisualMatrix } from './site-visual-matrix-check.mjs'
 import legacyAnchors from '../site/legacy-anchors.json' with { type: 'json' }
 
 const root = resolve(import.meta.dirname, '..')
@@ -60,12 +61,14 @@ const origin = `http://127.0.0.1:${server.address().port}`
 const errors = []
 const results = []
 const versions = []
+const visualMatrix = []
 try {
   for (const [engine, launcher] of [['chromium', chromium], ['webkit', webkit]]) {
     if (process.env.SITE_TEST_ENGINE && process.env.SITE_TEST_ENGINE !== engine) continue
     const browser = await launcher.launch()
     versions.push({ engine, version: browser.version() })
     try {
+      visualMatrix.push(...await verifyVisualMatrix(browser, { origin, engine, artifacts }))
       results.push(...await verifyHeaderReadiness(browser, { origin, engine }))
       const specimen = await browser.newPage({ reducedMotion: 'reduce' })
       const specimenModule = /\/_astro\/FoundationPreview\.[^/]+\.js$/
@@ -166,7 +169,7 @@ try {
     } finally { await browser.close() }
   }
   assert.deepEqual(errors, [], 'No browser runtime errors')
-  const report = { routes: pages.length, versions, results, forcedColors: 'Chromium focus checked', screenReader: 'not tested', screenshots: artifacts }
+  const report = { routes: pages.length, versions, results, visualMatrix, forcedColors: 'Chromium focus checked', screenReader: 'not tested', screenshots: artifacts }
   await writeFile(resolve(artifacts, 'report.json'), JSON.stringify(report, null, 2) + '\n')
   console.log(JSON.stringify(report, null, 2))
 } finally { await new Promise(resolve => server.close(resolve)) }
