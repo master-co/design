@@ -32,7 +32,7 @@ export const pages = [
     ['responsive', 'Responsive composition', 'Adapt the composition while preserving the task.'],
   ].map(([slug, title, description]) => page(`/patterns/${slug}`, `patterns/${slug}`, title, description, 'Patterns')),
   ...[
-    ['surfaces', 'Surface craft', 'Rings, hairlines, layered shadows and dark surfaces.'],
+    ['surfaces', 'Surface craft', 'Rings, hairlines, layered shadows, dark surfaces and textures.'],
     ['geometry', 'Geometry', 'Insets, painted boundaries and nested corners.'],
     ['images', 'Image craft', 'Outlines, crop, container edges and image identity.'],
     ['typography', 'Typographic craft', 'Glyphs, numbers, line boxes and mixed scripts.'],

@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.2 — 2026-11-12
+
+- Add guidance for background textures: give each one meaning for empty room, keep it out from under text and controls, keep its ink below nearby structural lines, align tiles to whole pixels and never let it carry meaning alone.
+
 ## 0.3.1 — 2026-11-12
 
 - Keep the portable skill focused on general design principles, foundations, usage and craft across brands and frameworks.
