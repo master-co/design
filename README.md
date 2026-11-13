@@ -10,6 +10,8 @@ Use one entry, **`$master-design`**. It follows the consumer project's framework
 
 The website and installed skill share the Markdown in `skills/master-design/references/`. The site adapts that source for navigation, links and search; it maintains no second copy of the prose or runtime tokens. Existing craft studies remain local research examples.
 
+The website adds explanatory figures, interactive studies and complete local task examples. Their code and the internal documentation-illustration skill belong to this repository's authoring workflow; they are not installed with the public skill. The reference text remains useful without the site.
+
 ## Install
 
 ```sh

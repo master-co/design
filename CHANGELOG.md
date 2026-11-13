@@ -4,6 +4,7 @@
 
 - Expand the portable Web guideline with composition, content design, localization, data visualization, eight additional task patterns, focus and scrolling craft, and complete task-review scenarios.
 - Deepen foundation, component and craft decisions while preserving consumer brands and implementation conventions.
+- Add site-only explanatory figures, eight interactive studies and three local task examples. Keep documentation-illustration authoring internal and outside the public skill package.
 
 ## 0.3.2 — 2026-11-12
 

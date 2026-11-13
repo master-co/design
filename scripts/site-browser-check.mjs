@@ -7,6 +7,7 @@ import { parseHTML } from 'linkedom'
 import { pages } from '../site/catalog.mjs'
 import { verifyHeaderReadiness } from './header-readiness-check.mjs'
 import { verifyVisualMatrix } from './site-visual-matrix-check.mjs'
+import { verifyTeaching, verifyTeachingReadiness } from './site-teaching-check.mjs'
 import legacyAnchors from '../site/legacy-anchors.json' with { type: 'json' }
 
 const root = resolve(import.meta.dirname, '..')
@@ -62,12 +63,15 @@ const errors = []
 const results = []
 const versions = []
 const visualMatrix = []
+const teaching = []
 try {
   for (const [engine, launcher] of [['chromium', chromium], ['webkit', webkit]]) {
     if (process.env.SITE_TEST_ENGINE && process.env.SITE_TEST_ENGINE !== engine) continue
     const browser = await launcher.launch()
     versions.push({ engine, version: browser.version() })
     try {
+      if (process.env.SITE_TEST_SECTION === 'readiness') { results.push(...await verifyTeachingReadiness(browser, { origin, engine })); continue }
+      if (process.env.SITE_TEST_SECTION === 'teaching') { teaching.push(await verifyTeaching(browser, { origin, engine, artifacts })); continue }
       visualMatrix.push(...await verifyVisualMatrix(browser, { origin, engine, artifacts }))
       results.push(...await verifyHeaderReadiness(browser, { origin, engine }))
       const specimen = await browser.newPage({ reducedMotion: 'reduce' })
@@ -110,7 +114,7 @@ try {
         await field.fill('Accessible field notes')
         await page.getByRole('button', { name: 'Save changes', exact: true }).click()
         await page.getByRole('status').filter({ hasText: 'Saved “Accessible field notes”' }).waitFor()
-        await page.evaluate(() => Promise.all(document.getAnimations().map(animation => animation.finished.catch(() => {}))))
+        await page.evaluate(() => Promise.all(document.getAnimations().filter(animation => animation.timeline === document.timeline && animation.effect?.getTiming().iterations !== Infinity).map(animation => animation.finished.catch(() => {}))))
         await page.screenshot({ path: resolve(artifacts, `${engine}-${theme}-desktop.png`), fullPage: false })
         await page.goto(origin + '/principles')
         await page.getByRole('button', { name: /Search/i }).first().click()
@@ -139,7 +143,7 @@ try {
         })
         assert.deepEqual(searchMaterial.differences, [], `${engine}/${theme}: canonical command frame material`)
         assert(searchMaterial.command && searchMaterial.input && searchMaterial.list && searchMaterial.body, 'Search must use canonical command/listbox parts')
-        await page.evaluate(() => Promise.all(document.getAnimations().map(animation => animation.finished.catch(() => {}))))
+        await page.evaluate(() => Promise.all(document.getAnimations().filter(animation => animation.timeline === document.timeline && animation.effect?.getTiming().iterations !== Infinity).map(animation => animation.finished.catch(() => {}))))
         await page.screenshot({ path: resolve(artifacts, `${engine}-${theme}-search.png`) })
         results.push(`${engine}/${theme}: canonical command frame and listbox parts render correctly`)
 
@@ -166,10 +170,11 @@ try {
         results.push(`${engine}/${theme}: density, submit, first-click search, menu Escape, narrow navigation, reflow and 200% text`)
         await page.close()
       }
+      teaching.push(await verifyTeaching(browser, { origin, engine, artifacts }))
     } finally { await browser.close() }
   }
   assert.deepEqual(errors, [], 'No browser runtime errors')
-  const report = { routes: pages.length, versions, results, visualMatrix, forcedColors: 'Chromium focus checked', screenReader: 'not tested', screenshots: artifacts }
-  await writeFile(resolve(artifacts, 'report.json'), JSON.stringify(report, null, 2) + '\n')
+  const report = { routes: pages.length, versions, results, visualMatrix, teaching, forcedColors: process.env.SITE_TEST_SECTION === 'readiness' ? 'not run (readiness-only)' : 'Chromium focus checked', screenReader: 'not tested', screenshots: artifacts }
+  await writeFile(resolve(artifacts, process.env.SITE_TEST_SECTION ? `${process.env.SITE_TEST_SECTION}-report.json` : 'report.json'), JSON.stringify(report, null, 2) + '\n')
   console.log(JSON.stringify(report, null, 2))
 } finally { await new Promise(resolve => server.close(resolve)) }

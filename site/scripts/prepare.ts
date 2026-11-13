@@ -1,13 +1,16 @@
-import { mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises'
+import { access, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises'
 import { dirname, join, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { generateSearchPages } from '@master/internal-site/utils/search-pages'
 import { pages } from '../catalog.mjs'
-import { metadataFor, webMarkdown } from './content.mjs'
+import { metadataFor } from './content.mjs'
+import { illustratedMarkdown, renderers, validateFigureCatalog } from './illustrations.mjs'
 
 const site = fileURLToPath(new URL('../', import.meta.url))
 const root = fileURLToPath(new URL('../../', import.meta.url))
 const expected = new Set<string>()
+validateFigureCatalog(pages)
+for (const renderer of Object.values(renderers)) await access(join(site, 'components', renderer))
 async function write(file: string, value: string) {
   expected.add(file)
   if (await readFile(file, 'utf8').catch(() => '') === value) return
@@ -17,10 +20,8 @@ async function write(file: string, value: string) {
 for (const page of pages) {
   const markdown = await readFile(join(root, page.source), 'utf8')
   const directory = join(site, 'content', page.route === '/' ? '(home)' : page.route.slice(1))
-  const specimen = page.route === '/foundations/sizing'
-    ? `import FoundationPreview from '../../../components/FoundationPreview.svelte'\n\n<FoundationPreview client:load />\n\n`
-    : ''
-  await write(join(directory, 'content.mdx'), specimen + webMarkdown(markdown, page.source))
+  const componentPrefix = relative(directory, join(site, 'components')).split('\\').join('/')
+  await write(join(directory, 'content.mdx'), illustratedMarkdown(markdown, page.source, componentPrefix))
   await write(join(directory, 'metadata.ts'), `// Generated from the portable skill. Edit site/catalog.mjs for route metadata.\nexport default ${JSON.stringify(metadataFor(page), null, 2)}\n`)
   await write(join(site, 'public/guidelines', page.source.replace('skills/master-design/references/', '')), markdown)
 }

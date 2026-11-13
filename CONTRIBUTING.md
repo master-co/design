@@ -20,6 +20,8 @@ The guide and skill help people and agents design and refine interfaces in the c
 
 Keep the entry concise and load detailed references on demand. Everything required after installation must stay inside `skills/master-design/`; an installed skill must not require this repository, the example app, the companion article or an absolute local path.
 
+Documentation illustrations use the internal `master-design-doc-illustrations` skill in `.agents/skills/`. Its authoring guidance and all site figure, lab and case-study implementations are excluded from the public skill. Keep design conclusions in the canonical reference Markdown, then register site-only presentations against their source sections. Check both ordinary installer discovery and named public installation when changing skill boundaries. The release archive continues to contain only `skills/master-design`.
+
 ## Develop locally
 
 Use Node 24.20.0 and Bun 1.4.4 for repository development. This tooling is not a requirement for people using the installed skill.
@@ -46,7 +48,7 @@ Use original or appropriately licensed material. Record source, version and attr
 
 For website changes, also run `bun run check:site`, `bun run build:site` and `bun run test:site` against the built site. The canonical prose remains inside the skill; generated website pages are ignored.
 
-Always run `bun run check`. It validates the single skill, references, contribution forms, example mappings, TypeScript and data logic.
+Always run `bun run check`. It validates the public skill and internal authoring boundary, references, contribution forms, example mappings, TypeScript and data logic.
 
 | Affected area | Additional checks |
 | --- | --- |

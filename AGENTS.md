@@ -2,6 +2,8 @@
 
 Maintain the public design guide and one portable Agent Skill at `skills/master-design`. Keep the entry concise and load topic references on demand. Installed guidance must not depend on files outside that skill folder, this checkout, a particular agent, or the companion article.
 
+The internal `master-design-doc-illustrations` skill at `.agents/skills/master-design-doc-illustrations` owns authoring and verifying this site's figures. It is marked internal and must not ship with or become a capability of the public skill. Site figures, labs and examples stay outside `skills/master-design`; their essential design knowledge remains in the canonical reference Markdown. There is one public skill, not a repository-wide limit of one `SKILL.md`.
+
 Preserve each consumer project's framework, brand, fonts, density and styling conventions. General guidance ships no personal style profile. Master UI-specific material choices and implementation guidance belong in the UI repository; this guide stays independent of any component library. Recipes are scoped specimens, never universal defaults; distinguish functional boundaries from decorative contours.
 
 Write the skill, references, docs, code labels and reports in English. Changes should improve observable behavior or judgment. Avoid growing blanket rules from one example, copying third-party instruction sets, or treating visual preference as a historical movement.

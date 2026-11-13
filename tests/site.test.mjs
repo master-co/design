@@ -4,6 +4,8 @@ import { readFile, access } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { pages } from '../site/catalog.mjs'
 import { webMarkdown, metadataFor } from '../site/scripts/content.mjs'
+import { illustratedMarkdown, validateFigureCatalog } from '../site/scripts/illustrations.mjs'
+import { figures, figuresFor } from '../site/figures/catalog.mjs'
 import { stabilizeIslandIds } from '../site/scripts/stable-island-ids.mjs'
 const root = resolve(import.meta.dirname, '..')
 
@@ -37,10 +39,30 @@ test('site adapters, search and downloaded Markdown preserve source ownership', 
     const directory = page.route === '/' ? '(home)' : page.route.slice(1)
     const generated = await readFile(resolve(root, 'site/content', directory, 'content.mdx'), 'utf8')
     const source = await readFile(resolve(root, page.source), 'utf8')
-    assert(generated.includes(webMarkdown(source, page.source)))
+    const depth = directory.split('/').length
+    assert.equal(generated, illustratedMarkdown(source, page.source, '../'.repeat(depth + 1) + 'components'))
     const download = await readFile(resolve(root, 'site/public/guidelines', page.source.replace('skills/master-design/references/', '')), 'utf8')
     assert.equal(download, source)
     assert(search.some(entry => new URL(entry.url, 'https://design.master.co').pathname === page.route), `Missing search route ${page.route}`)
+  }
+})
+
+test('site figures fail for missing sections, sources, renderers and duplicate IDs', () => {
+  validateFigureCatalog(pages)
+  const entry = figures[0]
+  assert.throws(() => validateFigureCatalog(pages, [entry, entry]), /Duplicate/)
+  assert.throws(() => validateFigureCatalog(pages, [{ ...entry, source: 'absent.md' }]), /Missing canonical/)
+  assert.throws(() => validateFigureCatalog(pages, [{ ...entry, component: 'Absent' }]), /Missing figure renderer/)
+  assert.throws(() => illustratedMarkdown('# Test\n\n## Other\n\nText.', entry.source, '../components', [entry]), /expected one section/)
+})
+
+test('site presentation never enters the installed knowledge or Markdown downloads', async () => {
+  for (const page of pages) {
+    const source = await readFile(resolve(root, page.source), 'utf8')
+    assert(!/GuideFigure|DesignLab|TaskStudy|doc-illustrations|site\/components|\.agents\//.test(source), page.source)
+    const directory = page.route === '/' ? '(home)' : page.route.slice(1)
+    const generated = await readFile(resolve(root, 'site/content', directory, 'content.mdx'), 'utf8')
+    for (const entry of figuresFor(page.source)) assert(generated.includes(`id="${entry.id}"`), `Missing ${entry.id}`)
   }
 })
 
@@ -60,7 +82,7 @@ test('moved UI material has no stale Design page, download or search entry', asy
     assert.equal(new URL(rule[1]).hash, '', 'The destination must allow a retained source fragment')
   }
   const sizing = await readFile(resolve(root, 'site/content/foundations/sizing/content.mdx'), 'utf8')
-  assert(sizing.includes('<FoundationPreview client:load />'), 'The density example stays available with the sizing guidance')
+  assert(sizing.includes('<StudyFrame id="density-preview" />'), 'The density example stays available with the sizing guidance')
 })
 
 // Compatibility aliases are site metadata, never part of the installed skill text.
