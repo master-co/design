@@ -29,6 +29,7 @@
     "build:site:cloudflare-pages": "bash scripts/build-site-hosted.sh",
     "check:site": "bun run --cwd site type-check && node --test tests/site.test.mjs",
     "test:site": "node scripts/site-browser-check.mjs",
+    "test:site-dev": "node scripts/site-dev-check.mjs",
     "check:site-pins": "node scripts/check-site-pins.mjs",
     "check:site-delivery": "node scripts/site-delivery-check.mjs",
     "test:site-delivery": "node --test tests/pages-site-manifest.test.mjs tests/pages-site-release.test.mjs tests/pages-release-github.test.mjs tests/pages-release-target.test.mjs"
@@ -46,5 +47,8 @@
   },
   "workspaces": [
     "site"
-  ]
+  ],
+  "patchedDependencies": {
+    "@master/internal-site@0.2.12": "patches/@master%2Finternal-site@0.2.12.patch"
+  }
 }

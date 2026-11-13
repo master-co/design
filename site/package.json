@@ -7,7 +7,7 @@
   },
   "scripts": {
     "prepare-site": "node --import tsx scripts/prepare.ts",
-    "dev": "bun run prepare-site && astro dev",
+    "dev": "node --import tsx scripts/dev.ts",
     "build": "bun run prepare-site && astro build",
     "preview": "wrangler pages dev out",
     "type-check": "bun run prepare-site && astro sync && astro-check --tsconfig tsconfig.json && svelte-check --tsconfig tsconfig.json"

@@ -1,3 +1,4 @@
+import { stableDevRuntime } from './scripts/dev-runtime'
 import { defineConfig } from 'astro/config'
 import { fileURLToPath } from 'node:url'
 import masterSite from '@master/internal-site/astro'
@@ -8,6 +9,7 @@ export default defineConfig({
   outDir: './out',
   server: { port: 3400 },
   devToolbar: { enabled: false },
+  vite: { plugins: [stableDevRuntime()] },
   integrations: [
     masterSite(site),
     // Cloudflare Pages rebuilds the delivered commit and must reproduce the verified bytes exactly.

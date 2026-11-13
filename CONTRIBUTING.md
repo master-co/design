@@ -22,6 +22,8 @@ Keep the entry concise and load detailed references on demand. Everything requir
 
 Documentation illustrations use the internal `master-design-doc-illustrations` skill in `.agents/skills/`. Its authoring guidance and all site figure, lab and case-study implementations are excluded from the public skill. Keep design conclusions in the canonical reference Markdown, then register site-only presentations against their source sections. Check both ordinary installer discovery and named public installation when changing skill boundaries. The release archive continues to contain only `skills/master-design`.
 
+Use `bun run dev` for live authoring and `bun run test:site-dev` after changing the development runner, watcher or dependency handling. The runner watches canonical inputs independently of Vite restarts; generated MDX remains disposable. The pinned shared-site package has a repository-local Bun patch so ordinary MDX body edits use HMR rather than restarting the server. Its existing refresh path remains for frontmatter and structural route changes. Keep the source and distributed patch hunks aligned, and remove the patch when a verified upstream version includes the fix. See the [development-server verification](docs/verification/astro-development-2026-11-13.md).
+
 ## Develop locally
 
 Use Node 24.20.0 and Bun 1.4.4 for repository development. This tooling is not a requirement for people using the installed skill.

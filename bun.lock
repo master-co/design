@@ -46,6 +46,9 @@
       },
     },
   },
+  "patchedDependencies": {
+    "@master/internal-site@0.2.12": "patches/@master%2Finternal-site@0.2.12.patch",
+  },
   "packages": {
     "@acemir/cssom": ["@acemir/cssom@0.9.32", "", {}, "sha512-OijrAUu7rrJhSIoHNg6LMPS5e344nwUHA+1EFYYjrh64D+GmytUsfBQjci45TjT+rd5Spsp8B5xsZDT+TgyXXQ=="],
 

@@ -71,7 +71,10 @@ bun run dev
 bun run build:site
 bun run check:site
 bun run test:site
+bun run test:site-dev
 ```
+
+`bun run dev` starts a foreground development server at `http://127.0.0.1:3400` (or the next available port). Keep the terminal running; Ctrl+C stops it. Pass `--port 3407` or `--host 127.0.0.1` to override its address. Changes to canonical Markdown, the page catalog and figure registration automatically regenerate the adapters, search and downloads. Astro handles component and stylesheet updates. Preparation errors are reported in the terminal; fix the source and save again to recover. `test:site-dev` checks cold startup and live updates in an isolated copy under ignored artifacts.
 
 Edit the skill Markdown, not generated `site/content`. `site/scripts/prepare.ts` builds routes, categories, search and downloadable Markdown from the source catalog. The separate `deploy-site.yml` workflow reuses the full checks on every push to `main`, rebuilds the commit, requires the exact tested bytes and publishes a manifest of every output file. It then moves the `pages-stable` branch, which Cloudflare Pages builds with its Git integration and deploys only when the output matches that manifest byte for byte. GitHub holds no Cloudflare credential; until the Pages repository variables exist, nothing is delivered. Project and domain configuration remain separate authorized operations. See [website deployment](docs/site-deployment.md).
 
