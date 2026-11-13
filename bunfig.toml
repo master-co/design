@@ -1,4 +1,0 @@
-[install]
-minimumReleaseAge = 86400
-# Exact releases verified by the coordinated UI/platform acceptance run.
-minimumReleaseAgeExcludes = ["@master/ui@0.0.5", "@master/internal-site@0.2.12"]
