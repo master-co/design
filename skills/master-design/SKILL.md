@@ -4,7 +4,7 @@ description: "Design and refine web interfaces: principles, foundations, accessi
 license: MIT
 metadata:
   author: master-co
-  version: "0.3.2"
+  version: "0.3.3"
 ---
 
 # Master Design

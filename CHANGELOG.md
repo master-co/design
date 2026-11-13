@@ -1,10 +1,11 @@
 # Changelog
 
-## Unreleased
+## 0.3.3 — 2026-11-14
 
 - Expand the portable Web guideline with composition, content design, localization, data visualization, eight additional task patterns, focus and scrolling craft, and complete task-review scenarios.
 - Deepen foundation, component and craft decisions while preserving consumer brands and implementation conventions.
-- Add site-only explanatory figures, eight interactive studies and three local task examples. Keep documentation-illustration authoring internal and outside the public skill package.
+- Add 47 site-only explanatory figures, eight interactive labs and three complete local task examples, all framed in shared documentation trays. Keep illustration authoring internal and outside the public skill package.
+- Restore reliable cold startup and live editing for the companion guide, including automatic regeneration of pages, search and downloads from canonical Markdown.
 
 ## 0.3.2 — 2026-11-12
 
