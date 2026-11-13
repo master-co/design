@@ -1,4 +1,0 @@
-interface:
-  display_name: "Master Design"
-  short_description: "Design clear, accessible web interfaces"
-  default_prompt: "Use $master-design to design and refine this interface, including its task flow, accessibility and visual details, while preserving its existing brand and framework."
