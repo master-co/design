@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.4 — 2026-11-14
+
+- Grow the target for a coarse pointer, never the visible surface: a control keeps its drawn size, radius and proportions on touch, and an invisible hit area reaches around it. Explain why taller controls cascade through rows kept level, how to extend only along an open axis where neighbors sit close, and why list rows are the exception.
+
 ## 0.3.3 — 2026-11-14
 
 - Expand the portable Web guideline with composition, content design, localization, data visualization, eight additional task patterns, focus and scrolling craft, and complete task-review scenarios.
