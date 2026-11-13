@@ -65,7 +65,7 @@ Documentation-only changes do not require recapturing every image. CI runs the r
 
 ## Submit a pull request
 
-Use a focused branch and a title describing the resulting behavior. Explain the problem, mechanism, scope, evidence and relevant limits. Include matched screenshots for visible changes; keep the same content, viewport, font state and theme. Note changes to skill coverage or provenance.
+Use a focused branch and a title describing the resulting behavior. Commit headers and pull request titles follow the [Aronrepo](https://github.com/1aron/aronrepo) `Type(Scope): Summary` format; `bun install` adds a commit-msg hook that checks them, and the policy block in [AGENTS.md](AGENTS.md) lists the types. Only `skills/master-design` ships, so site, script and test changes use non-release types such as `Chore(Site)`, even for fixes. Aronrepo only checks messages here; releases follow the steps below. Explain the problem, mechanism, scope, evidence and relevant limits. Include matched screenshots for visible changes; keep the same content, viewport, font state and theme. Note changes to skill coverage or provenance.
 
 Maintainers may ask for a smaller case, narrower guidance or a clearer distinction between a personal preference and a functional requirement. Discuss the implementation respectfully, and avoid attaching personal judgments to an author or contributor.
 

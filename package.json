@@ -7,6 +7,7 @@
     "node": "24.x"
   },
   "scripts": {
+    "prepare": "husky",
     "build": "bun build examples/interface-craft/app.ts examples/interface-craft/avatar/client.ts examples/interface-craft/typography-layout/client.ts --root examples/interface-craft --target browser --outdir examples/interface-craft/dist && node scripts/build.mjs",
     "demo": "node scripts/serve.mjs",
     "check": "bun run --cwd site prepare-site && node scripts/check.mjs && node scripts/release.mjs check && tsc --noEmit && node --test tests/*.test.mjs",
@@ -31,12 +32,14 @@
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",
+    "@types/node": "^24.12.2",
+    "aronrepo": "4.0.2",
+    "husky": "9.1.7",
     "linkedom": "^0.18.14",
     "sharp": "0.35.5",
-    "typescript": "6.0.3",
-    "yaml": "^2.8.0",
     "tsx": "4.23.13",
-    "@types/node": "^24.12.2"
+    "typescript": "6.0.3",
+    "yaml": "^2.8.0"
   },
   "workspaces": [
     "site"

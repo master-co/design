@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Aronrepo reads each pull request commit and the files it changes.
+          fetch-depth: ${{ github.event_name == 'pull_request' && 0 || 1 }}
       - uses: actions/setup-node@v4
         with:
           node-version-file: .node-version
@@ -19,6 +22,15 @@ jobs:
         with:
           bun-version: 1.4.4
       - run: bun install --frozen-lockfile
+      - name: Check commit messages
+        if: github.event_name == 'pull_request'
+        run: |
+          bun x aronrepo check --from "origin/$BASE_REF" --to "$HEAD_SHA"
+          bun x aronrepo check --title "$TITLE" --base "origin/$BASE_REF" --head "$HEAD_SHA"
+        env:
+          BASE_REF: ${{ github.base_ref }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          TITLE: ${{ github.event.pull_request.title }}
       - run: bun run check:site-pins
       - run: bun run build
       - run: bun run check
