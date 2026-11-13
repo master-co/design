@@ -49,6 +49,8 @@ jobs:
         with:
           name: master-design-site-${{ github.sha }}
           path: site/out
+          # The site delivery rebuilds this commit and compares it with these exact tested bytes.
+          include-hidden-files: true
           if-no-files-found: error
           retention-days: 7
       - uses: actions/upload-artifact@v4

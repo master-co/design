@@ -18,3 +18,7 @@ site/public/search/
 site/public/llms.txt
 site/public/guidelines/
 site/.wrangler/
+
+# Site delivery evidence: manifests, receipts and canonical proofs.
+release-artifacts/
+wrangler.jsonc.verified

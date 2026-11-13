@@ -4,6 +4,7 @@ import { readFile, access } from 'node:fs/promises'
 import { resolve } from 'node:path'
 import { pages } from '../site/catalog.mjs'
 import { webMarkdown, metadataFor } from '../site/scripts/content.mjs'
+import { stabilizeIslandIds } from '../site/scripts/stable-island-ids.mjs'
 const root = resolve(import.meta.dirname, '..')
 
 test('every public route resolves a self-contained source and adapts its local links', async () => {
@@ -81,4 +82,16 @@ test('legacy fragments point only to equivalent sections and missing targets fai
   }
   assert.equal(count, 3)
   assert.throws(() => webMarkdown('# Principles\n\n## Unrelated topic', 'skills/master-design/references/principles.md'), /Missing legacy anchor target/)
+})
+
+test('island ids depend on public island markup, not on the checkout path', () => {
+  const island = (uid, props = '{}') => `<astro-island uid="${uid}" component-url="/_astro/A.js" props="${props}" ssr client="load">`
+  const page = uid => `${island(uid)}<p>a</p></astro-island>${island(uid + 'x')}</astro-island>${island('z', '{&quot;a&quot;:1}')}</astro-island>`
+  const first = stabilizeIslandIds(page('runner')), second = stabilizeIslandIds(page('buildhome'))
+  assert.equal(first, second)
+  const ids = [...first.matchAll(/uid="([^"]+)"/g)].map(match => match[1])
+  assert.equal(ids.length, 3)
+  assert.equal(new Set(ids).size, 3, 'Identical islands on one page keep distinct ids')
+  assert.equal(stabilizeIslandIds(first), first)
+  assert.equal(stabilizeIslandIds('<astro-island component-url="/_astro/A.js">'), '<astro-island component-url="/_astro/A.js">')
 })

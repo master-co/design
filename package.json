@@ -10,7 +10,7 @@
     "prepare": "husky",
     "build": "bun build examples/interface-craft/app.ts examples/interface-craft/avatar/client.ts examples/interface-craft/typography-layout/client.ts --root examples/interface-craft --target browser --outdir examples/interface-craft/dist && node scripts/build.mjs",
     "demo": "node scripts/serve.mjs",
-    "check": "bun run --cwd site prepare-site && node scripts/check.mjs && node scripts/release.mjs check && tsc --noEmit && node --test tests/*.test.mjs",
+    "check": "bun run --cwd site prepare-site && node scripts/check.mjs && node scripts/release.mjs check && node scripts/site-delivery-check.mjs && tsc --noEmit && node --test tests/*.test.mjs",
     "release:plan": "node scripts/release.mjs plan",
     "release:pack": "node scripts/release.mjs pack",
     "capture": "node scripts/capture.mjs",
@@ -26,9 +26,12 @@
     "test:reading": "node scripts/reading-controls-check.mjs",
     "dev": "bun run --cwd site dev",
     "build:site": "bun run --cwd site build",
+    "build:site:cloudflare-pages": "bash scripts/build-site-hosted.sh",
     "check:site": "bun run --cwd site type-check && node --test tests/site.test.mjs",
     "test:site": "node scripts/site-browser-check.mjs",
-    "check:site-pins": "node scripts/check-site-pins.mjs"
+    "check:site-pins": "node scripts/check-site-pins.mjs",
+    "check:site-delivery": "node scripts/site-delivery-check.mjs",
+    "test:site-delivery": "node --test tests/pages-site-manifest.test.mjs tests/pages-site-release.test.mjs tests/pages-release-github.test.mjs tests/pages-release-target.test.mjs"
   },
   "devDependencies": {
     "@playwright/test": "1.63.0",

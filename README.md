@@ -71,7 +71,7 @@ bun run check:site
 bun run test:site
 ```
 
-Edit the skill Markdown, not generated `site/content`. `site/scripts/prepare.ts` builds routes, categories, search and downloadable Markdown from the source catalog. `site/wrangler.jsonc` records the Pages project and output directory. The separate `deploy-site.yml` workflow reuses the full checks, verifies exact installed first-party pins and deploys the tested artifact on `main`. It reports a clear skip when either Cloudflare credential is absent. Publishing and domain configuration remain separate authorized operations. See [website deployment](docs/site-deployment.md).
+Edit the skill Markdown, not generated `site/content`. `site/scripts/prepare.ts` builds routes, categories, search and downloadable Markdown from the source catalog. The separate `deploy-site.yml` workflow reuses the full checks on every push to `main`, rebuilds the commit, requires the exact tested bytes and publishes a manifest of every output file. It then moves the `pages-stable` branch, which Cloudflare Pages builds with its Git integration and deploys only when the output matches that manifest byte for byte. GitHub holds no Cloudflare credential; until the Pages repository variables exist, nothing is delivered. Project and domain configuration remain separate authorized operations. See [website deployment](docs/site-deployment.md).
 
 ## Develop
 
