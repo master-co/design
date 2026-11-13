@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Expand the portable Web guideline with composition, content design, localization, data visualization, eight additional task patterns, focus and scrolling craft, and complete task-review scenarios.
+- Deepen foundation, component and craft decisions while preserving consumer brands and implementation conventions.
+
 ## 0.3.2 — 2026-11-12
 
 - Add guidance for background textures: give each one meaning for empty room, keep it out from under text and controls, keep its ink below nearby structural lines, align tiles to whole pixels and never let it carry meaning alone.

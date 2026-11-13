@@ -13,6 +13,10 @@ export const pages = [
     ['elevation', 'Elevation and surfaces', 'Use surface treatment to explain regions and layers.'],
     ['icons', 'Icons and imagery', 'Support recognition without hiding meaning behind a glyph.'],
     ['motion', 'Motion', 'Explain change while respecting interruption and reduced motion.'],
+    ['layout', 'Layout and hierarchy', 'Compose reading order, comparison and the next useful action.'],
+    ['content', 'Content design', 'Write labels, instructions and feedback for the decision at hand.'],
+    ['localization', 'Localization', 'Adapt language, direction, formats and input without losing meaning.'],
+    ['data-visualization', 'Data visualization', 'Choose honest representations for meaningful comparison.'],
   ].map(([slug, title, description]) => page(`/foundations/${slug}`, `foundations/${slug}`, title, description, 'Foundations')),
   ...[
     ['actions', 'Actions', 'Choose links and buttons, define emphasis and preserve state.'],
@@ -30,6 +34,14 @@ export const pages = [
     ['async', 'Asynchronous work', 'Represent waiting, progress, partial completion and failure honestly.'],
     ['recovery', 'Recovery', 'Make consequences clear and help people recover their work.'],
     ['responsive', 'Responsive composition', 'Adapt the composition while preserving the task.'],
+    ['onboarding', 'Onboarding and disclosure', 'Reach a useful first outcome and reveal detail when it helps.'],
+    ['access', 'Authentication and permissions', 'Explain access and preserve context through interruptions.'],
+    ['editing', 'Editing and saving', 'Distinguish drafts, saved versions, failures and conflicts.'],
+    ['files', 'Uploads and downloads', 'Keep file identity, progress and partial recovery understandable.'],
+    ['collections', 'Collections and bulk actions', 'Keep selected scope and per-item outcomes explicit.'],
+    ['empty', 'Empty and unavailable states', 'Explain why content is absent and offer the right next action.'],
+    ['notifications', 'Notifications and attention', 'Match interruption, persistence and recovery to consequence.'],
+    ['help', 'Help and support', 'Keep useful guidance and escalation connected to the task.'],
   ].map(([slug, title, description]) => page(`/patterns/${slug}`, `patterns/${slug}`, title, description, 'Patterns')),
   ...[
     ['surfaces', 'Surface craft', 'Rings, hairlines, layered shadows, dark surfaces and textures.'],
@@ -42,5 +54,12 @@ export const pages = [
     ['materials', 'Material craft', 'Glass, directional edges, masks and falloff.'],
     ['avatar-stacks', 'Avatar stacks', 'Overlap, separation, image edges and participant interaction.'],
     ['evidence', 'Evidence and verification', 'Separate measurements, deductions and visual judgments.'],
+    ['focus', 'Focus and input', 'Preserve keyboard destinations and complete input sequences.'],
+    ['scrolling', 'Scrolling and overflow', 'Keep content, targets and focus reachable across scroll regions.'],
   ].map(([slug, title, description]) => page(`/craft/${slug}`, slug, title, description, 'Craft')),
+  ...[
+    ['reading', 'Content discovery and reading', 'Follow a query into a document and return with context.'],
+    ['service', 'A complete form service', 'Enter, review, correct, retry and recognize completion.'],
+    ['workspace', 'A data workspace', 'Manage selection, drafts, partial outcomes and undo together.'],
+  ].map(([slug, title, description]) => page(`/studies/${slug}`, `studies/${slug}`, title, description, 'Studies')),
 ]

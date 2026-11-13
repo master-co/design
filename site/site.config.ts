@@ -1,6 +1,6 @@
 import { defineSite } from '@master/internal-site/config'
 import translations from './i18n/translations'
-const sections = ['home', 'principles', 'accessibility', 'foundations', 'components', 'patterns', 'craft']
+const sections = ['home', 'principles', 'accessibility', 'foundations', 'components', 'patterns', 'craft', 'studies']
 const categories = new URL('./.categories/guide.json', import.meta.url)
 const document = { layout: new URL('./layouts/Doc.astro', import.meta.url), dictionaries: new URL('./dictionaries.ts', import.meta.url), categories }
 export default defineSite({
