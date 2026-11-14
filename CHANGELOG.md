@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.3.5 — 2026-11-15
 
 - Complete conditional visual, accessible component and task guidance while preserving consumer brands and existing craft examples.
 - Add media, disclosure, temporal entry, large collections, privacy/sharing and AI references with local teaching specimens.
