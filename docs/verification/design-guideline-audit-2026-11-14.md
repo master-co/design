@@ -1,5 +1,7 @@
 # Web interface guideline audit — 2026-11-14
 
+Historical record: the [2026-11-15 scope revision](wcag-scope-2026-11-15.md) removes WCAG 2.2.2 guidance and the paused-update specimen. Coverage counts, planned requirements and results below describe the original audit or implementation, not the revised guide.
+
 Master Design has broad coverage of interface design, but uneven decision depth. Its strongest material explains rendered geometry, mixed-script typography, state identity and recovery. The main opportunity is to connect those mechanisms to more explicit selection criteria, counterexamples and verification scenarios. Adding every component name from another design system would not solve that problem.
 
 This review identifies **32 work items**: eight visual-foundation refinements, six accessibility refinements, seven component-decision refinements, six task-pattern refinements and five editorial/evidence corrections. These are work packages, not 32 absent subjects or 32 product defects. Some extend already useful guidance; others correct overly broad instructions. The proposed implementation is in the [expansion plan](../design-guide-expansion-plan.md). The [source register](design-guideline-sources-2026-11-14.md) records the external comparison and its limits.

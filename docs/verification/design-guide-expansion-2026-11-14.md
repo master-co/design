@@ -1,5 +1,7 @@
 # Web interface expansion — implementation and evidence
 
+Historical record: the [2026-11-15 scope revision](wcag-scope-2026-11-15.md) removes WCAG 2.2.2 guidance and the paused-update specimen. Coverage counts, planned requirements and results below describe the original audit or implementation, not the revised guide.
+
 Implemented the [32-item audit](design-guideline-audit-2026-11-14.md) and its [incorporation plan](../design-guide-expansion-plan.md), preserving the existing Web-interface remit and original examples. All 32 items have a canonical destination and an implementation or editorial result below. The available automated/browser verification passed. Real assistive-technology speech and physical-device walkthroughs remain unverified; this report is not a conformance declaration.
 
 ## Delivered structure

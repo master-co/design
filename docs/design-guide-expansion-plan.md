@@ -1,5 +1,7 @@
 # Complete the Web interface design guidance
 
+Historical record: the [2026-11-15 scope revision](verification/wcag-scope-2026-11-15.md) removes WCAG 2.2.2 guidance and the paused-update specimen. Coverage counts, planned requirements and results below describe the original audit or implementation, not the revised guide.
+
 Implementation status: all 32 items are now implemented. See the [implementation and evidence record](verification/design-guide-expansion-2026-11-14.md) for actual results and the remaining real-AT/hardware verification limits. The text below preserves the original implementation specification.
 
 Implementation plan based on the [2026-11-14 audit](verification/design-guideline-audit-2026-11-14.md). The user selected deeper coverage of the existing Web interface design remit, with necessary illustrations and behavioral verification. The audit and this plan are complete planning artifacts; the guidance and specimens described below are not implemented by this documentation change.

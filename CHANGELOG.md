@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.6 — 2026-11-15
+
+- Remove ongoing-motion and automatic-update pause/stop/hide requirements from the guide and its timing specimen. Keep time-limit, audio, flashing and reduced-motion guidance.
+
 ## 0.3.5 — 2026-11-15
 
 - Complete conditional visual, accessible component and task guidance while preserving consumer brands and existing craft examples.
