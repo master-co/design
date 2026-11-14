@@ -1,5 +1,6 @@
 /** Linear equivalents for site drawings. Decisions remain in canonical Markdown. */
 export const descriptions = {
+  'nested-spacing': 'Two enclosed cards use 8px sibling gaps, 24px padding and a 12px gutter. Larger padding than gutter is valid. In the second comparison only label-to-field and field-to-next-label distances change; the corrected case keeps each label nearer its own field.',
   target: 'A 16px plus mark is centered inside a dotted 44px square target. The schematic is three times these CSS dimensions. The visible mark and clickable area have different bounds; neighboring targets must remain separate.',
   color: 'A labeled surface contains content, a boundary, a focus outline and a status with a checkmark and words. Roles explain meaning, values describe the current theme, and contrast concerns the actual foreground/background pair.',
   type: 'An article places a title before prose and a next-step link. Beside it, three records align the values 1,240.50, 82.00 and 9,508.12 at the end of a column. Reading hierarchy and numerical comparison use different arrangements with the same font.',

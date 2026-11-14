@@ -16,7 +16,7 @@ const titles: Record<string, string> = {
   workspace: 'Manage a local collection',
 }
 if (!['DesignLab', 'TaskStudy', 'FoundationPreview'].includes(entry.component)) throw new Error(`Not an interactive study: ${id}`)
-const title = entry.component === 'FoundationPreview' ? 'Apply a density change coherently' : titles[entry.kind!]
+const title = entry.title ?? (entry.component === 'FoundationPreview' ? 'Apply a density change coherently' : titles[entry.kind!])
 ---
 <Demo title={title} frameClassName="design-study-frame" data-study-frame={id} aria-label={title} padding="sm" align="start">
   {entry.component === 'DesignLab' && <DesignLab kind={entry.kind!} client:load />}

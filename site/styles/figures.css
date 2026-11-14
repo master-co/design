@@ -112,3 +112,5 @@
 .df-branches { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:1.5rem; list-style:none; padding:0; margin:1rem 0 0; }
 .df-branches li { border-top:2px solid var(--color-line-divider); padding-top:1rem; }
 @container (max-width:480px) { .df-branches { grid-template-columns:minmax(0,1fr); } }
+
+.df-nested-cards { display:flex; flex-wrap:wrap; gap:12px; }.df-nested-cards>div { display:grid; gap:8px; padding:24px; border:1px solid var(--color-line-strong); flex:1 1 12rem; min-width:0; }.df-label-association {display:grid;gap:8px;margin-top:16px}.df-label-association strong {margin-bottom:24px}.df-label-association.correct strong {margin-bottom:0}.df-label-association.correct .df-input-shape {margin-bottom:24px}

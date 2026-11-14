@@ -7,6 +7,7 @@ import { parseHTML } from 'linkedom'
 import { pages } from '../site/catalog.mjs'
 import { verifyHeaderReadiness } from './header-readiness-check.mjs'
 import { verifyVisualMatrix } from './site-visual-matrix-check.mjs'
+import { verifyExpansion } from './site-expansion-check.mjs'
 import { verifyTeaching, verifyTeachingReadiness } from './site-teaching-check.mjs'
 import legacyAnchors from '../site/legacy-anchors.json' with { type: 'json' }
 
@@ -70,6 +71,7 @@ try {
     const browser = await launcher.launch()
     versions.push({ engine, version: browser.version() })
     try {
+      if (process.env.SITE_TEST_SECTION === 'expansion') { teaching.push(await verifyExpansion(browser, { origin, engine, artifacts })); continue }
       if (process.env.SITE_TEST_SECTION === 'readiness') { results.push(...await verifyTeachingReadiness(browser, { origin, engine })); continue }
       if (process.env.SITE_TEST_SECTION === 'teaching') { teaching.push(await verifyTeaching(browser, { origin, engine, artifacts })); continue }
       visualMatrix.push(...await verifyVisualMatrix(browser, { origin, engine, artifacts }))
@@ -171,10 +173,11 @@ try {
         await page.close()
       }
       teaching.push(await verifyTeaching(browser, { origin, engine, artifacts }))
+      teaching.push(await verifyExpansion(browser, { origin, engine, artifacts }))
     } finally { await browser.close() }
   }
   assert.deepEqual(errors, [], 'No browser runtime errors')
-  const report = { routes: pages.length, versions, results, visualMatrix, teaching, forcedColors: process.env.SITE_TEST_SECTION === 'readiness' ? 'not run (readiness-only)' : 'Chromium focus checked', screenReader: 'not tested', screenshots: artifacts }
+  const report = { routes: pages.length, versions, results, visualMatrix, teaching, forcedColors: ['readiness','expansion'].includes(process.env.SITE_TEST_SECTION) || process.env.SITE_TEST_ENGINE === 'webkit' ? 'not run in this selection' : 'Chromium focus checked', screenReader: 'not tested', screenshots: artifacts }
   await writeFile(resolve(artifacts, process.env.SITE_TEST_SECTION ? `${process.env.SITE_TEST_SECTION}-report.json` : 'report.json'), JSON.stringify(report, null, 2) + '\n')
   console.log(JSON.stringify(report, null, 2))
 } finally { await new Promise(resolve => server.close(resolve)) }

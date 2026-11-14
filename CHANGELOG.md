@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Complete conditional visual, accessible component and task guidance while preserving consumer brands and existing craft examples.
+- Add media, disclosure, temporal entry, large collections, privacy/sharing and AI references with local teaching specimens.
+- Qualify density and texture recipes, make optical and spacing decisions testable, and remove article-specific obligations from portable guidance.
+
 ## 0.3.4 — 2026-11-14
 
 - Grow the target for a coarse pointer, never the visible surface: a control keeps its drawn size, radius and proportions on touch, and an invisible hit area reaches around it. Explain why taller controls cascade through rows kept level, how to extend only along an open axis where neighbors sit close, and why list rows are the exception.

@@ -7,6 +7,7 @@
   const titles: Record<string, string> = { color: 'Inspect a composited color pair', density: 'Measure the target independently', geometry: 'Inspect a circular inset', typography: 'Let real text change the layout', states: 'Keep selection and focus distinct', responsive: 'Recompose a reading region', async: 'Resolve requests out of order', motion: 'Reverse motion before it finishes' }
   let mounted = $state(false)
   let alpha = $state(.7), dark = $state(false)
+  let coordinated = $state(false)
   let target = $state(44), gap = $state(12), activations = $state(0)
   let outer = $state(24), inset = $state(8), ring = $state(.5)
   let long = $state(false), script = $state('en'), tabular = $state(true)
@@ -29,7 +30,7 @@
   onDestroy(() => clearTimeout(timer))
   function reset() {
     clearTimeout(timer)
-    alpha = .7; dark = false; target = 44; gap = 12; activations = 0
+    alpha = .7; dark = false; coordinated = false; target = 44; gap = 12; activations = 0
     outer = 24; inset = 8; ring = .5; long = false; script = 'en'; tabular = true
     selected = true; clipped = false; activated = false; narrow = false; rtl = false
     request = initialRequestState(); open = false; reduce = false
@@ -48,7 +49,9 @@
       <p class="study-output">Calculated contrast: <output aria-live="off">{contrast.toFixed(2)}:1</output>. {contrast >= 4.5 ? 'This pair meets the 4.5:1 normal-text threshold.' : 'This pair is below the 4.5:1 normal-text threshold.'} This does not certify the page.</p>
     {:else if kind === 'density'}
       <div class="study-controls"><label>Target size <input class="slider" type="range" min="24" max="56" step="4" bind:value={target} /><output aria-live="off">{target}px</output></label><label>Between-target gap <input class="slider" type="range" min="0" max="24" step="4" bind:value={gap} /><output aria-live="off">{gap}px</output></label></div>
+      <label class="check"><input class="checkbox" type="checkbox" bind:checked={coordinated} /> Compare coordinated visible growth</label>
       <div class="lab-targets" style:gap={`${gap}px`}>{#each ['Previous', 'Next'] as name}<button class="btn" style:width={`${target}px`} style:height={`${target}px`} style:min-width={`${target}px`} style:min-height={`${target}px`} style:padding="0" aria-label={`${name} specimen item`} onclick={() => activations++}><span class="lab-target-mark" aria-hidden="true">{name === 'Previous' ? '←' : '→'}</span></button>{/each}</div>
+      {#if coordinated}<div class="coordinated-controls"><button class="btn" style:min-height={`${target}px`} onclick={() => activations++}>Longer visible action</button><label>Related field<input class="input" style:min-height={`${target}px`} value="Growing together" /></label></div><p>The visible control family grows together; the fixed 16px marks above remain an independent valid case.</p>{/if}
       <p class="study-output" role="status">16px visible marks; {target}px measured target intent; {gap}px gap. Activations: {activations}. Check rendered bounds, not declarations alone.</p>
     {:else if kind === 'geometry'}
       <div class="study-controls"><label>Outer circular radius <input class="slider" type="range" min="8" max="40" step="2" bind:value={outer} /><output aria-live="off">{outer}px</output></label><label>Inset <input class="slider" type="range" min="2" max="16" step="2" bind:value={inset} /><output aria-live="off">{inset}px</output></label><label>Outside ring <input class="slider" type="range" min="0" max="2" step="0.5" bind:value={ring} /><output aria-live="off">{ring}px</output></label></div>

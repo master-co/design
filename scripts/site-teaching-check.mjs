@@ -284,7 +284,7 @@ export async function verifyTeaching(browser, { origin, engine, artifacts }) {
       await goto(route)
       await page.locator('html').evaluate(element => element.style.fontSize = '200%')
       await fits(`${route}/200%`)
-      await page.locator('.design-lab,.task-study').screenshot({ path: resolve(directory, `${engine}-200-${route.split('/').at(-1)}.png`) })
+      await page.locator('.design-lab,.task-study').first().screenshot({ path: resolve(directory, `${engine}-200-${route.split('/').at(-1)}.png`) })
     }
     checks.push('all figures: reading/narrow, light/dark, local overflow; representative 200% text')
     assert.deepEqual(errors, [], 'Teaching pages have no runtime errors')
@@ -308,7 +308,7 @@ export async function verifyTeaching(browser, { origin, engine, artifacts }) {
     await touch.locator('[data-lab="geometry"]').screenshot({ path: resolve(directory, `${engine}-native-dpr2-geometry.png`) })
     checks.push('first-touch form activation and native DPR2 geometry capture')
   } finally { await touch.close() }
-  const report = { engine, version: browser.version(), figures: figures.filter(entry => entry.component === 'GuideFigure').length, labs: 8, studies: 3, checks, captures, screenReader: 'Not tested; browser accessibility semantics are not a screen-reader walkthrough.' }
+  const report = { engine, version: browser.version(), figures: figures.filter(entry => entry.component === 'GuideFigure').length, labs: figures.filter(entry => entry.component === 'DesignLab').length, studies: figures.filter(entry => entry.component === 'TaskStudy').length, checks, captures, screenReader: 'Not tested; browser accessibility semantics are not a screen-reader walkthrough.' }
   await writeFile(resolve(directory, `${engine}-report.json`), JSON.stringify(report, null, 2) + '\n')
   return report
 }

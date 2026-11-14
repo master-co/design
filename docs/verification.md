@@ -62,3 +62,13 @@ The installed Typography reference includes this measured condition and a scoped
 ## aron.tw application feedback — 2026-10-30
 
 The [application record](verification/aron-site-2026-10-30.md) separates the site's production verification from the portable reading-controls specimen. It records the existing CJK/row work retained here, the additional heading/arrow/touch/motion guidance, two-engine checks and their limits. Run `bun run test:reading` for the new live section; the six original typography/layout boards and article artwork remain separate.
+
+## Web interface guideline audit — 2026-11-14
+
+The [full audit](verification/design-guideline-audit-2026-11-14.md) reviews all 51 canonical references, records 32 admitted improvements/corrections and maps content coverage against the 55 WCAG 2.2 A/AA success criteria. The [source register](verification/design-guideline-sources-2026-11-14.md) records the first-party comparison corpus and access limitations. The [implementation plan](design-guide-expansion-plan.md) assigns canonical ownership, six additional reference routes, teaching specimens and behavioral acceptance scenarios.
+
+These are review and planning artifacts. They do not establish implementation completion, website accessibility conformance or new browser/AT evaluation results. The audit's verification record identifies the checks performed on this documentation change.
+
+## Web interface expansion — 2026-11-14
+
+The [implementation record](verification/design-guide-expansion-2026-11-14.md) maps all 32 admitted findings to canonical guidance and actual evidence. The public guide now contains 57 references; new teaching material preserves all original figures and task studies. The report distinguishes successful repository/browser and independent skill evaluations from the real AT/hardware conditions that remain unverified. Exact hashes and selected results are retained in its runtime manifest.
