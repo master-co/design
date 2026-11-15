@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.3.7 — 2026-11-16
+
+- Align a control at the end of a bar by what is seen at rest. A borderless control in a bar without a contour extends its box into the bar's padding so its glyph meets the shared edge. A control in a contoured holder keeps an even box inset. Record the tradeoff when the two conflict.
+- Give a page header and its content one inline gutter at every width, and change both at each breakpoint.
+- Align an action, a badge or a trailing value with the first line of a multi-line label, and use one alignment strategy within a row.
+- Explain why a flex or grid box can export an icon's bottom edge as its baseline, and why `overflow-wrap: anywhere` can split a short label one letter at a time in a column sized to its content.
+
 ## 0.3.6 — 2026-11-15
 
 - Remove ongoing-motion and automatic-update pause/stop/hide requirements from the guide and its timing specimen. Keep time-limit, audio, flashing and reduced-motion guidance.
