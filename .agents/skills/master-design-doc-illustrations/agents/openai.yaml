@@ -1,4 +1,0 @@
-interface:
-  display_name: "Master Design documentation illustrations"
-  short_description: "Explain design relationships in the documentation site"
-  default_prompt: "Use $master-design-doc-illustrations to illustrate and verify this Master Design documentation section."
