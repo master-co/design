@@ -47,8 +47,5 @@
   },
   "workspaces": [
     "site"
-  ],
-  "patchedDependencies": {
-    "@master/internal-site@0.2.13": "patches/@master%2Finternal-site@0.2.13.patch"
-  }
+  ]
 }

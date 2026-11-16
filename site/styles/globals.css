@@ -1,9 +1,6 @@
 @import '@master/css';
 @reference '@master/internal-site/styles/foundation.css';
 @import '@master/internal-site/styles/foundation.css';
-@import '@master/ui/components/button.css';
-@import '@master/ui/components/input.css';
-@import '@master/ui/components/radio.css';
 
 /* Site composition only; reusable control presentation is owned by Master UI. */
 .design-document { min-width: 0; flex: 1; }

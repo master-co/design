@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount, onDestroy } from 'svelte'
   import { compositeGray, contrastGray, circularInset, initialRequestState, requestTransition } from '../studies/model.mjs'
-  import '../styles/studies.css'
+  import '../styles/studies.ts'
   let { kind }: { kind: string } = $props()
   const uid = $props.id()
   const titles: Record<string, string> = { color: 'Inspect a composited color pair', density: 'Measure the target independently', geometry: 'Inspect a circular inset', typography: 'Let real text change the layout', states: 'Keep selection and focus distinct', responsive: 'Recompose a reading region', async: 'Resolve requests out of order', motion: 'Reverse motion before it finishes' }

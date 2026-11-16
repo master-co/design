@@ -13,7 +13,7 @@
   import TimingStudy from './studies/TimingStudy.svelte'
   import ControlStudy from './studies/ControlStudy.svelte'
   import MeaningStudy from './studies/MeaningStudy.svelte'
-  import '../styles/studies.css'
+  import '../styles/studies.ts'
   let { kind }: { kind: string } = $props()
 </script>
 {#if kind === 'reading'}<ReadingStudy />{:else if kind === 'service'}<ServiceStudy />{:else if kind === 'workspace'}<WorkspaceStudy />{/if}
