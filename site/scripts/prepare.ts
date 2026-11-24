@@ -2,13 +2,15 @@ import { access, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promise
 import { dirname, join, relative } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { generateSearchPages } from '@master/internal-site/utils/search-pages'
-import { pages } from '../catalog.mjs'
+import { transformMarkdownLinks } from '@master/internal-site/utils/markdown-links.ts'
+import { pages, siteOrigin } from '../catalog.mjs'
 import { metadataFor } from './content.mjs'
 import { illustratedMarkdown, renderers, validateFigureCatalog } from './illustrations.mjs'
 
 const site = fileURLToPath(new URL('../', import.meta.url))
 const root = fileURLToPath(new URL('../../', import.meta.url))
 const expected = new Set<string>()
+const fullGuide: string[] = []
 validateFigureCatalog(pages)
 for (const renderer of Object.values(renderers)) await access(join(site, 'components', renderer))
 async function write(file: string, value: string) {
@@ -23,7 +25,11 @@ for (const page of pages) {
   const componentPrefix = relative(directory, join(site, 'components')).split('\\').join('/')
   await write(join(directory, 'content.mdx'), illustratedMarkdown(markdown, page.source, componentPrefix))
   await write(join(directory, 'metadata.ts'), `// Generated from the portable skill. Edit site/catalog.mjs for route metadata.\nexport default ${JSON.stringify(metadataFor(page), null, 2)}\n`)
-  await write(join(site, 'public/guidelines', page.source.replace('skills/master-design/references/', '')), markdown)
+  await write(join(site, 'public', page.markdownPath), markdown)
+  // Each source has its own base directory. Keep its links usable from the combined file.
+  const markdownURL = new URL(page.markdownPath, siteOrigin)
+  const body = transformMarkdownLinks(markdown, href => new URL(href, markdownURL).href)
+  fullGuide.push(`[Read this page on Master Design](${new URL(page.route, siteOrigin).href})\n\n${body.trimEnd()}`)
 }
 // Remove adapters for deleted routes, never source Markdown.
 for (const file of await readdir(join(site, 'content'), { recursive: true }).catch(() => [] as string[])) {
@@ -34,9 +40,23 @@ for (const file of await readdir(join(site, 'public/guidelines'), { recursive: t
   const path = join(site, 'public/guidelines', file)
   if (file.endsWith('.md') && !expected.has(path)) await rm(path)
 }
-await write(join(site, 'public/guidelines/LICENSE.txt'), await readFile(join(root, 'skills/master-design/LICENSE.txt'), 'utf8'))
-const categories = [...new Set(pages.map(page => page.category))].map(name => ({ name, pages: pages.filter(page => page.category === name).map(metadataFor) }))
+const license = await readFile(join(root, 'skills/master-design/LICENSE.txt'), 'utf8')
+await write(join(site, 'public/guidelines/LICENSE.txt'), license)
+const groups = [...Map.groupBy(pages, page => page.category)]
+const categories = groups.map(([name, entries]) => ({ name, pages: entries.map(metadataFor) }))
 await write(join(site, '.categories/guide.json'), JSON.stringify(categories, null, 2) + '\n')
-await write(join(site, 'public/llms.txt'), `# Master Design\n\nPractical web interface guidelines. The canonical Markdown also ships in the portable master-design skill.\n\nThe guideline Markdown is [MIT licensed](https://design.master.co/guidelines/LICENSE.txt).\n\n${pages.map(page => `- [${page.title}](https://design.master.co/guidelines/${page.source.replace('skills/master-design/references/', '')}): ${page.description}`).join('\n')}\n`)
+const sections = groups.map(([name, entries]) => [
+  `## ${name}`,
+  entries.map(page => `- [${page.documentTitle}](${new URL(page.markdownPath, siteOrigin).href}): ${page.description}`).join('\n'),
+].join('\n\n'))
+await write(join(site, 'public/llms.txt'), [
+  '# Master Design',
+  '> A practical guide to web interface design, accessibility and interaction. The portable master-design skill uses the same Markdown.',
+  'Start with the decision you are making. Each topic links to a standalone Markdown document.',
+  ...sections,
+  '## Optional',
+  `- [Complete guide](${siteOrigin}/llms-full.txt): All topics in one file, with links to the published pages.\n- [Markdown license](${siteOrigin}/guidelines/LICENSE.txt): MIT license for the guideline text.`,
+].join('\n\n') + '\n')
+await write(join(site, 'public/llms-full.txt'), ['# Master Design\n\nWeb interface design guidelines.', ...fullGuide, license.trimEnd()].join('\n\n---\n\n') + '\n')
 await generateSearchPages({ cwd: site, defaultLocale: 'en', locales: ['en'], dictionariesDir: join(site, 'i18n'), write: true })
 console.log(`Prepared ${pages.length} pages from ${relative(root, join(root, 'skills/master-design/references'))}.`)

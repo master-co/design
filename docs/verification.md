@@ -72,3 +72,7 @@ These are review and planning artifacts. They do not establish implementation co
 ## Web interface expansion — 2026-11-14
 
 The [implementation record](verification/design-guide-expansion-2026-11-14.md) maps all 32 admitted findings to canonical guidance and actual evidence. The public guide now contains 57 references; new teaching material preserves all original figures and task studies. The report distinguishes successful repository/browser and independent skill evaluations from the real AT/hardware conditions that remain unverified. Exact hashes and selected results are retained in its runtime manifest.
+
+## Search and agent discovery — 2026-11-24
+
+The [discovery audit](verification/search-and-agent-discovery-2026-11-24.md) records the production crawl and the local checks for canonical URLs, sitemap coverage, sharing images, Markdown and agent indexes across all 57 guides.

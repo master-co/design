@@ -5,6 +5,7 @@ import { extname, resolve, sep } from 'node:path'
 import { chromium, webkit } from '@playwright/test'
 import { parseHTML } from 'linkedom'
 import { pages } from '../site/catalog.mjs'
+import { verifyGuideHead, verifyGuideIndexes } from './site-discovery-check.mjs'
 import { verifyHeaderReadiness } from './header-readiness-check.mjs'
 import { verifyVisualMatrix } from './site-visual-matrix-check.mjs'
 import { verifyExpansion } from './site-expansion-check.mjs'
@@ -19,11 +20,12 @@ const types = { '.html': 'text/html', '.js': 'text/javascript', '.mjs': 'text/ja
 const fileFor = pathname => resolve(output, '.' + (pathname === '/' ? '/index.html' : extname(pathname) ? pathname : pathname + '.html'))
 
 // Every published document and internal destination must exist in the static artifact.
+await verifyGuideIndexes(output)
 for (const entry of pages) {
   const html = await readFile(fileFor(entry.route), 'utf8')
   const { document } = parseHTML(html)
   assert.equal(document.querySelectorAll('h1').length, 1, `${entry.route}: one page title`)
-  assert.equal(document.querySelector('link[rel="canonical"]')?.getAttribute('href'), `https://design.master.co${entry.route === '/' ? '/' : entry.route}`)
+  await verifyGuideHead(entry, document, output)
   for (const link of document.querySelectorAll('a[href]')) {
     const value = link.getAttribute('href')
     if (!value.startsWith('/') && !value.startsWith('#')) continue

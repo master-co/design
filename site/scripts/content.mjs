@@ -43,12 +43,12 @@ export function webMarkdown(markdown, source) {
 
 export function metadataFor(page) {
   return {
-    title: page.title,
-    ...(page.route === '/' ? { other: { subject: 'Overview' } } : {}),
+    title: page.documentTitle,
+    ...(page.documentTitle !== page.title ? { other: { subject: page.route === '/' ? 'Overview' : page.title, heading: page.title } } : {}),
     description: page.description,
     category: page.category,
     pathname: page.route,
     sourcePath: page.source,
-    alternates: { canonical: `https://design.master.co${page.route === '/' ? '' : page.route}` },
+    alternates: { canonical: page.route },
   }
 }

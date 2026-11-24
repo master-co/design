@@ -16,6 +16,7 @@ site/.astro/
 site/out/
 site/public/search/
 site/public/llms.txt
+site/public/llms-full.txt
 site/public/guidelines/
 site/.wrangler/
 
