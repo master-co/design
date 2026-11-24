@@ -6,4 +6,5 @@ export default {
   sourceBaseURL: 'https://github.com/master-co/design/blob/main/',
   feedbackURL: 'https://github.com/master-co/design/issues/new?template=documentation.yml',
   navs: primaryNavs, communityNavs, header: { communityNavs, searchOnHome: true }, versions: [], Logotype,
+  search: { examples: ['contrast', 'focus', 'motion'] },
 } satisfies SiteApp
