@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Say what a change between percentages reports — percentage points or relative change — and what it is compared against. Keep direction separate from whether the change is good.
+- Keep a value below a detection limit with its comparator, limit and unit, and show a data cutoff beside the generation time when they differ.
+- Show what is due now and what recurs before payment, and write out an unfamiliar abbreviation at its first use.
+- Name each language in a switcher in its own language and mark passages in another language. Give links to different destinations distinguishable purposes.
+
 ## 0.3.7 — 2026-11-16
 
 - Align a control at the end of a bar by what is seen at rest. A borderless control in a bar without a contour extends its box into the bar's padding so its glyph meets the shared edge. A control in a contoured holder keeps an even box inset. Record the tradeoff when the two conflict.
