@@ -9,6 +9,7 @@ const panel = (label, value, note) => ({ label, value, note })
 /** @type {Array<{id:string, source:string, heading:string, component:string, kind?:string, title?:string, panels?:Array<{label:string,value:string,note:string}>, caption?:string}>} */
 export const figures = [
   { id: 'embedded-action', source: source('geometry'), heading: 'Check an embedded end control', component: 'TaskStudy', kind: 'inset', title: 'Measure the three adjacent gaps' },
+  { id: 'text-wrap', source: source('typography'), heading: 'Wrapping', component: 'TaskStudy', kind: 'wrap', title: 'Wrap the same words three ways', caption: 'Every specimen takes the chosen wrap. Balance suits the option descriptions and the centered lead; the streaming reply shows why text that grows while it is read stays stable, which breaks lines as ordinary wrapping does. Breaks depend on the engine, the font and the width.' },
   { id: 'optical-alignment', source: source('typography'), heading: 'Correct a specific optical imbalance', component: 'TaskStudy', kind: 'alignment', title: 'Compare visible ink with geometric boxes' },
   { id: 'reading-measure', source: source('foundations/typography'), heading: 'Choose a reading measure', component: 'TaskStudy', kind: 'measure', title: 'Read actual paragraphs at different measures' },
   { id: 'hierarchy-diagnostic', source: source('evidence'), heading: 'Diagnose hierarchy at coarse scale', component: 'TaskStudy', kind: 'hierarchy', title: 'Compare visual weight before reading normally' },

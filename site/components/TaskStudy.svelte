@@ -13,6 +13,7 @@
   import TimingStudy from './studies/TimingStudy.svelte'
   import ControlStudy from './studies/ControlStudy.svelte'
   import MeaningStudy from './studies/MeaningStudy.svelte'
+  import WrapStudy from './studies/WrapStudy.svelte'
   import '../styles/studies.ts'
   let { kind }: { kind: string } = $props()
 </script>
@@ -21,6 +22,7 @@
 {#if kind === 'inset'}<InsetStudy />{/if}
 {#if kind === 'alignment'}<AlignmentStudy />{/if}
 {#if kind === 'measure'}<MeasureStudy />{/if}
+{#if kind === 'wrap'}<WrapStudy />{/if}
 {#if kind === 'interaction'}<InteractionStudy />{/if}
 {#if kind === 'branch'}<BranchStudy />{/if}
 {#if kind === 'large-collection'}<CollectionStudy />{/if}

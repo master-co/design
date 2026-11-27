@@ -22,5 +22,5 @@ const title = entry.title ?? (entry.component === 'FoundationPreview' ? 'Apply a
   {entry.component === 'DesignLab' && <DesignLab kind={entry.kind!} client:load />}
   {entry.component === 'TaskStudy' && <TaskStudy kind={entry.kind!} client:load />}
   {entry.component === 'FoundationPreview' && <FoundationPreview client:load />}
-  <Fragment slot="caption">{entry.component === 'TaskStudy' ? 'Local data and simulated outcomes. Follow the acceptance walkthrough in the guide, including interruption and recovery.' : 'Observe the rendered relationship as you change the controls. Example values describe this specimen; use the surrounding guide to choose values for your project.'}</Fragment>
+  <Fragment slot="caption">{entry.caption ?? (entry.component === 'TaskStudy' ? 'Local data and simulated outcomes. Follow the acceptance walkthrough in the guide, including interruption and recovery.' : 'Observe the rendered relationship as you change the controls. Example values describe this specimen; use the surrounding guide to choose values for your project.')}</Fragment>
 </Demo>
