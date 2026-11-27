@@ -6,6 +6,7 @@
 - Keep a value below a detection limit with its comparator, limit and unit, and show a data cutoff beside the generation time when they differ.
 - Show what is due now and what recurs before payment, and write out an unfamiliar abbreviation at its first use.
 - Name each language in a switcher in its own language and mark passages in another language. Give links to different destinations distinguishable purposes.
+- Choose a text wrap by how a block is read: balance a title and the sentence or two that completes it, keep pretty wrapping for running text or text of unbounded length, and keep text that changes while it is seen stable. Center balanced lines in a box sized by its own words.
 
 ## 0.3.7 — 2026-11-16
 
