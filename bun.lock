@@ -19,16 +19,16 @@
     "site": {
       "name": "@master/design-site",
       "dependencies": {
-        "@master/css": "2.1.8",
-        "@master/css-astro": "2.1.8",
-        "@master/css-compiler": "2.1.8",
-        "@master/css-language-service": "2.1.8",
-        "@master/css-preset": "2.1.8",
-        "@master/css-schema": "2.1.8",
-        "@master/css-server": "2.1.8",
-        "@master/css-tooling": "2.1.8",
-        "@master/internal-site": "0.3.6",
-        "@master/ui": "2.2.1",
+        "@master/css": "2.1.9",
+        "@master/css-astro": "2.1.9",
+        "@master/css-compiler": "2.1.9",
+        "@master/css-language-service": "2.1.9",
+        "@master/css-preset": "2.1.9",
+        "@master/css-schema": "2.1.9",
+        "@master/css-server": "2.1.9",
+        "@master/css-tooling": "2.1.9",
+        "@master/internal-site": "0.3.7",
+        "@master/ui": "2.3.0",
         "@tabler/icons-svelte-runes": "3.50.0",
         "astro": "7.4.2",
         "clsx": "2.1.1",
@@ -287,49 +287,49 @@
 
     "@jridgewell/trace-mapping": ["@jridgewell/trace-mapping@0.3.31", "", { "dependencies": { "@jridgewell/resolve-uri": "^3.1.0", "@jridgewell/sourcemap-codec": "^1.4.14" } }, "sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw=="],
 
-    "@master/css": ["@master/css@2.1.8", "", { "dependencies": { "@master/css-binding": "2.1.8", "@master/css-preset": "2.1.8", "@master/css-schema": "2.1.8" } }, "sha512-WpCo9F0Sw8H5/giCrCIBKOJgjIj6Px+f3L21xvdioy+bhnmSX/wAxUtvsgYILFllaxUq9Ou5vUErL0QiyFkuYg=="],
+    "@master/css": ["@master/css@2.1.9", "", { "dependencies": { "@master/css-binding": "2.1.9", "@master/css-preset": "2.1.9", "@master/css-schema": "2.1.9" } }, "sha512-JHfwiwKFAwcvkPA4pQF6BUFC9H7+q0rNa4qqfecHsD94PKgSeDd0WBODogEP3rnuf6JUh9frwucxJxS4YRIaOw=="],
 
-    "@master/css-astro": ["@master/css-astro@2.1.8", "", { "dependencies": { "@master/css": "2.1.8", "@master/css-compiler": "2.1.8", "@master/css-schema": "2.1.8", "@master/css-server": "2.1.8", "@master/css-vite": "2.1.8" }, "peerDependencies": { "astro": ">=5", "vite": ">=6" } }, "sha512-0PDk1jdeVFoFC9yubVw/kLONTtYjVFp3MLAgSI0cdtTMtznKENn0MQn/Mnc2gghspYI939cPGujALgOkRXvphA=="],
+    "@master/css-astro": ["@master/css-astro@2.1.9", "", { "dependencies": { "@master/css": "2.1.9", "@master/css-compiler": "2.1.9", "@master/css-schema": "2.1.9", "@master/css-server": "2.1.9", "@master/css-vite": "2.1.9" }, "peerDependencies": { "astro": ">=5", "vite": ">=6" } }, "sha512-cuA+NWt905CxxjSlo2Q+PUYMczSb5u6+j1WoTOIxP5w6y4FBcibFhHhsIGGnuhybSnsZIp91bOooLQrUFrNtWQ=="],
 
-    "@master/css-binding": ["@master/css-binding@2.1.8", "", { "dependencies": { "@master/css-binding-wasm-compiler": "2.1.8", "@master/css-binding-wasm-engine": "2.1.8", "@master/css-binding-wasm-tooling": "2.1.8", "@master/css-schema": "2.1.8" }, "optionalDependencies": { "@master/css-binding-darwin-arm64": "2.1.8", "@master/css-binding-darwin-x64": "2.1.8", "@master/css-binding-linux-arm64-gnu": "2.1.8", "@master/css-binding-linux-arm64-musl": "2.1.8", "@master/css-binding-linux-x64-gnu": "2.1.8", "@master/css-binding-linux-x64-musl": "2.1.8", "@master/css-binding-win32-arm64-msvc": "2.1.8", "@master/css-binding-win32-x64-msvc": "2.1.8" } }, "sha512-Kr429M/GuvBSLADVUUkje0wZeodLY4OwKSPr/AYq3P5vC6Of8AxrUXKBCpBEa6BnEoZ/XghFpuJcA1eQXFj3yA=="],
+    "@master/css-binding": ["@master/css-binding@2.1.9", "", { "dependencies": { "@master/css-binding-wasm-compiler": "2.1.9", "@master/css-binding-wasm-engine": "2.1.9", "@master/css-binding-wasm-tooling": "2.1.9", "@master/css-schema": "2.1.9" }, "optionalDependencies": { "@master/css-binding-darwin-arm64": "2.1.9", "@master/css-binding-darwin-x64": "2.1.9", "@master/css-binding-linux-arm64-gnu": "2.1.9", "@master/css-binding-linux-arm64-musl": "2.1.9", "@master/css-binding-linux-x64-gnu": "2.1.9", "@master/css-binding-linux-x64-musl": "2.1.9", "@master/css-binding-win32-arm64-msvc": "2.1.9", "@master/css-binding-win32-x64-msvc": "2.1.9" } }, "sha512-sRYyDb3XSWw9Mft512Y6H32sEHbmVLatmhjuRy5LQMI4UTTE0BG18KS2HitnuA30L9SuH6y0KI+u7wIMZOgYCQ=="],
 
-    "@master/css-binding-darwin-arm64": ["@master/css-binding-darwin-arm64@2.1.8", "", { "os": "darwin", "cpu": "arm64" }, "sha512-dMX9OK6v60Bj1qtPy1AqU0GFtuc0yKG5Iglacp6tqDwbmMKF5n95U5BUHzj+pTEXV/JwL+odlULHD0i6zcVJRA=="],
+    "@master/css-binding-darwin-arm64": ["@master/css-binding-darwin-arm64@2.1.9", "", { "os": "darwin", "cpu": "arm64" }, "sha512-ymITzInxS0QwcJDlLX2rKBdGQ77+6nz1yWhHWh7DNlTaG1s35ebOvqlJdVQ6VjLWVC5rETTENsxlVKebVJCbjQ=="],
 
-    "@master/css-binding-darwin-x64": ["@master/css-binding-darwin-x64@2.1.8", "", { "os": "darwin", "cpu": "x64" }, "sha512-g1Sy77vvVkDLW/gNxUAmx+2alluSHX/N4Vy2O0ax3sHUx/wD7OFVZLFtkv3+eb2rSZZ3iPFZ4jBz6IqybSXzyQ=="],
+    "@master/css-binding-darwin-x64": ["@master/css-binding-darwin-x64@2.1.9", "", { "os": "darwin", "cpu": "x64" }, "sha512-9T1pfp9b1DEFdOknb2UzvZSmV5fI3CXXTnNzut0qda6QLpoRLCmnacMz7wimFSNG1FYyBJhiUQtZycEw7dUijA=="],
 
-    "@master/css-binding-linux-arm64-gnu": ["@master/css-binding-linux-arm64-gnu@2.1.8", "", { "os": "linux", "cpu": "arm64", "libc": "glibc" }, "sha512-rLOsvOmgBfqvqikqLT1vF3Y6S0+uaQZUU9tbSiXx8aSYZzDdD/frxf12sU0rgyb+FUcY0JuCTDp713KmJKKasA=="],
+    "@master/css-binding-linux-arm64-gnu": ["@master/css-binding-linux-arm64-gnu@2.1.9", "", { "os": "linux", "cpu": "arm64", "libc": "glibc" }, "sha512-T4Wqnvxq7d0PLicKydaZxytTo6jzPldX6dpeS1KLYZgitJbeXhX+dMDa/c4UvAxRylPuCBjgCYHLQBNZkHH3yA=="],
 
-    "@master/css-binding-linux-arm64-musl": ["@master/css-binding-linux-arm64-musl@2.1.8", "", { "os": "linux", "cpu": "arm64", "libc": "musl" }, "sha512-eAQkru1LvWxc17/AFQHUmpnQQ/B8XhUlGXnyhX1JgkHUJ+2oEcYrkyaR2OyaB8NGJdpZVeItXCYDxvn5uWF/og=="],
+    "@master/css-binding-linux-arm64-musl": ["@master/css-binding-linux-arm64-musl@2.1.9", "", { "os": "linux", "cpu": "arm64", "libc": "musl" }, "sha512-bUHbv3sL5Ekg+GNVNxLmVrKMii8r0l+c7IQPyC7+ONUSPqRDodTWCsl8oBcgOhUbsOMuCjSyKzmEPkNyAjMKwg=="],
 
-    "@master/css-binding-linux-x64-gnu": ["@master/css-binding-linux-x64-gnu@2.1.8", "", { "os": "linux", "cpu": "x64", "libc": "glibc" }, "sha512-z5BL4qiuHCAsI4s1Op6qhSt0y1kDowLV01C60oM1+YsSsaxn3Ux7nJzSAjGnXcuPmOCj8bFIGLEZm4e7p7VlYg=="],
+    "@master/css-binding-linux-x64-gnu": ["@master/css-binding-linux-x64-gnu@2.1.9", "", { "os": "linux", "cpu": "x64", "libc": "glibc" }, "sha512-1e+KigmZ0W9FeRd8wk05jduFkAvQDiiwHqJFFf9nYdZgFxvm1Y/8ugVc1HXO2Z1XPJpzE7i1kUpQnT8IaI2ZEg=="],
 
-    "@master/css-binding-linux-x64-musl": ["@master/css-binding-linux-x64-musl@2.1.8", "", { "os": "linux", "cpu": "x64", "libc": "musl" }, "sha512-gBSEL0jCum0H7TGI4hFqprcZ9RNjRLAX8P6lzBJVt9WdMtBs8+s41A+HxbLK11vOgIvaUeshPd7V3ZDuz990Iw=="],
+    "@master/css-binding-linux-x64-musl": ["@master/css-binding-linux-x64-musl@2.1.9", "", { "os": "linux", "cpu": "x64", "libc": "musl" }, "sha512-0GQmYc0UlmAr/QdLq2AEP5JVuLT6bRjJXGQNDM8CKM+tf79NhTVHRsKa5FZLQHm01Jg9NF2CS3u6JuJVB5mQfg=="],
 
-    "@master/css-binding-wasm-compiler": ["@master/css-binding-wasm-compiler@2.1.8", "", { "dependencies": { "@master/css-schema": "2.1.8" } }, "sha512-cwFIzeiAoA8X0M1+Ii+0IE33bRyRwH26tWXHNlHdN27a7jKmU9g+Q0fKYz3r3i7GWfXPtBcGhxLwxIjHGzZA/g=="],
+    "@master/css-binding-wasm-compiler": ["@master/css-binding-wasm-compiler@2.1.9", "", { "dependencies": { "@master/css-schema": "2.1.9" } }, "sha512-BTX+212Liqb5l0uZdO/0wLm+duPlNGwGQ9K/tWjkpsfpC101SzjA2Vu/eTu6cAhHtjGttxihGYvvELkV125B6Q=="],
 
-    "@master/css-binding-wasm-engine": ["@master/css-binding-wasm-engine@2.1.8", "", { "dependencies": { "@master/css-schema": "2.1.8" } }, "sha512-iEGnIWRgaSmWinfjp5AafxAvdRhLpInbcGeBwR4c3N+VM/KUAiIL9kGJDE8h9L+MovMaNjZ89h3wNhymlywazw=="],
+    "@master/css-binding-wasm-engine": ["@master/css-binding-wasm-engine@2.1.9", "", { "dependencies": { "@master/css-schema": "2.1.9" } }, "sha512-+eH13fCHCJZO1ECPzJkMh9DmG4RulbQgi+WT9PeMlA6mRSJ3zdxj60y/KrAeNYhsHMJ3biORhylF9HQG92mRSw=="],
 
-    "@master/css-binding-wasm-tooling": ["@master/css-binding-wasm-tooling@2.1.8", "", { "dependencies": { "@master/css-schema": "2.1.8" } }, "sha512-NM9kkb7IHGTcin+I/GV4g437QxEhmbxuSW+0sUE40/2v6NjafD+uW/f7f7u+7yeOlYpmfVx2PbED9EtCJh6rbg=="],
+    "@master/css-binding-wasm-tooling": ["@master/css-binding-wasm-tooling@2.1.9", "", { "dependencies": { "@master/css-schema": "2.1.9" } }, "sha512-POcXCjGZfhG1P1qqn73e/k6mcosroTDNtBmeaXihniCrhA23M+WGNPGqDF9VfwzkvSJRx0ZH2O489tT9FhEibg=="],
 
-    "@master/css-binding-win32-arm64-msvc": ["@master/css-binding-win32-arm64-msvc@2.1.8", "", { "os": "win32", "cpu": "arm64" }, "sha512-2Rga/Ed1p0ZqFO/qO2V79vcASPWjhs55cAKRybuqnvlVyJ2edYCfTyMj+SJAWvp76oLjgYpCESbZgYXn70xQXw=="],
+    "@master/css-binding-win32-arm64-msvc": ["@master/css-binding-win32-arm64-msvc@2.1.9", "", { "os": "win32", "cpu": "arm64" }, "sha512-0Z75WodDfdHkFxIJpriKqZ4eqlF4NC5CfkbezDDHVPRTN7KTEsVJVJweJxPOyIE54HxKp4FuEy20jyaLsqI0bw=="],
 
-    "@master/css-binding-win32-x64-msvc": ["@master/css-binding-win32-x64-msvc@2.1.8", "", { "os": "win32", "cpu": "x64" }, "sha512-KyBzMudD1UnNo4gqimYDjCQaBddIMmFVCuZ6mK8Ut7/NwYqwTHNnpNTZHjuiQazVdaEq93cU/G+T0ZIXep010A=="],
+    "@master/css-binding-win32-x64-msvc": ["@master/css-binding-win32-x64-msvc@2.1.9", "", { "os": "win32", "cpu": "x64" }, "sha512-dQxuD9+XyfIDpGp+Jvj/JXybPAfyFDvx9UMf+oLydpM8I1UVkrsgrU8YCNoSKtnc1osY1+1bvtTTJNdAdccyKQ=="],
 
-    "@master/css-compiler": ["@master/css-compiler@2.1.8", "", { "dependencies": { "@master/css-binding": "2.1.8", "@master/css-schema": "2.1.8", "@master/css-tooling": "2.1.8", "fast-glob": "^3.3.3" } }, "sha512-ScuHV7ObdGUlMyqs3C2SQu//fAennNHiTxIWuB73Lhm9UejNfi+2DgKyax0kTTaVZyVUq6h7GtfQ6O0mvOw+bw=="],
+    "@master/css-compiler": ["@master/css-compiler@2.1.9", "", { "dependencies": { "@master/css-binding": "2.1.9", "@master/css-schema": "2.1.9", "@master/css-tooling": "2.1.9", "fast-glob": "^3.3.3" } }, "sha512-WzNdtEroXYgaP6ARCB9l+JwMrBwLD3pYOlYRB2dxuDA/Q8tlexj0IBNU30oLKtKrykNw0eMBi7hGsqo+98sSNg=="],
 
-    "@master/css-language-service": ["@master/css-language-service@2.1.8", "", { "dependencies": { "@master/css-preset": "2.1.8", "@master/css-schema": "2.1.8", "@master/css-tooling": "2.1.8", "colorjs.io": "^0.7.1", "defu": "^6.1.7", "js-beautify": "^2.0.3", "minimatch": "^10.2.6", "vscode-languageserver-protocol": "^3.18.5", "vscode-languageserver-textdocument": "^1.0.16" } }, "sha512-edSBmc0XXp3+hRPgKvO1wALFyEJt3UVgjZI2iUAMj6cQ5M0AJ66Vu4Jo0XrG5sc8rV8TyjkFefFLH+eP4GYwGA=="],
+    "@master/css-language-service": ["@master/css-language-service@2.1.9", "", { "dependencies": { "@master/css-preset": "2.1.9", "@master/css-schema": "2.1.9", "@master/css-tooling": "2.1.9", "colorjs.io": "^0.7.1", "defu": "^6.1.7", "js-beautify": "^2.0.3", "minimatch": "^10.2.6", "vscode-languageserver-protocol": "^3.18.5", "vscode-languageserver-textdocument": "^1.0.16" } }, "sha512-Q+n40+ihH6Mke9QCOW0UJYZ2Y0kibWr0YOpV3C8v8JHbgiqPjI/vC2ou7nt6Gh6mPfGcxSyoxz1fi9Qd+DUGOA=="],
 
-    "@master/css-preset": ["@master/css-preset@2.1.8", "", { "dependencies": { "@master/css-schema": "2.1.8" } }, "sha512-qEQln9M8EuNmQ9f1xt/dT2Z7Kho7ils4Al4CKSz4I21Jk33dfoBHjBALzkhebS43W3KsrQmh6SsC1+XTqEFYZQ=="],
+    "@master/css-preset": ["@master/css-preset@2.1.9", "", { "dependencies": { "@master/css-schema": "2.1.9" } }, "sha512-5wjrnAPt1/739jsBL0ZD5r9TYLbQC8t5b4+9kRINW0yRTKKnIEXyOFinyVZo0y/NFOxefIonXW06Lmn+8MNtrQ=="],
 
-    "@master/css-runtime": ["@master/css-runtime@2.1.8", "", { "dependencies": { "@master/css": "2.1.8", "@master/css-binding": "2.1.8", "@master/css-schema": "2.1.8" } }, "sha512-Lm8cqyu3Mh3NKT7x2/yIsiv2nFFPN0FFd5TmyRiPXKvKFzhR6i5TjVil4vrAKfqhihLTSUhyc6mPkJtP3iesZQ=="],
+    "@master/css-runtime": ["@master/css-runtime@2.1.9", "", { "dependencies": { "@master/css": "2.1.9", "@master/css-binding": "2.1.9", "@master/css-schema": "2.1.9" } }, "sha512-cs2zFwEEHaYOZX50XIrHqcudcbVBPEFKcXIih8KSyrv/JihGna7fb638+SFRprlyYqj/OhCIRDvU9WZ20JviBg=="],
 
-    "@master/css-schema": ["@master/css-schema@2.1.8", "", { "dependencies": { "csstype": "^3.2.3" } }, "sha512-TOcYZQJDa5qBnsMw6+ljaiuP+elEeOECemB1aSKEomNcpU0yTKbDLGGEPTk6THPhwRwiNw+8hJ5klUJwALn9OA=="],
+    "@master/css-schema": ["@master/css-schema@2.1.9", "", { "dependencies": { "csstype": "^3.2.3" } }, "sha512-d0s+JLGrrAUqXWgBVC2HJv9mmxskeMgBl9GLx9gwr6e3ER0teb/VkzMV1kG3aNG3qOTvfBYB6HVKXM5qPt9EWQ=="],
 
-    "@master/css-server": ["@master/css-server@2.1.8", "", { "dependencies": { "@master/css": "2.1.8", "@master/css-schema": "2.1.8", "@master/css-tooling": "2.1.8", "dom-serializer": "^3.1.1", "domhandler": "^6.0.1", "htmlparser2": "^12.0.0" } }, "sha512-B26oTvsWAAFIu0+Y7O+AGY2VDXzIe/weFq6xr+5e1eNMxu+8qJ7mBDqSm8T94eRzree+wqsGFpQGMDlJ5Soh/g=="],
+    "@master/css-server": ["@master/css-server@2.1.9", "", { "dependencies": { "@master/css": "2.1.9", "@master/css-schema": "2.1.9", "@master/css-tooling": "2.1.9", "dom-serializer": "^3.1.1", "domhandler": "^6.0.1", "htmlparser2": "^12.0.0" } }, "sha512-SYn1tAatvrxEhHCtZyD+kFTyeggLajjVW5R5uhQELa9JkFuIgqVAIZemHqXh66g+wA0Zh/ZWJIPRLyyVaM/0Ig=="],
 
-    "@master/css-tooling": ["@master/css-tooling@2.1.8", "", { "dependencies": { "@master/css-binding": "2.1.8", "@master/css-schema": "2.1.8", "consola": "^3.4.2", "defu": "^6.1.7", "ignore": "^7.0.14", "mdn-data": "^2.37.2", "minimatch": "^10.2.6" }, "peerDependencies": { "svelte": ">=4", "vue": ">=3" }, "optionalPeers": ["svelte", "vue"] }, "sha512-Hz9z0O02tmkqVeVBdjY6PpgEtGSzXwScnsbQBLMvl5qSaLU74aNLzcd/bqcFx5WPwr9B/MPUUPiPi72m+k2QkA=="],
+    "@master/css-tooling": ["@master/css-tooling@2.1.9", "", { "dependencies": { "@master/css-binding": "2.1.9", "@master/css-schema": "2.1.9", "consola": "^3.4.2", "defu": "^6.1.7", "ignore": "^7.0.14", "mdn-data": "^2.37.2", "minimatch": "^10.2.6" }, "peerDependencies": { "svelte": ">=4", "vue": ">=3" }, "optionalPeers": ["svelte", "vue"] }, "sha512-WrIlXyRDrMujaNm1EGJnSNRB71n7vhjX2XtKTvBFC9JQZiQiVIxytjIMddJ0ndtl/kE/sSOSLB2aO7wAydzTtg=="],
 
-    "@master/css-vite": ["@master/css-vite@2.1.8", "", { "dependencies": { "@master/css": "2.1.8", "@master/css-compiler": "2.1.8", "@master/css-runtime": "2.1.8", "@master/css-schema": "2.1.8", "@master/css-server": "2.1.8", "@master/css-tooling": "2.1.8", "magic-string": "^1.4.3" }, "peerDependencies": { "vite": ">=6" } }, "sha512-Ukro8uiF45fQo+N+gAk4GUScjsSKaPgkSlq32ldM30dGcxS/THrW+FfuWYstPSWRe6vsPx45Uk+IsRQtpZGj7A=="],
+    "@master/css-vite": ["@master/css-vite@2.1.9", "", { "dependencies": { "@master/css": "2.1.9", "@master/css-compiler": "2.1.9", "@master/css-runtime": "2.1.9", "@master/css-schema": "2.1.9", "@master/css-server": "2.1.9", "@master/css-tooling": "2.1.9", "magic-string": "^1.4.3" }, "peerDependencies": { "vite": ">=6" } }, "sha512-SgrC+9QQNYv2rHRwdX9NE7Sb+BkPOnc0nHFL9o+Sl2CWhe5B6dVSf24rLAadSmX5BeNuxGPAgHGIy+ZK4YvaXg=="],
 
     "@master/design-site": ["@master/design-site@workspace:site"],
 
@@ -339,9 +339,9 @@
 
     "@master/icons-svelte": ["@master/icons-svelte@1.0.5", "", { "dependencies": { "@master/icons": "1.0.5" }, "peerDependencies": { "svelte": ">=5 <6" } }, "sha512-p02fMK+vaAGhDF/n42rogZEK+jqKJXsom7E2C5hHm4net8I86sC3vvUwWB/0YEejWCB7qIytrZHwh3CYOV9cpg=="],
 
-    "@master/internal-site": ["@master/internal-site@0.3.6", "", { "dependencies": { "@astrojs/markdown-remark": "^7.3.4", "@astrojs/mdx": "^8.1.2", "@astrojs/svelte": "^9.1.2", "@master/icons-astro": "1.0.5", "@master/icons-svelte": "1.0.5", "@resvg/resvg-js": "2.6.2", "@shikijs/langs": "^4.4.3", "@shikijs/transformers": "^4.4.3", "acorn": "^8.18.0", "clsx": "^2.1.1", "colorjs.io": "^0.7.1", "dayjs": "^1.11.23", "defu": "^6.1.7", "fast-glob": "^3.3.3", "fuse.js": "^7.5.0", "github-slugger": "^2.0.0", "hast-util-to-html": "^9.0.5", "html": "^1.0.0", "js-beautify": "^2.0.3", "mdast-util-from-markdown": "2.0.3", "mdast-util-mdx-jsx": "^3.2.0", "mdast-util-mdxjs-esm": "^2.0.1", "micromark-extension-mdx-jsx": "^3.0.2", "micromark-extension-mdxjs-esm": "^3.0.0", "package-manager-detector": "^1.8.0", "remark": "^15.0.1", "remark-gfm": "^4.0.1", "satori": "0.63.2", "sharp": "0.35.5", "shiki": "^4.4.3", "svgo": "^4.1.0", "theme-mode": "^1.1.1", "throttle-debounce": "^5.0.2", "ts-dedent": "^2.3.0", "unist-util-visit": "^5.1.0" }, "peerDependencies": { "@master/css": "0.0.0 || >=0.0.0-site.1793646900.gdf48b35846c1 <0.0.1 || ^2.1.0", "@master/css-astro": "^2.1.7", "@master/css-compiler": "0.0.0 || >=0.0.0-site.1793646900.gdf48b35846c1 <0.0.1 || ^2.1.0", "@master/css-language-service": "0.0.0 || >=0.0.0-site.1793646900.gdf48b35846c1 <0.0.1 || ^2.1.0", "@master/css-preset": "0.0.0 || >=0.0.0-site.1793646900.gdf48b35846c1 <0.0.1 || ^2.1.0", "@master/css-schema": "0.0.0 || >=0.0.0-site.1793646900.gdf48b35846c1 <0.0.1 || ^2.1.0", "@master/css-tooling": "0.0.0 || >=0.0.0-site.1793646900.gdf48b35846c1 <0.0.1 || ^2.1.0", "@master/ui": "^2.1.0", "astro": "7.4.2", "svelte": "5.57.2", "vite": "8.3.5" }, "optionalPeers": ["@master/css-compiler", "@master/css-language-service", "@master/css-preset", "@master/css-schema", "@master/css-tooling"] }, "sha512-ZdIIfizxwDw7bqnQh1A1Oq/pxIORkjpJMylYqme8ahEh9763TaUKr20lKMKQ6m2gxE6wVWlpGKC8qWiP1ETH+A=="],
+    "@master/internal-site": ["@master/internal-site@0.3.7", "", { "dependencies": { "@astrojs/markdown-remark": "^7.3.4", "@astrojs/mdx": "^8.1.2", "@astrojs/svelte": "^9.1.2", "@master/icons-astro": "1.0.5", "@master/icons-svelte": "1.0.5", "@resvg/resvg-js": "2.6.2", "@shikijs/langs": "^4.4.3", "@shikijs/transformers": "^4.4.3", "acorn": "^8.18.0", "clsx": "^2.1.1", "colorjs.io": "^0.7.1", "dayjs": "^1.11.23", "defu": "^6.1.7", "fast-glob": "^3.3.3", "fuse.js": "^7.5.0", "github-slugger": "^2.0.0", "hast-util-to-html": "^9.0.5", "html": "^1.0.0", "js-beautify": "^2.0.3", "mdast-util-from-markdown": "2.0.3", "mdast-util-mdx-jsx": "^3.2.0", "mdast-util-mdxjs-esm": "^2.0.1", "micromark-extension-mdx-jsx": "^3.0.2", "micromark-extension-mdxjs-esm": "^3.0.0", "package-manager-detector": "^1.8.0", "remark": "^15.0.1", "remark-gfm": "^4.0.1", "satori": "0.63.2", "sharp": "0.35.5", "shiki": "^4.4.3", "svgo": "^4.1.0", "theme-mode": "^1.1.1", "throttle-debounce": "^5.0.2", "ts-dedent": "^2.3.0", "unist-util-visit": "^5.1.0" }, "peerDependencies": { "@master/css": "0.0.0 || >=0.0.0-site.1793646900.gdf48b35846c1 <0.0.1 || ^2.1.0", "@master/css-astro": "^2.1.7", "@master/css-compiler": "0.0.0 || >=0.0.0-site.1793646900.gdf48b35846c1 <0.0.1 || ^2.1.0", "@master/css-language-service": "0.0.0 || >=0.0.0-site.1793646900.gdf48b35846c1 <0.0.1 || ^2.1.0", "@master/css-preset": "0.0.0 || >=0.0.0-site.1793646900.gdf48b35846c1 <0.0.1 || ^2.1.0", "@master/css-schema": "0.0.0 || >=0.0.0-site.1793646900.gdf48b35846c1 <0.0.1 || ^2.1.0", "@master/css-tooling": "0.0.0 || >=0.0.0-site.1793646900.gdf48b35846c1 <0.0.1 || ^2.1.0", "@master/ui": "^2.1.0", "astro": "7.4.2", "svelte": "5.57.2", "vite": "8.3.5" }, "optionalPeers": ["@master/css-compiler", "@master/css-language-service", "@master/css-preset", "@master/css-schema", "@master/css-tooling"] }, "sha512-BmJQDWYNFrSFyPvTyxoEO4skLKqT8wpD9TFp8v5haYO0Husd4cCtKf8uCMhN4SY9p/6zEnLv0gKySsPsRU1fhg=="],
 
-    "@master/ui": ["@master/ui@2.2.1", "", { "peerDependencies": { "@master/css": "^2.1.0" }, "bin": { "master-ui": "bin/master-ui.js" } }, "sha512-KTvcjxI2koEYbGk8EB7OKE47VW1O//ezVr+grHFfGL+m4DjosCmHDZwIteiGc4TO7TFW8Go4U1iuEqOP5IKz3A=="],
+    "@master/ui": ["@master/ui@2.3.0", "", { "peerDependencies": { "@master/css": "^2.1.9" }, "bin": { "master-ui": "bin/master-ui.js" } }, "sha512-IC4P7m/qvL3E23jFrAdC9q5lUcNl+PhRMzwfAMdFK4m69/gJ9T67vhtWj2GCrKb52p+MWPxFX2dgN2JuJ+3JSA=="],
 
     "@mdx-js/mdx": ["@mdx-js/mdx@3.1.1", "", { "dependencies": { "@types/estree": "^1.0.0", "@types/estree-jsx": "^1.0.0", "@types/hast": "^3.0.0", "@types/mdx": "^2.0.0", "acorn": "^8.0.0", "collapse-white-space": "^2.0.0", "devlop": "^1.0.0", "estree-util-is-identifier-name": "^3.0.0", "estree-util-scope": "^1.0.0", "estree-walker": "^3.0.0", "hast-util-to-jsx-runtime": "^2.0.0", "markdown-extensions": "^2.0.0", "recma-build-jsx": "^1.0.0", "recma-jsx": "^1.0.0", "recma-stringify": "^1.0.0", "rehype-recma": "^1.0.0", "remark-mdx": "^3.0.0", "remark-parse": "^11.0.0", "remark-rehype": "^11.0.0", "source-map": "^0.7.0", "unified": "^11.0.0", "unist-util-position-from-estree": "^2.0.0", "unist-util-stringify-position": "^4.0.0", "unist-util-visit": "^5.0.0", "vfile": "^6.0.0" } }, "sha512-f6ZO2ifpwAQIpzGWaBQT2TXxPv6z3RBzQKpVftEWN78Vl/YweF1uwussDx8ECAXVtr3Rs89fKyG9YlzUs9DyGQ=="],
 
