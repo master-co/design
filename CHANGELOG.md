@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.3.8 — 2026-11-28
 
 - Say what a change between percentages reports — percentage points or relative change — and what it is compared against. Keep direction separate from whether the change is good.
 - Keep a value below a detection limit with its comparator, limit and unit, and show a data cutoff beside the generation time when they differ.
